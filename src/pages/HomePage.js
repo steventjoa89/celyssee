@@ -1,7 +1,7 @@
 import React from "react";
 
 function HomePage() {
-  const items = Array(100)
+  const items = Array(20)
     .fill(null)
     .map((_, index) => `Hello world ${index + 1}`);
 

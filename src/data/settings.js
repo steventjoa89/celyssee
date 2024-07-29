@@ -1,6 +1,7 @@
 import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
 import XIcon from "@mui/icons-material/X";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import PinterestIcon from "@mui/icons-material/Pinterest";
 
 // MENU SIDEBAR
 // TODO: Link
@@ -32,31 +33,7 @@ export const TOP_MENU_SIDEBAR = [
 ];
 
 // TODO: Link
-export const BOTTOM_MENU_SIDEBAR = [
-  {
-    name: "Contact Us",
-    // link: ROUTES.BLOGS,
-  },
-  {
-    name: "FAQ",
-    // link: ROUTES.BLOGS,
-  },
-  {
-    name: "Return & Exchange",
-    // link: ROUTES.BLOGS,
-  },
-  {
-    name: "Terms & Conditions",
-    // link: ROUTES.BLOGS,
-  },
-  {
-    name: "Privacy Policy",
-    // link: ROUTES.BLOGS,
-  },
-];
-
-// TODO: Link
-export const BOTTOM_MENU_SOCIAL_MEDIA_SIDEBAR = [
+export const SOCIAL_MEDIA_ICONS = [
   {
     name: "Facebook",
     icon: <FacebookOutlinedIcon />,
@@ -70,6 +47,80 @@ export const BOTTOM_MENU_SOCIAL_MEDIA_SIDEBAR = [
   {
     name: "Instagram",
     icon: <InstagramIcon fontSize="small" />,
-    link: "https://www.instagram.com",
+    link: "https://www.instagram.com/celyssee.perfumery/",
+  },
+  {
+    name: "Pinterest",
+    icon: <PinterestIcon fontSize="small" />,
+    link: "Https://pinterest.com",
+  },
+];
+
+// FOOTER MENU
+// TODO: LINK
+export const FOOTER_MENU = [
+  {
+    title: "Help",
+    submenus: [
+      {
+        name: "Contact Us",
+        // link: ROUTES.BLOGS,
+      },
+      {
+        name: "FAQ",
+        // link: ROUTES.BLOGS,
+      },
+      {
+        name: "Return & Exchange",
+        // link: ROUTES.BLOGS,
+      },
+    ],
+  },
+  {
+    title: "Our Company",
+    submenus: [{ name: "Corporate Statements", link: "corporate-statements" }],
+  },
+  {
+    title: "Privacy & Terms",
+    submenus: [
+      {
+        name: "Privacy Policy",
+        // link: ROUTES.PRIVACYPOLICY,
+      },
+      {
+        name: "Term & Conditions",
+        // link: ROUTES.TERMSANDCONDITIONS
+      },
+    ],
+  },
+  {
+    title: "Online Shop",
+    submenus: [
+      {
+        name: "Tokopedia",
+        // link: "https://www.google.co.id",
+        outside: true,
+      },
+      {
+        name: "Shopee",
+        // link: "https://www.google.co.id",
+        outside: true,
+      },
+      {
+        name: "TikTok Shop",
+        // link: "https://www.google.co.id",
+        outside: true,
+      },
+      {
+        name: "Lazada",
+        // link: "https://www.google.co.id",
+        outside: true,
+      },
+      {
+        name: "Blibli",
+        // link: "https://www.google.co.id",
+        outside: true,
+      },
+    ],
   },
 ];

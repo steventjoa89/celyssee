@@ -4,6 +4,7 @@ import { Route, Routes, useLocation } from "react-router-dom";
 import { ROUTES } from "./routes";
 import Navbar from "./components/Navbar/Navbar";
 import HomePage from "./pages/HomePage";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const location = useLocation();
@@ -19,6 +20,7 @@ function App() {
       <Routes>
         <Route exatch path={ROUTES.HOME} element={<HomePage />} />
       </Routes>
+      <Footer />
     </div>
   );
 }
