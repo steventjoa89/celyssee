@@ -2,7 +2,12 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        title: ["philosopher", "serif"],
+        body: ["questrial", "serif"],
+      },
+    },
   },
   plugins: [],
 };

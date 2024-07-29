@@ -1,25 +1,25 @@
-import logo from "./logo.svg";
 import "./App.css";
+import { useEffect } from "react";
+import { Route, Routes, useLocation } from "react-router-dom";
+import { ROUTES } from "./routes";
+import Navbar from "./components/Navbar/Navbar";
+import HomePage from "./pages/HomePage";
 
 function App() {
+  const location = useLocation();
+
+  // Always Scroll to the top
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
   return (
-    <h1 className="text-3xl font-bold underline">Hello world!</h1>
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
-    // </div>
+    <div className="App">
+      <Navbar />
+      <Routes>
+        <Route exatch path={ROUTES.HOME} element={<HomePage />} />
+      </Routes>
+    </div>
   );
 }
 
