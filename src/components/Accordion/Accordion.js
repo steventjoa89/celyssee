@@ -15,6 +15,9 @@ function Accordion({
     setIsOpen(!isOpen);
   };
 
+  // const titleFontSize =
+  //   titleSize === "semi" ? `text-xs md:text-sm` : `text-${titleSize}`;
+
   return (
     <div
       className={`${

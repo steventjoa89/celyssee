@@ -2,6 +2,7 @@ import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
 import XIcon from "@mui/icons-material/X";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import PinterestIcon from "@mui/icons-material/Pinterest";
+import { ROUTES } from "../routes";
 
 // MENU SIDEBAR
 // TODO: Link
@@ -68,7 +69,7 @@ export const FOOTER_MENU = [
       },
       {
         name: "FAQ",
-        // link: ROUTES.BLOGS,
+        link: ROUTES.FAQS,
       },
       {
         name: "Return & Exchange",

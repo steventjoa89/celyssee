@@ -5,6 +5,7 @@ import { ROUTES } from "./routes";
 import Navbar from "./components/Navbar/Navbar";
 import HomePage from "./pages/HomePage";
 import Footer from "./components/Footer/Footer";
+import FaqPage from "./pages/FaqPage";
 
 function App() {
   const location = useLocation();
@@ -19,6 +20,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route exatch path={ROUTES.HOME} element={<HomePage />} />
+        <Route path={ROUTES.FAQS} element={<FaqPage />} />
       </Routes>
       <Footer />
     </div>
