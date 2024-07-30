@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { ROUTES } from "../../routes";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
@@ -19,6 +19,7 @@ function NavbarMenuIcon({ menu, onClick }) {
 
 function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
 
   // Collapsible Sidebar
   const [isMenuSideBarOpen, setIsMenuSideBarOpen] = useState(false);
@@ -55,6 +56,9 @@ function Navbar() {
     };
   }, []);
 
+  // Determine if the current path is the homepage
+  const isHomepage = location.pathname === "/";
+
   return (
     <>
       {/* Menu Sidebar */}
@@ -64,7 +68,7 @@ function Navbar() {
 
       <nav
         className={`sticky top-0 z-30 transition-all duration-300 ease-in-out ${
-          isScrolled
+          isScrolled || !isHomepage
             ? "bg-white backdrop-filter backdrop-blur-lg border-b border-gray-200"
             : "bg-transparent border-none"
         }`}

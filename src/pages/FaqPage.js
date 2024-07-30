@@ -165,7 +165,6 @@ function FaqPage() {
             </p>
           </div>
           <div className="flex-1 p-4">
-            <div className="border-t border-gray-200"></div>
             {item.faqs.map((itemFaq, itemIndex) => (
               <Accordion
                 key={itemIndex}
