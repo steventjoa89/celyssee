@@ -4,6 +4,8 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import PinterestIcon from "@mui/icons-material/Pinterest";
 import { ROUTES } from "../routes";
 
+export const COMPANY_WHATSAPP_NUMBER = "+62 819 058 75858";
+
 // MENU SIDEBAR
 // TODO: Link
 export const TOP_MENU_SIDEBAR = [
@@ -72,8 +74,8 @@ export const FOOTER_MENU = [
         link: ROUTES.FAQS,
       },
       {
-        name: "Return & Exchange",
-        // link: ROUTES.BLOGS,
+        name: "Return Policy",
+        link: ROUTES.RETURN_POLICY,
       },
     ],
   },

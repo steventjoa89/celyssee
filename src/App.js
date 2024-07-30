@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar/Navbar";
 import HomePage from "./pages/HomePage";
 import Footer from "./components/Footer/Footer";
 import FaqPage from "./pages/FaqPage";
+import ReturnPolicyPage from "./pages/ReturnPolicyPage";
 
 function App() {
   const location = useLocation();
@@ -21,6 +22,7 @@ function App() {
       <Routes>
         <Route exatch path={ROUTES.HOME} element={<HomePage />} />
         <Route path={ROUTES.FAQS} element={<FaqPage />} />
+        <Route path={ROUTES.RETURN_POLICY} element={<ReturnPolicyPage />} />
       </Routes>
       <Footer />
     </div>
