@@ -1,7 +1,12 @@
 import React from "react";
-import { FOOTER_MENU, SOCIAL_MEDIA_ICONS } from "../../data/settings";
+import {
+  COMPANY_INFO,
+  FOOTER_MENU,
+  SOCIAL_MEDIA_ICONS,
+} from "../../data/settings";
 import { Link } from "react-router-dom";
 import Accordion from "../Accordion/Accordion";
+import { toProperCase } from "../../utils/stringUtil";
 
 function FooterLogo({ isHideTop = false, isHideBottom = false }) {
   return (
@@ -12,7 +17,7 @@ function FooterLogo({ isHideTop = false, isHideBottom = false }) {
       ) : (
         <div className="flex flex-col items-center justify-center cursor-pointer">
           <span className="font-title font-black text-xl tracking-widest">
-            CELYSSEE
+            {COMPANY_INFO.COMPANY_NAME}
           </span>
         </div>
       )}
@@ -38,7 +43,7 @@ function FooterLogo({ isHideTop = false, isHideBottom = false }) {
           {/* Copyright */}
           <div className="flex flex-col">
             <span className="text-xs text-gray-400 text-left">
-              Copyright &copy; 2024, CELYSSEE
+              Copyright &copy; 2024, {toProperCase(COMPANY_INFO.COMPANY_NAME)}
             </span>
             <span className="text-xs text-gray-400 text-left">
               All Right Reserved

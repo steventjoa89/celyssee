@@ -1,29 +1,44 @@
 import React from "react";
 import Accordion from "../components/Accordion/Accordion";
 import parse from "html-react-parser";
+import { COMPANY_INFO } from "../data/settings";
+import { toProperCase } from "../utils/stringUtil";
 
 function FaqPage() {
   const faqs = [
     {
       title: "General Inquiries",
-      description:
-        "Answers to common questions about Celyssee, including company information and how to contact us.",
+      description: `Answers to common questions about ${toProperCase(
+        COMPANY_INFO.COMPANY_NAME
+      )}, including company information and how to contact us.`,
       faqs: [
         {
-          q: "What is the story behind Celyssee?",
-          a: "Celyssee was founded to blend artistry and elegance in the world of fragrances. Our story is one of crafting exceptional perfumes that embody sophistication and timeless beauty, combining traditional techniques with modern creativity.",
+          q: `What is the story behind ${toProperCase(
+            COMPANY_INFO.COMPANY_NAME
+          )}?`,
+          a: `${toProperCase(
+            COMPANY_INFO.COMPANY_NAME
+          )} was founded to blend artistry and elegance in the world of fragrances. Our story is one of crafting exceptional perfumes that embody sophistication and timeless beauty, combining traditional techniques with modern creativity.`,
         },
         {
-          q: "What makes Celyssee unique?",
-          a: "Celyssee is distinguished by our meticulous selection of premium ingredients and our commitment to artisanal craftsmanship. Each fragrance is crafted to offer a unique and luxurious olfactory experience, reflecting our dedication to quality and innovation.",
+          q: `What makes ${toProperCase(COMPANY_INFO.COMPANY_NAME)} unique?`,
+          a: `${toProperCase(
+            COMPANY_INFO.COMPANY_NAME
+          )} is distinguished by our meticulous selection of premium ingredients and our commitment to artisanal craftsmanship. Each fragrance is crafted to offer a unique and luxurious olfactory experience, reflecting our dedication to quality and innovation.`,
         },
         {
-          q: "Where can I purchase Celyssee products?",
-          a: "Celyssee products are currently available for purchase through our online boutique and via WhatsApp.",
+          q: `Where can I purchase ${toProperCase(
+            COMPANY_INFO.COMPANY_NAME
+          )} products?`,
+          a: `${toProperCase(
+            COMPANY_INFO.COMPANY_NAME
+          )} products are currently available for purchase through our online boutique and via WhatsApp.`,
         },
         {
-          q: "How can I contact Celyssee?",
-          a: "You can reach the Celyssee team through our Instagram account, email, or via WhatsApp.",
+          q: `How can I contact ${toProperCase(COMPANY_INFO.COMPANY_NAME)}?`,
+          a: `You can reach the ${toProperCase(
+            COMPANY_INFO.COMPANY_NAME
+          )} team through our Instagram account, email, or via WhatsApp.`,
         },
       ],
     },
@@ -49,8 +64,12 @@ function FaqPage() {
           a: "If you wish to cancel your order, please notify us immediately via email or WhatsApp. We will attempt to cancel your order before it is shipped. If the order has already been processed, we will guide you through our return procedure.",
         },
         {
-          q: "Does Celyssee ship internationally?",
-          a: "At this time, Celyssee's shipping is limited to Indonesia. However, if you have an alternative shipping arrangement, we would be delighted to assist you in facilitating your purchase. Please feel free to explore options with a local shipping service.",
+          q: `Does ${toProperCase(
+            COMPANY_INFO.COMPANY_NAME
+          )} ship internationally?`,
+          a: `At this time, ${toProperCase(
+            COMPANY_INFO.COMPANY_NAME
+          )}'s shipping is limited to Indonesia. However, if you have an alternative shipping arrangement, we would be delighted to assist you in facilitating your purchase. Please feel free to explore options with a local shipping service.`,
         },
       ],
     },
@@ -60,8 +79,12 @@ function FaqPage() {
         "Comprehensive information about our fragrances profile, and how to use them effectively.",
       faqs: [
         {
-          q: "What types of fragrances does Celyssee offer?",
-          a: "Celyssee currently offers a curated selection of eau de parfum, featuring both classic and contemporary scents crafted to meet diverse preferences. In the future, we plan to expand our collection to include additional fragrance types and exclusive blends designed to captivate and inspire.",
+          q: `What types of fragrances does ${toProperCase(
+            COMPANY_INFO.COMPANY_NAME
+          )} offer?`,
+          a: `${toProperCase(
+            COMPANY_INFO.COMPANY_NAME
+          )} currently offers a curated selection of eau de parfum, featuring both classic and contemporary scents crafted to meet diverse preferences. In the future, we plan to expand our collection to include additional fragrance types and exclusive blends designed to captivate and inspire.`,
         },
         {
           q: "How do I choose the right fragrance for me?",
@@ -72,23 +95,33 @@ function FaqPage() {
           a: "Eau de parfum and eau de toilette differ primarily in their concentration of fragrance oils. Eau de parfum has a higher concentration, offering a more intense and longer-lasting scent, while eau de toilette is lighter and more subtle.",
         },
         {
-          q: "Are Celyssee perfumes suitable for sensitive skin?",
+          q: `Are ${toProperCase(
+            COMPANY_INFO.COMPANY_NAME
+          )} perfumes suitable for sensitive skin?`,
           a: "Our fragrances are formulated with high-quality ingredients to minimize irritation. However, if you have particularly sensitive skin or allergies, we recommend performing a patch test before full application or consulting with a healthcare professional.",
         },
         {
-          q: "How should I store my Celyssee perfumes?",
-          a: "To maintain the integrity and longevity of your fragrance, store it in a cool, dry place away from direct sunlight and heat. Keeping the perfume in its original box or a dark, airtight container can also help preserve its quality.",
+          q: `How should I store my ${toProperCase(
+            COMPANY_INFO.COMPANY_NAME
+          )} perfumes?`,
+          a: `To maintain the integrity and longevity of your fragrance, store it in a cool, dry place away from direct sunlight and heat. Keeping the perfume in its original box or a dark, airtight container can also help preserve its quality.`,
         },
         {
-          q: "Are Celyssee perfumes vegan and cruelty-free?",
-          a: "Celyssee is committed to ethical practices. Our perfumes are formulated without animal-derived ingredients and are not tested on animals. We ensure that our products meet high standards of cruelty-free and vegan-friendly.",
+          q: `Are ${toProperCase(
+            COMPANY_INFO.COMPANY_NAME
+          )} perfumes vegan and cruelty-free?`,
+          a: `${toProperCase(
+            COMPANY_INFO.COMPANY_NAME
+          )} is committed to ethical practices. Our perfumes are formulated without animal-derived ingredients and are not tested on animals. We ensure that our products meet high standards of cruelty-free and vegan-friendly.`,
         },
         {
           q: "Can I customize my fragrance?",
           a: "Currently, we do not offer customization for individual fragrances. However, our diverse range of scents allows you to find a blend that matches your unique preferences. Feel free to explore our collection to discover your perfect fragrance.",
         },
         {
-          q: "How long will my Celyssee perfume last?",
+          q: `How long will my ${toProperCase(
+            COMPANY_INFO.COMPANY_NAME
+          )} perfume last?`,
           a: "The longevity of a perfume can vary based on factors such as concentration, application, and skin type. Typically, eau de parfum offers longer-lasting wear compared to eau de toilette. To maximize longevity, apply the fragrance to pulse points and avoid excessive rubbing.",
         },
       ],
@@ -100,7 +133,9 @@ function FaqPage() {
       faqs: [
         {
           q: "What payment methods do you accept?",
-          a: "Celyssee currently accepts payments via bank transfer and Indonesian marketplace payment methods. We prioritize secure transactions to ensure a smooth and reliable checkout experience. In the future, we plan to expand our payment options to provide even greater convenience for our customers.",
+          a: `${toProperCase(
+            COMPANY_INFO.COMPANY_NAME
+          )} currently accepts payments via bank transfer and Indonesian marketplace payment methods. We prioritize secure transactions to ensure a smooth and reliable checkout experience. In the future, we plan to expand our payment options to provide even greater convenience for our customers.`,
         },
         {
           q: "Can I use multiple discount codes on a single order?",

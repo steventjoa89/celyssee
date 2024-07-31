@@ -5,6 +5,7 @@ import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import LeftSidebar from "../Sidebar/LeftSidebar";
 import MenuSidebar from "../Sidebar/Menu/MenuSidebar";
+import { COMPANY_INFO } from "../../data/settings";
 
 function NavbarMenuIcon({ menu, onClick }) {
   const { icon, name } = menu;
@@ -89,7 +90,7 @@ function Navbar() {
             {/* Middle - Logo */}
             <Link to={ROUTES.HOME}>
               <span className="font-title font-black text-2xl md:text-3xl tracking-[.25em]">
-                CELYSSEE
+                {COMPANY_INFO.COMPANY_NAME}
               </span>
             </Link>
 

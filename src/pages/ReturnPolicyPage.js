@@ -1,5 +1,6 @@
 import React from "react";
-import { COMPANY_WHATSAPP_NUMBER } from "../data/settings";
+import { COMPANY_INFO } from "../data/settings";
+import { toProperCase } from "../utils/stringUtil";
 
 function ReturnPolicyPage() {
   return (
@@ -8,12 +9,13 @@ function ReturnPolicyPage() {
       <div className="text-sm md:text-base my-5 text-left space-y-5">
         <p className="font-bold">Our Return Policy</p>
         <p>
-          At Celyssee, your satisfaction is our top priority. If you find that
-          your purchase does not meet your expectations or is not in the
-          condition you anticipated, you have the option to return it within 7
-          days of receipt. We will cover the shipping costs for the return,
-          ensuring a hassle-free process for you. Simply reach out to us via
-          WhatsApp at {COMPANY_WHATSAPP_NUMBER}, and we will assist you through
+          At {toProperCase(COMPANY_INFO.COMPANY_NAME)}, your satisfaction is our
+          top priority. If you find that your purchase does not meet your
+          expectations or is not in the condition you anticipated, you have the
+          option to return it within 7 days of receipt. We will cover the
+          shipping costs for the return, ensuring a hassle-free process for you.
+          Simply reach out to us via WhatsApp at{" "}
+          {COMPANY_INFO.COMPANY_WHATSAPP_NUMBER}, and we will assist you through
           every step of the return procedure.
         </p>
         <p>
@@ -32,8 +34,9 @@ function ReturnPolicyPage() {
           possible.
         </p>
         <p>
-          Thank you for choosing Celyssee. We are committed to providing you
-          with exceptional products and excellent service.
+          Thank you for choosing {toProperCase(COMPANY_INFO.COMPANY_NAME)}. We
+          are committed to providing you with exceptional products and excellent
+          service.
         </p>
       </div>
     </div>

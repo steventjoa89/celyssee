@@ -4,48 +4,50 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import PinterestIcon from "@mui/icons-material/Pinterest";
 import { ROUTES } from "../routes";
 
-export const COMPANY_WHATSAPP_NUMBER = "+62 819 058 75858";
+export const COMPANY_INFO = {
+  COMPANY_NAME: "CELYSSEE",
+  COMPANY_WHATSAPP_NUMBER: "+62 819 058 75858",
+  COMPANY_EMAIL_ADDRESS: "steventjoa89@gmail.com",
+};
 
 // MENU SIDEBAR
-// TODO: Link
 export const TOP_MENU_SIDEBAR = [
   {
     name: "Best Sellers",
-    // link: ROUTES.BESTSELLERS,
+    // link: ROUTES.BESTSELLERS,    // TODO: Link
   },
   {
     name: "Feminine Perfume",
-    // link: ROUTES.COLLECTIONS("feminine"),
+    // link: ROUTES.COLLECTIONS("feminine"),// TODO: Link
   },
   {
     name: "Masculine Perfume",
-    // link: ROUTES.COLLECTIONS("masculine"),
+    // link: ROUTES.COLLECTIONS("masculine"),// TODO: Link
   },
   {
     name: "Unisex Perfume",
-    // link: ROUTES.COLLECTIONS("unisex"),
+    // link: ROUTES.COLLECTIONS("unisex"),// TODO: Link
   },
   {
     name: "Our Stories",
-    // link: ROUTES.OURSTORIES,
+    // link: ROUTES.OURSTORIES,// TODO: Link
   },
   {
     name: "Blogs & Magazines",
-    // link: ROUTES.BLOGS,
+    // link: ROUTES.BLOGS,// TODO: Link
   },
 ];
 
-// TODO: Link
 export const SOCIAL_MEDIA_ICONS = [
   {
     name: "Facebook",
     icon: <FacebookOutlinedIcon />,
-    link: "https://www.facebook.com",
+    link: "https://www.facebook.com", // TODO: Link
   },
   {
     name: "Twitter",
     icon: <XIcon fontSize="small" />,
-    link: "https://www.twitter.com",
+    link: "https://www.twitter.com", // TODO: Link
   },
   {
     name: "Instagram",
@@ -55,19 +57,18 @@ export const SOCIAL_MEDIA_ICONS = [
   {
     name: "Pinterest",
     icon: <PinterestIcon fontSize="small" />,
-    link: "Https://pinterest.com",
+    link: "Https://pinterest.com", // TODO: Link
   },
 ];
 
 // FOOTER MENU
-// TODO: LINK
 export const FOOTER_MENU = [
   {
     title: "Help",
     submenus: [
       {
         name: "Contact Us",
-        // link: ROUTES.BLOGS,
+        // link: ROUTES.BLOGS,// TODO: LINK
       },
       {
         name: "FAQ",
@@ -81,18 +82,23 @@ export const FOOTER_MENU = [
   },
   {
     title: "Our Company",
-    submenus: [{ name: "Corporate Statements", link: "corporate-statements" }],
+    submenus: [
+      {
+        name: "Corporate Statements",
+        // link: "corporate-statements" // TODO: LINK
+      },
+    ],
   },
   {
     title: "Privacy & Terms",
     submenus: [
       {
         name: "Privacy Policy",
-        // link: ROUTES.PRIVACYPOLICY,
+        // link: ROUTES.PRIVACYPOLICY,// TODO: LINK
       },
       {
         name: "Term & Conditions",
-        // link: ROUTES.TERMSANDCONDITIONS
+        // link: ROUTES.TERMSANDCONDITIONS// TODO: LINK
       },
     ],
   },
