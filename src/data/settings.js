@@ -10,6 +10,8 @@ export const COMPANY_INFO = {
   COMPANY_EMAIL_ADDRESS: "steventjoa89@gmail.com",
 };
 
+export const HOME_BANNER_IMAGE = "banner.webp";
+
 // MENU SIDEBAR
 export const TOP_MENU_SIDEBAR = [
   {

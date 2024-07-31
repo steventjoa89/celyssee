@@ -1,9 +1,12 @@
 import React from "react";
 
-function Button({ text }) {
+function Button({ children, ...props }) {
   return (
-    <button className="w-full items-center justify-center border border-black">
-      {text}
+    <button
+      {...props}
+      className="border-2 border-black text-black px-4 py-2 rounded hover:bg-black hover:text-white focus:outline-none focus:ring-2 focus:ring-black"
+    >
+      {children}
     </button>
   );
 }
