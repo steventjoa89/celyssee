@@ -1,20 +1,27 @@
-import React from "react";
+import React, { useRef } from "react";
 import Banner from "../components/Banner/Banner";
-import Button from "../components/Button/Button";
 import { HOME_BANNER_IMAGE } from "../data/settings";
+import SubBanner from "../components/Banner/SubBanner";
 
 function HomePage() {
   const items = Array(20)
     .fill(null)
     .map((_, index) => `Hello world ${index + 1}`);
 
+  const subBannerRef = useRef(null);
+
   const handleOnClickBanner = () => {
-    console.log("hello world");
+    if (subBannerRef.current) {
+      window.scrollTo({
+        top: subBannerRef.current.offsetTop - 80,
+        behavior: "smooth",
+      });
+    }
   };
 
   return (
     <div>
-      {/* Large Banner */}
+      {/* Home Banner */}
       <Banner
         img={`${process.env.PUBLIC_URL}/images/banner/${HOME_BANNER_IMAGE}`}
         onClick={handleOnClickBanner}
@@ -35,7 +42,10 @@ function HomePage() {
         </div>
       </Banner>
 
-      <Button>Hello World</Button>
+      {/* SubBanner */}
+      <div ref={subBannerRef}>
+        <SubBanner />
+      </div>
 
       <div className="space-y-4">
         {items.map((item, index) => (
