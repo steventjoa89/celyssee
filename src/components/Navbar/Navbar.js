@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { ROUTES } from "../../routes";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
@@ -19,8 +19,8 @@ function NavbarMenuIcon({ menu, onClick }) {
 }
 
 function Navbar() {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const location = useLocation();
+  // const [isScrolled, setIsScrolled] = useState(false);
+  // const location = useLocation();
 
   // Collapsible Sidebar
   const [isMenuSideBarOpen, setIsMenuSideBarOpen] = useState(false);
@@ -47,18 +47,18 @@ function Navbar() {
     },
   ];
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 0 ? true : false);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll); // Cleanup listener on component unmount
-    };
-  }, []);
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     setIsScrolled(window.scrollY > 0 ? true : false);
+  //   };
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll); // Cleanup listener on component unmount
+  //   };
+  // }, []);
 
   // Determine if the current path is the homepage
-  const isHomepage = location.pathname === "/";
+  // const isHomepage = location.pathname === "/";
 
   return (
     <>
@@ -67,13 +67,14 @@ function Navbar() {
         <MenuSidebar toggleSidebar={toggleMenuSidebar} />
       </LeftSidebar>
 
-      <nav
+      {/* <nav
         className={`sticky top-0 z-30 transition-all duration-300 ease-in-out ${
           isScrolled || !isHomepage
             ? "bg-white backdrop-filter backdrop-blur-lg border-b border-gray-200"
             : "bg-transparent border-none"
         }`}
-      >
+      > */}
+      <nav className="sticky top-0 z-30 bg-white backdrop-filter backdrop-blur-lg border-b border-gray-200">
         <div className="max-w-full mx-auto px-8 md:px-12">
           <div className="flex items-center justify-between h-20">
             {/* Left - Menu Icon */}
