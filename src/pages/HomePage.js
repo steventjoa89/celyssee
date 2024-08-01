@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import Banner from "../components/Banner/Banner";
 import {
   HOME_BANNER_IMAGE,
+  HOME_BEST_SELLER_PERFUMES_IDS,
   HOME_MUST_HAVES_PERFUMES_IDS,
 } from "../data/settings";
 import SubBanner from "../components/Banner/SubBanner";
@@ -11,6 +12,11 @@ import EmailSubscription from "../components/EmailSubscription/EmailSubscription
 
 function HomePage() {
   const subBannerRef = useRef(null);
+
+  // Best Seller Perfumes Items
+  const bestSellerPerfumes = PERFUME_CATALOG.filter((perfumeObj) =>
+    HOME_BEST_SELLER_PERFUMES_IDS.includes(perfumeObj.id)
+  ).sort((a, b) => a.id - b.id);
 
   // Must Haves Perfumes Items
   const mustHavesPerfumes = PERFUME_CATALOG.filter((perfumeObj) =>
@@ -54,8 +60,14 @@ function HomePage() {
         <SubBanner />
       </div>
 
-      {/* TODO: Best Sellers Sections */}
-      <div>Best Sellers</div>
+      {/* Best Sellers Sections */}
+      <div className="my-3 px-8 pb-10 border-b border-gray-200">
+        <h1 className="relative font-title text-3xl mt-8 mb-5">
+          Our Best Sellers
+          <span className="absolute left-1/2 transform -translate-x-1/2 bottom-[-4px] w-16 h-[2px] bg-black"></span>
+        </h1>
+        <HorizontalScrollableGridView perfumeList={bestSellerPerfumes} />
+      </div>
 
       {/* TODO: Selected For You Sections */}
       <div>Selected For You</div>
