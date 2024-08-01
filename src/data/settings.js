@@ -14,7 +14,7 @@ export const HOME_BANNER_IMAGE = "banner.webp";
 export const HOME_SUBBANNER1_IMAGE = "subbanner-1.avif";
 export const HOME_SUBBANNER2_IMAGE = "subbanner-2.avif";
 
-export const HOME_MUST_HAVES_PERFUMES_IDS = [1, 2, 3]; // Min 4
+export const HOME_MUST_HAVES_PERFUMES_IDS = [1, 2, 3, 4]; // Min 4
 
 // MENU SIDEBAR
 export const TOP_MENU_SIDEBAR = [
@@ -72,10 +72,6 @@ export const FOOTER_MENU = [
   {
     title: "Help",
     submenus: [
-      {
-        name: "Contact Us",
-        // link: ROUTES.BLOGS,// TODO: LINK
-      },
       {
         name: "FAQ",
         link: ROUTES.FAQS,

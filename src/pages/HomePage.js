@@ -53,6 +53,15 @@ function HomePage() {
         <SubBanner />
       </div>
 
+      {/* TODO: Best Sellers Sections */}
+      <div>Best Sellers</div>
+
+      {/* TODO: Selected For You Sections */}
+      <div>Selected For You</div>
+
+      {/* TODO: Try Starter Kit Sections */}
+      <div>Starter Kit</div>
+
       {/* Must Have Sections */}
       <div className="my-3 px-8 border-y border-gray-200">
         <h1 className="relative font-title text-3xl mt-8 mb-5">
@@ -61,6 +70,9 @@ function HomePage() {
         </h1>
         <HorizontalScrollableGridView perfumeList={mustHavesPerfumes} />
       </div>
+
+      {/* TODO: Subscribe Sections */}
+      <div>Subscribe</div>
     </div>
   );
 }
