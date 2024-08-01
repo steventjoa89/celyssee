@@ -1,14 +1,20 @@
 import React, { useRef } from "react";
 import Banner from "../components/Banner/Banner";
-import { HOME_BANNER_IMAGE } from "../data/settings";
+import {
+  HOME_BANNER_IMAGE,
+  HOME_MUST_HAVES_PERFUMES_IDS,
+} from "../data/settings";
 import SubBanner from "../components/Banner/SubBanner";
+import HorizontalScrollableGridView from "../components/GridView/HorizontalScrollableGridView";
+import { PERFUME_CATALOG } from "../data/data";
 
 function HomePage() {
-  const items = Array(20)
-    .fill(null)
-    .map((_, index) => `Hello world ${index + 1}`);
-
   const subBannerRef = useRef(null);
+
+  // Must Haves Perfumes Items
+  const mustHavesPerfumes = PERFUME_CATALOG.filter((perfumeObj) =>
+    HOME_MUST_HAVES_PERFUMES_IDS.includes(perfumeObj.id)
+  ).sort((a, b) => a.id - b.id);
 
   const handleOnClickBanner = () => {
     if (subBannerRef.current) {
@@ -47,14 +53,14 @@ function HomePage() {
         <SubBanner />
       </div>
 
-      <div className="space-y-4">
-        {items.map((item, index) => (
-          <h1 key={index} className="text-3xl font-title font-bold underline">
-            {item}
-          </h1>
-        ))}
+      {/* Must Have Sections */}
+      <div className="my-3 px-8 border-y border-gray-200">
+        <h1 className="relative font-title text-3xl mt-8 mb-5">
+          Must Haves
+          <span className="absolute left-1/2 transform -translate-x-1/2 bottom-[-4px] w-16 h-[2px] bg-black"></span>
+        </h1>
+        <HorizontalScrollableGridView perfumeList={mustHavesPerfumes} />
       </div>
-      <h1 className="text-3xl font-title font-bold underline">Hello world!</h1>
     </div>
   );
 }
