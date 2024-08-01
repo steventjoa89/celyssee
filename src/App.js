@@ -7,6 +7,7 @@ import HomePage from "./pages/HomePage";
 import Footer from "./components/Footer/Footer";
 import FaqPage from "./pages/FaqPage";
 import ReturnPolicyPage from "./pages/ReturnPolicyPage";
+import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
 
 function App() {
   const location = useLocation();
@@ -23,6 +24,7 @@ function App() {
         <Route exatch path={ROUTES.HOME} element={<HomePage />} />
         <Route path={ROUTES.FAQS} element={<FaqPage />} />
         <Route path={ROUTES.RETURN_POLICY} element={<ReturnPolicyPage />} />
+        <Route path={ROUTES.PRIVACY_POLICY} element={<PrivacyPolicyPage />} />
       </Routes>
       <Footer />
     </div>

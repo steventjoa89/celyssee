@@ -96,12 +96,12 @@ export const FOOTER_MENU = [
     title: "Privacy & Terms",
     submenus: [
       {
-        name: "Privacy Policy",
-        // link: ROUTES.PRIVACYPOLICY,// TODO: LINK
-      },
-      {
         name: "Term & Conditions",
         // link: ROUTES.TERMSANDCONDITIONS// TODO: LINK
+      },
+      {
+        name: "Privacy Policy",
+        link: ROUTES.PRIVACY_POLICY,
       },
     ],
   },
