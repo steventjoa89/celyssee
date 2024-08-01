@@ -3,25 +3,28 @@ import Banner from "../components/Banner/Banner";
 import {
   HOME_BANNER_IMAGE,
   HOME_BEST_SELLER_PERFUMES_IDS,
-  HOME_MUST_HAVES_PERFUMES_IDS,
 } from "../data/settings";
 import SubBanner from "../components/Banner/SubBanner";
 import HorizontalScrollableGridView from "../components/GridView/HorizontalScrollableGridView";
 import { PERFUME_CATALOG } from "../data/data";
 import EmailSubscription from "../components/EmailSubscription/EmailSubscription";
+import Button from "../components/Button/Button";
+import { useNavigate } from "react-router-dom";
+import { ROUTES } from "../routes";
 
 function HomePage() {
   const subBannerRef = useRef(null);
+  const navigate = useNavigate();
 
   // Best Seller Perfumes Items
   const bestSellerPerfumes = PERFUME_CATALOG.filter((perfumeObj) =>
     HOME_BEST_SELLER_PERFUMES_IDS.includes(perfumeObj.id)
   ).sort((a, b) => a.id - b.id);
 
-  // Must Haves Perfumes Items
-  const mustHavesPerfumes = PERFUME_CATALOG.filter((perfumeObj) =>
-    HOME_MUST_HAVES_PERFUMES_IDS.includes(perfumeObj.id)
-  ).sort((a, b) => a.id - b.id);
+  // New Collections Perfumes Items
+  const newCollectionPerfumes = PERFUME_CATALOG.sort(
+    (a, b) => new Date(b.releaseAt) - new Date(a.releaseAt)
+  ).slice(0, 4);
 
   const handleOnClickBanner = () => {
     if (subBannerRef.current) {
@@ -67,6 +70,11 @@ function HomePage() {
           <span className="absolute left-1/2 transform -translate-x-1/2 bottom-[-4px] w-16 h-[2px] bg-black"></span>
         </h1>
         <HorizontalScrollableGridView perfumeList={bestSellerPerfumes} />
+        <div className="mt-5">
+          <Button onClick={() => navigate(ROUTES.BEST_SELLERS)}>
+            SEE MORE
+          </Button>
+        </div>
       </div>
 
       {/* TODO: Selected For You Sections */}
@@ -75,13 +83,18 @@ function HomePage() {
       {/* TODO: Try Starter Kit Sections */}
       <div>Starter Kit</div>
 
-      {/* Must Have Sections */}
+      {/* New Collections Sections */}
       <div className="my-3 px-8 border-t border-gray-200">
         <h1 className="relative font-title text-3xl mt-8 mb-5">
-          Must Haves
+          New Collections
           <span className="absolute left-1/2 transform -translate-x-1/2 bottom-[-4px] w-16 h-[2px] bg-black"></span>
         </h1>
-        <HorizontalScrollableGridView perfumeList={mustHavesPerfumes} />
+        <HorizontalScrollableGridView perfumeList={newCollectionPerfumes} />
+        <div className="mt-5">
+          <Button onClick={() => navigate(ROUTES.NEW_COLLECTIONS)}>
+            SEE MORE
+          </Button>
+        </div>
       </div>
 
       {/* Email Subscribe Sections */}

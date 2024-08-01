@@ -17,13 +17,16 @@ export const HOME_SUBBANNER2_IMAGE = "subbanner-2.avif";
 export const HOME_EMAIL_SUBSCRIPTION_IMAGE = "email_subscription.avif";
 
 export const HOME_BEST_SELLER_PERFUMES_IDS = [1, 2, 3, 4]; // Min 4
-export const HOME_MUST_HAVES_PERFUMES_IDS = [1, 2, 3, 4]; // Min 4
 
 // MENU SIDEBAR
 export const TOP_MENU_SIDEBAR = [
   {
     name: "Best Sellers",
-    // link: ROUTES.BESTSELLERS,    // TODO: Link
+    link: ROUTES.BEST_SELLERS,
+  },
+  {
+    name: "New Collections",
+    link: ROUTES.NEW_COLLECTIONS,
   },
   {
     name: "Feminine Perfume",
