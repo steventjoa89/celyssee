@@ -7,6 +7,7 @@ import {
 import SubBanner from "../components/Banner/SubBanner";
 import HorizontalScrollableGridView from "../components/GridView/HorizontalScrollableGridView";
 import { PERFUME_CATALOG } from "../data/data";
+import EmailSubscription from "../components/EmailSubscription/EmailSubscription";
 
 function HomePage() {
   const subBannerRef = useRef(null);
@@ -63,7 +64,7 @@ function HomePage() {
       <div>Starter Kit</div>
 
       {/* Must Have Sections */}
-      <div className="my-3 px-8 border-y border-gray-200">
+      <div className="my-3 px-8 border-t border-gray-200">
         <h1 className="relative font-title text-3xl mt-8 mb-5">
           Must Haves
           <span className="absolute left-1/2 transform -translate-x-1/2 bottom-[-4px] w-16 h-[2px] bg-black"></span>
@@ -71,8 +72,8 @@ function HomePage() {
         <HorizontalScrollableGridView perfumeList={mustHavesPerfumes} />
       </div>
 
-      {/* TODO: Subscribe Sections */}
-      <div>Subscribe</div>
+      {/* Email Subscribe Sections */}
+      <EmailSubscription />
     </div>
   );
 }

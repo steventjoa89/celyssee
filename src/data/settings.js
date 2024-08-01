@@ -14,6 +14,7 @@ export const COMPANY_INFO = {
 export const HOME_BANNER_IMAGE = "banner.webp";
 export const HOME_SUBBANNER1_IMAGE = "subbanner-1.avif";
 export const HOME_SUBBANNER2_IMAGE = "subbanner-2.avif";
+export const HOME_EMAIL_SUBSCRIPTION_IMAGE = "email_subscription.avif";
 
 export const HOME_MUST_HAVES_PERFUMES_IDS = [1, 2, 3, 4]; // Min 4
 
