@@ -10,6 +10,7 @@ import Footer from "./components/Footer/Footer";
 import FaqPage from "./pages/FaqPage";
 import ReturnPolicyPage from "./pages/ReturnPolicyPage";
 import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
+import TermsAndConditionsPage from "./pages/TermsAndConditionsPage";
 
 function App() {
   const location = useLocation();
@@ -28,6 +29,10 @@ function App() {
         <Route path={ROUTES.NEW_COLLECTIONS} element={<NewCollectionsPage />} />
         <Route path={ROUTES.FAQS} element={<FaqPage />} />
         <Route path={ROUTES.RETURN_POLICY} element={<ReturnPolicyPage />} />
+        <Route
+          path={ROUTES.TERM_AND_CONDITIONS}
+          element={<TermsAndConditionsPage />}
+        />
         <Route path={ROUTES.PRIVACY_POLICY} element={<PrivacyPolicyPage />} />
       </Routes>
       <Footer />

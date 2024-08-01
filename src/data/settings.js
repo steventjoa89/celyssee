@@ -102,7 +102,7 @@ export const FOOTER_MENU = [
     submenus: [
       {
         name: "Term & Conditions",
-        // link: ROUTES.TERMSANDCONDITIONS// TODO: LINK
+        link: ROUTES.TERM_AND_CONDITIONS,
       },
       {
         name: "Privacy Policy",

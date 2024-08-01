@@ -8,7 +8,7 @@ function PrivacyPolicyPage() {
       <div className="text-xs md:text-sm my-5 text-left space-y-5">
         <p className="font-bold">Privacy Policy</p>
         <p>
-          <span className="font-bold">Effective Date:</span> 31 August 2024
+          <span className="font-bold">Effective Date</span>: 31 August 2024
         </p>
 
         <div className="space-y-2">
