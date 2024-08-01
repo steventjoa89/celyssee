@@ -6,6 +6,7 @@ import { ROUTES } from "../routes";
 
 export const COMPANY_INFO = {
   COMPANY_NAME: "CELYSSEE",
+  COMPANY_PHONE_NUMBER: "+62 819 058 75858",
   COMPANY_WHATSAPP_NUMBER: "+62 819 058 75858",
   COMPANY_EMAIL_ADDRESS: "steventjoa89@gmail.com",
 };
