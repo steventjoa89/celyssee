@@ -6,11 +6,12 @@ import Navbar from "./components/Navbar/Navbar";
 import HomePage from "./pages/HomePage";
 import BestSellersPage from "./pages/BestSellersPage";
 import NewCollectionsPage from "./pages/NewCollectionsPage";
-import Footer from "./components/Footer/Footer";
+import ProductDetailsPage from "./pages/ProductDetailsPage";
 import FaqPage from "./pages/FaqPage";
 import ReturnPolicyPage from "./pages/ReturnPolicyPage";
 import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
 import TermsAndConditionsPage from "./pages/TermsAndConditionsPage";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const location = useLocation();
@@ -27,6 +28,10 @@ function App() {
         <Route exatch path={ROUTES.HOME} element={<HomePage />} />
         <Route path={ROUTES.BEST_SELLERS} element={<BestSellersPage />} />
         <Route path={ROUTES.NEW_COLLECTIONS} element={<NewCollectionsPage />} />
+        <Route
+          path={ROUTES.PRODUCT_DETAILS(":id")}
+          element={<ProductDetailsPage />}
+        />
         <Route path={ROUTES.FAQS} element={<FaqPage />} />
         <Route path={ROUTES.RETURN_POLICY} element={<ReturnPolicyPage />} />
         <Route
