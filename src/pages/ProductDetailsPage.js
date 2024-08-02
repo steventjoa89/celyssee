@@ -3,6 +3,7 @@ import ProductInfo from "../components/ProductDetails/ProductInfo";
 import Card from "../components/Card/Card";
 import { PERFUME_CATALOG } from "../data/data";
 import { useParams } from "react-router-dom";
+import ProductImages from "../components/ProductDetails/ProductImages";
 
 function ProductDetailsPage() {
   const { id } = useParams();
@@ -67,10 +68,7 @@ function ProductDetailsPage() {
       <div className="container mx-auto p-4 flex flex-col md:flex-row">
         {/* Left Panel: Product Images */}
         <div className="w-full md:w-1/2 lg:pr-4 mb-4 md:mb-0">
-          {/* This is for images */}
-          <div className="bg-gray-200 h-64 flex items-center justify-center">
-            Image Carousel
-          </div>
+          <ProductImages item={selectedPerfume} />
         </div>
 
         {/* Right Panel: Product Info & Description */}
