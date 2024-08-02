@@ -1,4 +1,4 @@
-export function calculateDiscountedPrice(originalPrice, discount) {
+export function calculateDiscountedPrice(originalPrice, discount = 0) {
   if (typeof originalPrice !== "number" || typeof discount !== "number") {
     throw new TypeError("Both arguments must be numbers.");
   }
