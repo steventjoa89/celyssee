@@ -1,9 +1,6 @@
 import React, { useRef } from "react";
 import Banner from "../components/Banner/Banner";
-import {
-  HOME_BANNER_IMAGE,
-  HOME_BEST_SELLER_PERFUMES_IDS,
-} from "../data/settings";
+import { HOME_BANNER_IMAGE, BEST_SELLER_PERFUMES_IDS } from "../data/settings";
 import SubBanner from "../components/Banner/SubBanner";
 import HorizontalScrollableGridView from "../components/GridView/HorizontalScrollableGridView";
 import { PERFUME_CATALOG } from "../data/data";
@@ -18,8 +15,10 @@ function HomePage() {
 
   // Best Seller Perfumes Items
   const bestSellerPerfumes = PERFUME_CATALOG.filter((perfumeObj) =>
-    HOME_BEST_SELLER_PERFUMES_IDS.includes(perfumeObj.id)
-  ).sort((a, b) => a.id - b.id);
+    BEST_SELLER_PERFUMES_IDS.includes(perfumeObj.id)
+  )
+    .sort((a, b) => a.id - b.id)
+    .slice(0, 4);
 
   // New Collections Perfumes Items
   const newCollectionPerfumes = PERFUME_CATALOG.sort(

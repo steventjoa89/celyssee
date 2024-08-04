@@ -12,3 +12,9 @@ export function calculateDiscountedPrice(originalPrice, discount = 0) {
   const discountAmount = (originalPrice * discount) / 100;
   return originalPrice - discountAmount;
 }
+
+export function getPaginatedItems(array, currentPage, itemsPerPage) {
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  return array.slice(startIndex, endIndex);
+}
