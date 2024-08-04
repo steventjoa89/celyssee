@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { SortOptions } from "../../enums/sortOptions";
 
@@ -10,6 +10,7 @@ function NavbarFooterSortMenu({
 }) {
   const [isOpen, setIsOpen] = useState(false);
 
+  const dropdownRef = useRef(null);
   const toggleDropdown = () => setIsOpen(!isOpen);
 
   const sortOptionsArray = !isNewCollections
@@ -28,6 +29,23 @@ function NavbarFooterSortMenu({
     return value === SortOptions.FEATURED ? defaultSortOptionName : value;
   };
 
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        // Close the dropdown if the click is outside
+        setIsOpen(false);
+      }
+    }
+
+    // Add event listener
+    document.addEventListener("mousedown", handleClickOutside);
+
+    // Cleanup event listener on component unmount
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [setIsOpen]);
+
   return (
     <div className="sticky top-20 z-20 border-b border-gray-200 bg-white">
       <div className="max-w-full mx-auto px-4 sm:px-8 md:px-12">
@@ -44,7 +62,10 @@ function NavbarFooterSortMenu({
               <KeyboardArrowDownIcon className="ml-2" />
             </button>
             {isOpen && (
-              <div className="absolute top-full right-0 mt-2 text-center md:text-right w-full md:w-auto bg-white border border-gray-200 rounded shadow-lg z-30">
+              <div
+                ref={dropdownRef}
+                className="absolute top-full right-0 mt-2 text-center md:text-right w-full md:w-auto bg-white border border-gray-200 rounded shadow-lg z-30"
+              >
                 <ul className="p-2">
                   {sortOptionsArray.map(([key, value]) => (
                     <li
