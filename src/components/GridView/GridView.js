@@ -6,7 +6,6 @@ import { TailSpin } from "react-loader-spinner";
 
 function GridView({ data }) {
   const gridRef = useRef(null);
-  const scrollTopOffset = 140;
 
   const [page, setPage] = useState(1);
   const [productList, setProductList] = useState([]);
@@ -16,12 +15,12 @@ function GridView({ data }) {
   const countPages = Math.ceil(data.length / totalItemsPerPage);
 
   const handleChangePage = (_, value) => {
-    setPage(value);
     if (gridRef.current) {
       window.scrollTo({
-        top: gridRef.current.offsetTop - scrollTopOffset,
+        top: 0,
         behavior: "smooth",
       });
+      setPage(value);
     }
   };
 

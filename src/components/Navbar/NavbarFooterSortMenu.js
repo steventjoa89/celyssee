@@ -31,7 +31,7 @@ function NavbarFooterSortMenu({
               onClick={toggleDropdown}
               className="text-center flex items-center"
             >
-              Sort By:
+              Sort:
               <span className="hidden md:block ml-2">
                 <i>{renameDefaultSortOptionName(sortedBy)}</i>
               </span>
