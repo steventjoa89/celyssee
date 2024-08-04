@@ -50,7 +50,7 @@ function ProductInfo({ item, selectedSize, setSelectedSize }) {
             item.sizes[selectedSize].discount
           ).toLocaleString()}
         </span>
-        {item.sizes[selectedSize].discount && (
+        {(item.sizes[selectedSize].discount ?? 0) > 0 && (
           <span className="text-gray-400 line-through">
             Rp. {item.sizes[selectedSize].price.toLocaleString()}
           </span>
