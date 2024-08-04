@@ -6,12 +6,18 @@ function NavbarFooterSortMenu({
   sortedBy,
   setSortedBy,
   defaultSortOptionName = "",
+  isNewCollections = false,
 }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = () => setIsOpen(!isOpen);
 
-  const sortOptionsArray = Object.entries(SortOptions);
+  const sortOptionsArray = !isNewCollections
+    ? Object.entries(SortOptions)
+    : Object.entries(SortOptions).filter(
+        ([key]) =>
+          ![SortOptions.DATE_AZ, SortOptions.DATE_ZA].includes(SortOptions[key])
+      );
 
   const handleItemClick = (key) => {
     toggleDropdown();

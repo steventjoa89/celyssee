@@ -14,14 +14,14 @@ function HomePage() {
   const navigate = useNavigate();
 
   // Best Seller Perfumes Items
-  const bestSellerPerfumes = PERFUME_CATALOG.filter((perfumeObj) =>
+  const bestSellers = PERFUME_CATALOG.filter((perfumeObj) =>
     BEST_SELLER_PERFUMES_IDS.includes(perfumeObj.id)
   )
     .sort((a, b) => a.id - b.id)
     .slice(0, 4);
 
   // New Collections Perfumes Items
-  const newCollectionPerfumes = PERFUME_CATALOG.sort(
+  const newCollections = PERFUME_CATALOG.sort(
     (a, b) => new Date(b.releaseAt) - new Date(a.releaseAt)
   ).slice(0, 4);
 
@@ -68,7 +68,7 @@ function HomePage() {
           Our Best Sellers
           <span className="absolute left-1/2 transform -translate-x-1/2 bottom-[-4px] w-16 h-[2px] bg-black"></span>
         </h1>
-        <HorizontalScrollableGridView perfumeList={bestSellerPerfumes} />
+        <HorizontalScrollableGridView perfumeList={bestSellers} />
         <div className="mt-5">
           <Button onClick={() => navigate(ROUTES.BEST_SELLERS)}>
             SEE MORE
@@ -88,7 +88,7 @@ function HomePage() {
           New Collections
           <span className="absolute left-1/2 transform -translate-x-1/2 bottom-[-4px] w-16 h-[2px] bg-black"></span>
         </h1>
-        <HorizontalScrollableGridView perfumeList={newCollectionPerfumes} />
+        <HorizontalScrollableGridView perfumeList={newCollections} />
         <div className="mt-5">
           <Button onClick={() => navigate(ROUTES.NEW_COLLECTIONS)}>
             SEE MORE

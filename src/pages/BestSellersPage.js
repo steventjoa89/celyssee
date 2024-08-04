@@ -6,13 +6,6 @@ import { BEST_SELLER_PERFUMES_IDS } from "../data/settings";
 import { SortOptions } from "../enums/sortOptions";
 
 function BestSellersPage() {
-  /*
-  0 - Featured - Best Seller
-  1 - Alphabetically Asc
-  2 - Alphabetically Desc
-  3 - Price Asc
-  4 - Price Desc
-  */
   const [sortedBy, setSortedBy] = useState(SortOptions.FEATURED);
   const [sortedData, setSortedData] = useState([]);
 
