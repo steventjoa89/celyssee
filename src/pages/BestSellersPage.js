@@ -95,13 +95,8 @@ function BestSellersPage() {
         defaultSortOptionName="Best Seller"
       />
 
-      {/* Title */}
-      <h1 className="relative font-title text-2xl mt-8 mb-5">
-        Our Timeless Best Sellers
-        <span className="absolute left-1/2 transform -translate-x-1/2 bottom-[-4px] w-16 h-[2px] bg-black"></span>
-      </h1>
       {/* Grid View: Content Area */}
-      <GridView data={sortedData} />
+      <GridView title="Our Timeless Best Sellers" data={sortedData} />
     </div>
   );
 }

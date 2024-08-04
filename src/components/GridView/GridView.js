@@ -4,7 +4,7 @@ import { getPaginatedItems } from "../../utils/mathUtil";
 import { Pagination } from "@mui/material";
 import { TailSpin } from "react-loader-spinner";
 
-function GridView({ data }) {
+function GridView({ title = "", data }) {
   const gridRef = useRef(null);
 
   const [page, setPage] = useState(1);
@@ -39,6 +39,14 @@ function GridView({ data }) {
         <TailSpin color="black" width={50} />
       ) : (
         <>
+          {/* Title */}
+          {title && (
+            <h1 className="relative font-title text-2xl mt-8 mb-5">
+              {title}
+              <span className="absolute left-1/2 transform -translate-x-1/2 bottom-[-4px] w-16 h-[2px] bg-black"></span>
+            </h1>
+          )}
+
           {/* GridView */}
           <div
             ref={gridRef}

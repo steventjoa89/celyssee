@@ -44,10 +44,6 @@ export const TOP_MENU_SIDEBAR = [
     name: "Our Stories",
     // link: ROUTES.OURSTORIES,// TODO: Link
   },
-  {
-    name: "Blogs & Magazines",
-    // link: ROUTES.BLOGS,// TODO: Link
-  },
 ];
 
 export const SOCIAL_MEDIA_ICONS = [
