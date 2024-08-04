@@ -66,6 +66,7 @@ function ProductInfo({ item, selectedSize, setSelectedSize }) {
           <Button
             key={index}
             isSelected={index === selectedSize}
+            isUnavailable={item.isAvailable === false}
             onClick={() => setSelectedSize(index)}
           >
             {item.volume} ML
