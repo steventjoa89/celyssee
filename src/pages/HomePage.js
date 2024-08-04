@@ -14,11 +14,10 @@ function HomePage() {
   const navigate = useNavigate();
 
   // Best Seller Perfumes Items
+  const bestSellerIds = BEST_SELLER_PERFUMES_IDS.slice(0, 4);
   const bestSellers = PERFUME_CATALOG.filter((perfumeObj) =>
-    BEST_SELLER_PERFUMES_IDS.includes(perfumeObj.id)
-  )
-    .sort((a, b) => a.id - b.id)
-    .slice(0, 4);
+    bestSellerIds.includes(perfumeObj.id)
+  ).sort((a, b) => bestSellerIds.indexOf(a.id) - bestSellerIds.indexOf(b.id));
 
   // New Collections Perfumes Items
   const newCollections = PERFUME_CATALOG.sort(

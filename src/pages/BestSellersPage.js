@@ -4,6 +4,7 @@ import GridView from "../components/GridView/GridView";
 import { PERFUME_CATALOG } from "../data/data";
 import { BEST_SELLER_PERFUMES_IDS } from "../data/settings";
 import { SortOptions } from "../enums/sortOptions";
+import { sortPerfumes } from "../utils/sortingUtil";
 
 function BestSellersPage() {
   const [sortedBy, setSortedBy] = useState(SortOptions.FEATURED);
@@ -17,63 +18,7 @@ function BestSellersPage() {
 
     // Sort data based on the selected sorting option
     let sorted = [...filteredData]; // Create a copy to avoid mutating the original data
-
-    switch (sortedBy) {
-      case SortOptions.ALPHABETICALLY_AZ:
-        sorted.sort((a, b) => a.name.localeCompare(b.name));
-        break;
-      case SortOptions.ALPHABETICALLY_ZA:
-        sorted.sort((a, b) => b.name.localeCompare(a.name));
-        break;
-      case SortOptions.PRICE_AZ:
-        sorted.sort((a, b) => {
-          // Assuming we want to sort by the lowest price of the available sizes
-          const priceA = Math.min(
-            ...a.sizes
-              .filter((size) => size.isAvailable !== false)
-              .map((size) => size.price)
-          );
-          const priceB = Math.min(
-            ...b.sizes
-              .filter((size) => size.isAvailable !== false)
-              .map((size) => size.price)
-          );
-          return priceA - priceB;
-        });
-        break;
-      case SortOptions.PRICE_ZA:
-        sorted.sort((a, b) => {
-          // Assuming we want to sort by the highest price of the available sizes
-          const priceA = Math.max(
-            ...a.sizes
-              .filter((size) => size.isAvailable !== false)
-              .map((size) => size.price)
-          );
-          const priceB = Math.max(
-            ...b.sizes
-              .filter((size) => size.isAvailable !== false)
-              .map((size) => size.price)
-          );
-          return priceB - priceA;
-        });
-        break;
-      case SortOptions.DATE_AZ:
-        sorted.sort((a, b) => new Date(a.releaseAt) - new Date(b.releaseAt));
-        break;
-      case SortOptions.DATE_ZA:
-        sorted.sort((a, b) => new Date(b.releaseAt) - new Date(a.releaseAt));
-        break;
-      default: // Featured
-        const idOrderMap = new Map(
-          BEST_SELLER_PERFUMES_IDS.map((id, index) => [id, index])
-        );
-        sorted.sort((a, b) => {
-          const indexA = idOrderMap.get(a.id) ?? Infinity;
-          const indexB = idOrderMap.get(b.id) ?? Infinity;
-          return indexA - indexB;
-        });
-        break;
-    }
+    sorted = sortPerfumes(sortedBy, sorted, BEST_SELLER_PERFUMES_IDS);
 
     // Set the sorted data
     setSortedData(sorted);

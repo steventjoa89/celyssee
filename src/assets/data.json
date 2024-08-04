@@ -358,7 +358,7 @@
   },
   {
     "id": 11,
-    "name": "English Pear & Freesia",
+    "name": "English Pear & Freesia 11",
     "images": [
       "english-pear-freesia-1.avif",
       "english-pear-freesia-2.avif",
@@ -370,12 +370,12 @@
     "sizes": [
       {
         "volume": 30,
-        "price": 100000,
+        "price": 200000,
         "discount": 0
       },
       {
         "volume": 50,
-        "price": 1800000,
+        "price": 2800000,
         "discount": 30
       }
     ],
@@ -389,11 +389,11 @@
         "link": "https://www.google.co.id"
       }
     ],
-    "releaseAt": "2024-06-07T00:00:00Z"
+    "releaseAt": "2024-07-07T00:00:00Z"
   },
   {
     "id": 12,
-    "name": "English Pear & Freesia",
+    "name": "English Pear & Freesia 12",
     "images": [
       "english-pear-freesia-1.avif",
       "english-pear-freesia-2.avif",
@@ -405,12 +405,12 @@
     "sizes": [
       {
         "volume": 30,
-        "price": 100000,
+        "price": 300000,
         "discount": 0
       },
       {
         "volume": 50,
-        "price": 1800000,
+        "price": 3800000,
         "discount": 30
       }
     ],
@@ -424,11 +424,11 @@
         "link": "https://www.google.co.id"
       }
     ],
-    "releaseAt": "2024-06-07T00:00:00Z"
+    "releaseAt": "2024-07-07T00:00:00Z"
   },
   {
-    "id": 11,
-    "name": "English Pear & Freesia 14",
+    "id": 13,
+    "name": "English Pear & Freesia 13",
     "images": [
       "english-pear-freesia-1.avif",
       "english-pear-freesia-2.avif",
@@ -440,13 +440,13 @@
     "sizes": [
       {
         "volume": 30,
-        "price": 100000,
+        "price": 400000,
         "discount": 0
       },
       {
         "volume": 50,
-        "price": 1800000,
-        "discount": 30
+        "price": 4800000,
+        "discount": 0
       }
     ],
     "onlineMarketplaces": [

@@ -3,6 +3,7 @@ import NavbarFooterSortMenu from "../components/Navbar/NavbarFooterSortMenu";
 import GridView from "../components/GridView/GridView";
 import { SortOptions } from "../enums/sortOptions";
 import { PERFUME_CATALOG } from "../data/data";
+import { sortPerfumes } from "../utils/sortingUtil";
 
 function NewCollectionsPage() {
   const [sortedBy, setSortedBy] = useState(SortOptions.FEATURED);
@@ -16,49 +17,7 @@ function NewCollectionsPage() {
 
     // Sort data based on the selected sorting option
     let sorted = [...newCollections];
-
-    switch (sortedBy) {
-      case SortOptions.ALPHABETICALLY_AZ:
-        sorted.sort((a, b) => a.name.localeCompare(b.name));
-        break;
-      case SortOptions.ALPHABETICALLY_ZA:
-        sorted.sort((a, b) => b.name.localeCompare(a.name));
-        break;
-      case SortOptions.PRICE_AZ:
-        sorted.sort((a, b) => {
-          // Assuming we want to sort by the lowest price of the available sizes
-          const priceA = Math.min(
-            ...a.sizes
-              .filter((size) => size.isAvailable !== false)
-              .map((size) => size.price)
-          );
-          const priceB = Math.min(
-            ...b.sizes
-              .filter((size) => size.isAvailable !== false)
-              .map((size) => size.price)
-          );
-          return priceA - priceB;
-        });
-        break;
-      case SortOptions.PRICE_ZA:
-        sorted.sort((a, b) => {
-          // Assuming we want to sort by the highest price of the available sizes
-          const priceA = Math.max(
-            ...a.sizes
-              .filter((size) => size.isAvailable !== false)
-              .map((size) => size.price)
-          );
-          const priceB = Math.max(
-            ...b.sizes
-              .filter((size) => size.isAvailable !== false)
-              .map((size) => size.price)
-          );
-          return priceB - priceA;
-        });
-        break;
-      default: // Featured
-        break;
-    }
+    sorted = sortPerfumes(sortedBy, sorted);
 
     // Set the sorted data
     setSortedData(sorted);

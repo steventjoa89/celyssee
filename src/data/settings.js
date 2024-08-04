@@ -16,7 +16,7 @@ export const HOME_SUBBANNER1_IMAGE = "subbanner-1.avif";
 export const HOME_SUBBANNER2_IMAGE = "subbanner-2.avif";
 export const HOME_EMAIL_SUBSCRIPTION_IMAGE = "email_subscription.avif";
 
-export const BEST_SELLER_PERFUMES_IDS = [1, 2, 3, 4, 5]; // Home page display from FRONT Array (MAX: 4 items in Home Page)
+export const BEST_SELLER_PERFUMES_IDS = [5, 4, 3, 2, 1]; // Home page display from FRONT Array (MAX: 4 items in Home Page)
 
 // MENU SIDEBAR
 export const TOP_MENU_SIDEBAR = [
