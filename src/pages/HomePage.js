@@ -1,6 +1,11 @@
 import React, { useRef } from "react";
 import Banner from "../components/Banner/Banner";
-import { HOME_BANNER_IMAGE, BEST_SELLER_PERFUMES_IDS } from "../data/settings";
+import {
+  HOME_BANNER_IMAGE,
+  BEST_SELLER_PERFUMES_IDS,
+  HOME_SUBBANNER1_IMAGE,
+  HOME_SUBBANNER2_IMAGE,
+} from "../data/settings";
 import SubBanner from "../components/Banner/SubBanner";
 import HorizontalScrollableGridView from "../components/GridView/HorizontalScrollableGridView";
 import { PERFUME_CATALOG } from "../data/data";
@@ -34,6 +39,31 @@ function HomePage() {
     }
   };
 
+  const subbannerInfoArr = [
+    {
+      title: "Elegant Feminine Fragrances",
+      description: [
+        "Experience the essence of sophistication with Celyssee's exclusive range of feminine perfumes.",
+        "Our carefully crafted scents are designed to embody grace and allure, offering you a signature fragrance that enhances your natural beauty.",
+      ],
+      image: HOME_SUBBANNER1_IMAGE,
+      imagePosition: "left",
+      buttonText: "SEE MORE",
+      buttonClick: () => console.log("first"), // TODO: ONCLICK
+    },
+    {
+      title: "Refined Masculine Scents",
+      description: [
+        "Discover the essence of sophistication with Celyssee's distinguished range of masculine perfumes.",
+        "Our meticulously crafted fragrances are designed to exude strength and elegance, providing a signature scent that complements the modern man’s refined style.",
+      ],
+      image: HOME_SUBBANNER2_IMAGE,
+      imagePosition: "right",
+      buttonText: "SEE MORE",
+      buttonClick: () => console.log("second"), // TODO: ONCLICK
+    },
+  ];
+
   return (
     <div>
       {/* Home Banner */}
@@ -58,8 +88,18 @@ function HomePage() {
       </Banner>
 
       {/* SubBanner */}
-      <div ref={subBannerRef}>
-        <SubBanner />
+      <div ref={subBannerRef} className="my-12">
+        {subbannerInfoArr.map((item, index) => (
+          <SubBanner
+            key={index}
+            imagePosition={item.imagePosition}
+            image={item.image}
+            title={item.title}
+            description={item.description}
+            buttonText={item.buttonText}
+            onClick={item.buttonClick}
+          />
+        ))}
       </div>
 
       {/* Best Sellers Sections */}
@@ -75,9 +115,6 @@ function HomePage() {
           </Button>
         </div>
       </div>
-
-      {/* TODO: Selected For You Sections */}
-      {/* <div>Selected For You</div> */}
 
       {/* Try Starter Kit Sections */}
       <StarterKit />
