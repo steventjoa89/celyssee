@@ -8,6 +8,7 @@ import EmailSubscription from "../components/EmailSubscription/EmailSubscription
 import Button from "../components/Button/Button";
 import { useNavigate } from "react-router-dom";
 import { ROUTES } from "../routes";
+import StarterKit from "../components/StarterKit/StarterKit";
 
 function HomePage() {
   const subBannerRef = useRef(null);
@@ -76,10 +77,10 @@ function HomePage() {
       </div>
 
       {/* TODO: Selected For You Sections */}
-      <div>Selected For You</div>
+      {/* <div>Selected For You</div> */}
 
-      {/* TODO: Try Starter Kit Sections */}
-      <div>Starter Kit</div>
+      {/* Try Starter Kit Sections */}
+      <StarterKit />
 
       {/* New Collections Sections */}
       <div className="my-3 px-8 border-t border-gray-200">

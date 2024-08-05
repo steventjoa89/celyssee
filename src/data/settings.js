@@ -15,6 +15,7 @@ export const HOME_BANNER_IMAGE = "banner.webp";
 export const HOME_SUBBANNER1_IMAGE = "subbanner-1.avif";
 export const HOME_SUBBANNER2_IMAGE = "subbanner-2.avif";
 export const HOME_EMAIL_SUBSCRIPTION_IMAGE = "email_subscription.avif";
+export const HOME_STARTER_KIT_IMAGE = "starter_kit.avif";
 
 export const BEST_SELLER_PERFUMES_IDS = [5, 4, 3, 2, 1]; // Home page display from FRONT Array (MAX: 4 items in Home Page)
 
