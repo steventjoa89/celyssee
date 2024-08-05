@@ -24,10 +24,16 @@ function ImageDescriptionPanel({
   title = "",
   description = [],
   buttonText = "SEE MORE",
+  isTextCenter,
   onClick,
 }) {
+  const textStyle = isTextCenter ? "center" : "start";
+  const textAlignmentStyle = isTextCenter ? "center" : "left";
+
   return (
-    <div className="flex-1 flex flex-col justify-start items-start text-left md:px-12 py-6 xs:py-8 md:py-10 lg:py-12 xl:py-14">
+    <div
+      className={`flex-1 flex flex-col justify-${textStyle} items-${textStyle} text-${textAlignmentStyle} md:px-12 py-6 xs:py-8 md:py-10 lg:py-12 xl:py-14`}
+    >
       {title && (
         <div className="hidden md:block">
           <h2 className="font-title text-2xl lg:text-3xl font-bold mb-4">
@@ -40,7 +46,11 @@ function ImageDescriptionPanel({
           {item}
         </p>
       ))}
-      <div className="w-full flex justify-center md:justify-start">
+      <div
+        className={`w-full flex justify-center ${
+          !isTextCenter && "md:justify-start"
+        }`}
+      >
         <Button onClick={onClick}>{buttonText}</Button>
       </div>
     </div>
@@ -53,6 +63,7 @@ function SubBanner({
   title = "",
   description = [],
   buttonText = "",
+  isTextCenter = false,
   onClick,
 }) {
   const isImageLeft = imagePosition === "left";
@@ -69,6 +80,7 @@ function SubBanner({
           title={title}
           description={description}
           buttonText={buttonText}
+          isTextCenter={isTextCenter}
           onClick={onClick}
         />
       </div>

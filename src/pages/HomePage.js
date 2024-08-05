@@ -5,6 +5,7 @@ import {
   BEST_SELLER_PERFUMES_IDS,
   HOME_SUBBANNER1_IMAGE,
   HOME_SUBBANNER2_IMAGE,
+  HOME_STARTER_KIT_IMAGE,
 } from "../data/settings";
 import SubBanner from "../components/Banner/SubBanner";
 import HorizontalScrollableGridView from "../components/GridView/HorizontalScrollableGridView";
@@ -13,7 +14,6 @@ import EmailSubscription from "../components/EmailSubscription/EmailSubscription
 import Button from "../components/Button/Button";
 import { useNavigate } from "react-router-dom";
 import { ROUTES } from "../routes";
-import StarterKit from "../components/StarterKit/StarterKit";
 
 function HomePage() {
   const subBannerRef = useRef(null);
@@ -49,7 +49,7 @@ function HomePage() {
       image: HOME_SUBBANNER1_IMAGE,
       imagePosition: "left",
       buttonText: "SEE MORE",
-      buttonClick: () => console.log("first"), // TODO: ONCLICK
+      onClick: () => console.log("first"), // TODO: ONCLICK
     },
     {
       title: "Refined Masculine Scents",
@@ -60,9 +60,20 @@ function HomePage() {
       image: HOME_SUBBANNER2_IMAGE,
       imagePosition: "right",
       buttonText: "SEE MORE",
-      buttonClick: () => console.log("second"), // TODO: ONCLICK
+      onClick: () => console.log("second"), // TODO: ONCLICK
     },
   ];
+
+  const starterKitInfo = {
+    title: "Starter Kit",
+    description: [
+      "Discover your perfect fragrance with our Starter Kit. Featuring a curated selection of miniature perfume bottles, this kit allows you to explore and test various scents before committing to a full-sized bottle.",
+    ],
+    image: HOME_STARTER_KIT_IMAGE,
+    imagePosition: "left",
+    buttonText: "FIND YOUR FRAGANCE",
+    onClick: () => console.log("third"), // TODO: ONCLICK
+  };
 
   return (
     <div>
@@ -90,15 +101,7 @@ function HomePage() {
       {/* SubBanner */}
       <div ref={subBannerRef} className="my-12">
         {subbannerInfoArr.map((item, index) => (
-          <SubBanner
-            key={index}
-            imagePosition={item.imagePosition}
-            image={item.image}
-            title={item.title}
-            description={item.description}
-            buttonText={item.buttonText}
-            onClick={item.buttonClick}
-          />
+          <SubBanner key={index} {...item} />
         ))}
       </div>
 
@@ -117,7 +120,9 @@ function HomePage() {
       </div>
 
       {/* Try Starter Kit Sections */}
-      <StarterKit />
+      <div className="my-8">
+        <SubBanner {...starterKitInfo} isTextCenter={true} />
+      </div>
 
       {/* New Collections Sections */}
       <div className="my-3 px-8 border-t border-gray-200">
