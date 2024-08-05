@@ -1,5 +1,4 @@
 import React from "react";
-import parse from "html-react-parser";
 import { BLOGS } from "../data/blog";
 import { useNavigate } from "react-router-dom";
 import { ROUTES } from "../routes";
@@ -24,12 +23,12 @@ function BlogCard({ id, image, title, description }) {
         <p className="mt-2 text-gray-500 text-base line-clamp-3">
           {description}
         </p>
-        <p
+        <div
           className="mt-3 text-sm underline underline-offset-4 line-clamp-1 cursor-pointer"
           onClick={handleOnClick}
         >
           See More
-        </p>
+        </div>
       </div>
     </div>
   );
@@ -44,7 +43,7 @@ function BlogsPage() {
           id={item.id}
           image={item.image}
           title={item.title}
-          description={parse(item.content[item.excerpt])}
+          description={item.sneakPeek}
         />
       ))}
     </div>

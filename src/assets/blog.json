@@ -3,46 +3,288 @@
     "id": 1,
     "title": "The Art of Perfume: A Journey Through Fragrance",
     "image": "art-of-perfume.avif",
-    "content": [
-      "Welcome to the world of Celyssee, where we celebrate the timeless art of perfumery. Perfume is more than just a fragrance; it's a masterpiece of creativity and craftsmanship. In this blog, we invite you to embark on a journey through the art of perfume and discover what makes fragrance a true form of art.",
-      "<h2 class='text-base md:text-lg font-bold'>The Origins of Perfumery: An Ancient Tradition</h2>",
-      "Perfume has been an integral part of human culture for millennia. Ancient civilizations, from the Egyptians to the Greeks, revered fragrances as sacred offerings to the gods. They crafted perfumes using natural ingredients like herbs, spices, and resins, setting the foundation for what would become a rich tradition of scent-making. As we explore the history of perfumery, we gain insight into how these ancient practices continue to influence modern fragrance creation.",
-      "<h2 class='text-base md:text-lg font-bold'>The Anatomy of a Fragrance: Understanding Perfume Composition</h2>",
-      "Perfume is an intricate blend of carefully chosen ingredients, each contributing to the overall olfactory experience. A fragrance is typically composed of three main layers: the top, middle, and base notes.<ul class='my-3 ml-4 list-disc space-y-2'><li>Top Notes: These are the initial, light scents that greet the senses when the perfume is first applied. They are often fresh and citrusy, providing an immediate impression of the fragrance.</li><li>Middle Notes: Also known as heart notes, these emerge after the top notes dissipate and form the core of the fragrance. They are usually more complex and can include floral, fruity, or spicy elements.</li><li>Base Notes: These are the rich, deep scents that develop after the fragrance has settled. Base notes provide lasting power and are often warm and woody, adding depth and complexity to the perfume.</li></ul>Understanding these layers helps appreciate the artistry involved in creating a balanced and captivating fragrance.",
-      "<h2 class='text-base md:text-lg font-bold'>The Craftsmanship of Perfumery: From Concept to Creation</h2>",
-      "Creating a perfume is both an art and a science. It begins with the perfumer’s vision, a creative concept that guides the selection and blending of ingredients. Perfumers, also known as \"noses,\" use their expertise to combine essential oils, absolutes, and synthetics in precise proportions. The goal is to craft a fragrance that evokes emotion, tells a story, and leaves a lasting impression.<br />The process involves:<ul class='my-3 ml-4 list-disc space-y-2'><li>Sourcing Ingredients: High-quality raw materials are essential for crafting a premium fragrance. Perfumers carefully select ingredients based on their scent profiles and compatibility.</li><li>Blending: This is where the magic happens. Perfumers experiment with different combinations, adjusting ratios to achieve the desired balance and complexity.</li><li>Aging: Once blended, perfumes often undergo a maturation period, allowing the components to meld and develop a more refined scent.</li></ul>",
-      "<h2 class='text-base md:text-lg font-bold'>The Personal Touch: Finding Your Signature Scent</h2>",
-      "Perfume is a deeply personal experience, and finding your signature scent can be a journey in itself. Each fragrance evokes different emotions and memories, and what resonates with one person may not with another. Explore various scents and take your time to discover what speaks to you. Whether you prefer floral, woody, or oriental notes, there’s a perfect fragrance waiting to become your signature.",
-      "<h2 class='text-base md:text-lg font-bold'>The Future of Fragrance: Innovation Meets Tradition</h2>",
-      "The world of perfumery is constantly evolving, blending tradition with innovation. Modern perfumers experiment with new technologies and sustainable practices to create unique and eco-friendly fragrances. From synthetic ingredients that mimic natural scents to advances in packaging, the future of perfume promises exciting developments for both creators and enthusiasts.",
-      "<h2 class='text-base md:text-lg font-bold'>Join the Celyssee Journey</h2>",
-      "At Celyssee, we are passionate about the art of perfume and invite you to explore our curated collections. Follow our blog for insights, tips, and updates on the latest trends in fragrance. Share your own perfume journey with us and become part of a community that celebrates the beauty and artistry of scent.",
-      "Thank you for joining us on this aromatic adventure. We look forward to sharing more about the art of perfume and helping you find the fragrance that tells your story."
+    "sneakPeek": "Welcome to the world of Celyssee, where we celebrate the timeless art of perfumery. Perfume is more than just a fragrance; it's a masterpiece of creativity and craftsmanship. In this blog, we invite you to embark on a journey through the art of perfume and discover what makes fragrance a true form of art.",
+    "description": [
+      {
+        "type": "paragraph",
+        "content": "Welcome to the world of Celyssee, where we celebrate the timeless art of perfumery. Perfume is more than just a fragrance; it's a masterpiece of creativity and craftsmanship. In this blog, we invite you to embark on a journey through the art of perfume and discover what makes fragrance a true form of art."
+      },
+      {
+        "type": "subtitle",
+        "content": "The Origins of Perfumery: An Ancient Tradition"
+      },
+      {
+        "type": "paragraph",
+        "content": "Perfume has been an integral part of human culture for millennia. Ancient civilizations, from the Egyptians to the Greeks, revered fragrances as sacred offerings to the gods. They crafted perfumes using natural ingredients like herbs, spices, and resins, setting the foundation for what would become a rich tradition of scent-making. As we explore the history of perfumery, we gain insight into how these ancient practices continue to influence modern fragrance creation."
+      },
+      {
+        "type": "subtitle",
+        "content": "The Anatomy of a Fragrance: Understanding Perfume Composition"
+      },
+      {
+        "type": "paragraph",
+        "content": "Perfume is an intricate blend of carefully chosen ingredients, each contributing to the overall olfactory experience. A fragrance is typically composed of three main layers: the top, middle, and base notes."
+      },
+      {
+        "type": "list",
+        "style": "numbered",
+        "items": [
+          "Top Notes: These are the initial, light scents that greet the senses when the perfume is first applied. They are often fresh and citrusy, providing an immediate impression of the fragrance.",
+          "Middle Notes: Also known as heart notes, these emerge after the top notes dissipate and form the core of the fragrance. They are usually more complex and can include floral, fruity, or spicy elements.",
+          "Base Notes: These are the rich, deep scents that develop after the fragrance has settled. Base notes provide lasting power and are often warm and woody, adding depth and complexity to the perfume."
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": "Understanding these layers helps appreciate the artistry involved in creating a balanced and captivating fragrance."
+      },
+      {
+        "type": "subtitle",
+        "content": "The Craftsmanship of Perfumery: From Concept to Creation"
+      },
+      {
+        "type": "paragraph",
+        "content": "Creating a perfume is both an art and a science. It begins with the perfumer’s vision, a creative concept that guides the selection and blending of ingredients. Perfumers, also known as \"noses,\" use their expertise to combine essential oils, absolutes, and synthetics in precise proportions. The goal is to craft a fragrance that evokes emotion, tells a story, and leaves a lasting impression."
+      },
+      {
+        "type": "paragraph",
+        "content": "The process involves:"
+      },
+      {
+        "type": "list",
+        "style": "numbered",
+        "items": [
+          "Sourcing Ingredients: High-quality raw materials are essential for crafting a premium fragrance. Perfumers carefully select ingredients based on their scent profiles and compatibility.",
+          "Blending: This is where the magic happens. Perfumers experiment with different combinations, adjusting ratios to achieve the desired balance and complexity.",
+          "Aging: Once blended, perfumes often undergo a maturation period, allowing the components to meld and develop a more refined scent."
+        ]
+      },
+      {
+        "type": "subtitle",
+        "content": "The Personal Touch: Finding Your Signature Scent"
+      },
+      {
+        "type": "paragraph",
+        "content": "Perfume is a deeply personal experience, and finding your signature scent can be a journey in itself. Each fragrance evokes different emotions and memories, and what resonates with one person may not with another. Explore various scents and take your time to discover what speaks to you. Whether you prefer floral, woody, or oriental notes, there’s a perfect fragrance waiting to become your signature."
+      },
+      {
+        "type": "subtitle",
+        "content": "The Future of Fragrance: Innovation Meets Tradition"
+      },
+      {
+        "type": "paragraph",
+        "content": "The world of perfumery is constantly evolving, blending tradition with innovation. Modern perfumers experiment with new technologies and sustainable practices to create unique and eco-friendly fragrances. From synthetic ingredients that mimic natural scents to advances in packaging, the future of perfume promises exciting developments for both creators and enthusiasts."
+      },
+      {
+        "type": "subtitle",
+        "content": "Join the Celyssee Journey"
+      },
+      {
+        "type": "paragraph",
+        "content": "At Celyssee, we are passionate about the art of perfume and invite you to explore our curated collections. Follow our blog for insights, tips, and updates on the latest trends in fragrance. Share your own perfume journey with us and become part of a community that celebrates the beauty and artistry of scent."
+      },
+      {
+        "type": "paragraph",
+        "content": "Thank you for joining us on this aromatic adventure. We look forward to sharing more about the art of perfume and helping you find the fragrance that tells your story."
+      }
     ],
-    "excerpt": 0,
-    "author": "Steven Tjoa",
+    "author": "Celyssee Team",
     "createdAt": "2024-06-07T00:00:00Z"
   },
   {
     "id": 2,
     "title": "Unveiling the Secrets of Perfume: How to Choose Your Signature Scent",
     "image": "unveiling-the-perfume-secrets.avif",
-    "content": [
-      "Welcome to Celyssee’s blog, where we dive into the captivating world of fragrances. Choosing the perfect perfume can be an enchanting yet overwhelming experience. With countless options available, finding a scent that resonates with your personality and style is essential. In this post, we’ll guide you through the process of discovering your signature scent and help you understand what makes a fragrance truly unique.",
-      "<h2 class='text-base md:text-lg font-bold'>The Power of Scent: Understanding Its Impact</h2>",
-      "Perfume is not just a pleasant aroma—it’s a powerful tool for self-expression. A well-chosen fragrance can enhance your mood, boost your confidence, and even evoke cherished memories. Understanding the emotional and psychological impact of scent is the first step in selecting a perfume that aligns with your personal identity.",
-      "<h2 class='text-base md:text-lg font-bold'>Fragrance Families: Finding Your Fit</h2>",
-      "Fragrances are typically categorized into families, each with its distinct characteristics. Familiarizing yourself with these categories can help narrow down your options:<ul class='my-3 ml-4 list-disc space-y-2'> <li>Floral: Featuring notes like rose, jasmine, and lily, floral perfumes are romantic and feminine. They’re perfect for those who love a classic, elegant scent.</li> <li>Woody: With deep, earthy notes such as sandalwood, cedar, and patchouli, woody perfumes exude sophistication and warmth. They’re ideal for those who prefer a more grounded, natural aroma.</li> <li>Oriental: Rich and exotic, oriental fragrances often include spices, vanilla, and resins. They’re great for those who enjoy bold, sensual scents.</li> <li>Citrus: Bright and refreshing, citrus perfumes feature notes like bergamot, lemon, and grapefruit. They’re perfect for a vibrant, energetic feel.</li> </ul>",
-      "<h2 class='text-base md:text-lg font-bold'>Testing Perfumes: Tips for a Successful Experience</h2>",
-      "When testing perfumes, keep these tips in mind to ensure a successful experience:<ul class='my-3 ml-4 list-disc space-y-2'> <li>Test on Your Skin: Fragrance can react differently on each person due to body chemistry. Always test perfumes on your skin rather than on paper strips.</li> <li>Give It Time: Allow the perfume to settle on your skin and develop over a few hours. This helps you experience the full range of notes.</li> <li>Consider Your Lifestyle: Choose a fragrance that complements your daily routine and occasions. Opt for lighter scents for daytime and more intense fragrances for evenings.</li> </ul>",
-      "<h2 class='text-base md:text-lg font-bold'>Choosing a Signature Scent: Personalization and Style</h2>",
-      "Your signature scent should reflect your individuality and personal style. Whether you prefer a timeless classic or a modern, innovative fragrance, choose a scent that resonates with who you are. At Celyssee, we offer a diverse range of perfumes to help you find that perfect match.",
-      "<h2 class='text-base md:text-lg font-bold'>Celyssee: Your Guide to the World of Fragrance</h2>",
-      "At Celyssee, we’re dedicated to helping you explore the world of perfume and find your ideal scent. Visit our collection to discover a variety of luxurious fragrances that cater to every taste. Follow our blog for more tips, insights, and updates on the latest trends in perfumery.",
-      "Thank you for joining us on this aromatic journey. We look forward to helping you find a fragrance that truly represents you."
+    "sneakPeek": "Welcome to Celyssee’s blog, where we dive into the captivating world of fragrances. Choosing the perfect perfume can be an enchanting yet overwhelming experience. With countless options available, finding a scent that resonates with your personality and style is essential. In this post, we’ll guide you through the process of discovering your signature scent and help you understand what makes a fragrance truly unique.",
+    "description": [
+      {
+        "type": "paragraph",
+        "content": "Welcome to Celyssee’s blog, where we dive into the captivating world of fragrances. Choosing the perfect perfume can be an enchanting yet overwhelming experience. With countless options available, finding a scent that resonates with your personality and style is essential. In this post, we’ll guide you through the process of discovering your signature scent and help you understand what makes a fragrance truly unique."
+      },
+      {
+        "type": "subtitle",
+        "content": "The Power of Scent: Understanding Its Impact"
+      },
+      {
+        "type": "paragraph",
+        "content": "Perfume is not just a pleasant aroma—it’s a powerful tool for self-expression. A well-chosen fragrance can enhance your mood, boost your confidence, and even evoke cherished memories. Understanding the emotional and psychological impact of scent is the first step in selecting a perfume that aligns with your personal identity."
+      },
+      {
+        "type": "subtitle",
+        "content": "Fragrance Families: Finding Your Fit"
+      },
+      {
+        "type": "paragraph",
+        "content": "Fragrances are typically categorized into families, each with its distinct characteristics. Familiarizing yourself with these categories can help narrow down your options:"
+      },
+      {
+        "type": "list",
+        "style": "numbered",
+        "items": [
+          "Floral: Featuring notes like rose, jasmine, and lily, floral perfumes are romantic and feminine. They’re perfect for those who love a classic, elegant scent.",
+          "Woody: With deep, earthy notes such as sandalwood, cedar, and patchouli, woody perfumes exude sophistication and warmth. They’re ideal for those who prefer a more grounded, natural aroma.",
+          "Oriental: Rich and exotic, oriental fragrances often include spices, vanilla, and resins. They’re great for those who enjoy bold, sensual scents.",
+          "Citrus: Bright and refreshing, citrus perfumes feature notes like bergamot, lemon, and grapefruit. They’re perfect for a vibrant, energetic feel."
+        ]
+      },
+      {
+        "type": "subtitle",
+        "content": "Testing Perfumes: Tips for a Successful Experience"
+      },
+      {
+        "type": "paragraph",
+        "content": "When testing perfumes, keep these tips in mind to ensure a successful experience:"
+      },
+      {
+        "type": "list",
+        "style": "bullet",
+        "items": [
+          "Test on Your Skin: Fragrance can react differently on each person due to body chemistry. Always test perfumes on your skin rather than on paper strips.",
+          "Give It Time: Allow the perfume to settle on your skin and develop over a few hours. This helps you experience the full range of notes.",
+          "Consider Your Lifestyle: Choose a fragrance that complements your daily routine and occasions. Opt for lighter scents for daytime and more intense fragrances for evenings."
+        ]
+      },
+      {
+        "type": "subtitle",
+        "content": "Choosing a Signature Scent: Personalization and Style"
+      },
+      {
+        "type": "paragraph",
+        "content": "Your signature scent should reflect your individuality and personal style. Whether you prefer a timeless classic or a modern, innovative fragrance, choose a scent that resonates with who you are. At Celyssee, we offer a diverse range of perfumes to help you find that perfect match."
+      },
+      {
+        "type": "subtitle",
+        "content": "Celyssee: Your Guide to the World of Fragrance"
+      },
+      {
+        "type": "paragraph",
+        "content": "At Celyssee, we’re dedicated to helping you explore the world of perfume and find your ideal scent. Visit our collection to discover a variety of luxurious fragrances that cater to every taste. Follow our blog for more tips, insights, and updates on the latest trends in perfumery."
+      },
+      {
+        "type": "paragraph",
+        "content": "Thank you for joining us on this aromatic journey. We look forward to helping you find a fragrance that truly represents you."
+      }
     ],
-    "excerpt": 0,
-    "author": "Steven Tjoa",
-    "createdAt": "2024-08-05T00:00:00Z"
+    "author": "Celyssee Team",
+    "createdAt": "2024-06-08T00:00:00Z"
+  },
+  {
+    "id": 3,
+    "title": "The Secret to Long-Lasting Fragrance: How to Make Your Perfume Last All Day",
+    "image": "long-lasting-perfume.avif",
+    "sneakPeek": "Welcome to Celyssee, where we explore the finer nuances of perfumery. One of the most common questions fragrance enthusiasts have is, “How can I make my perfume last longer?” A perfume’s longevity is crucial for maintaining its beautiful scent throughout the day. In this blog, we’ll delve into the secrets of extending the life of your fragrance and ensure you enjoy its full allure from morning until night.",
+    "description": [
+      {
+        "type": "paragraph",
+        "content": "Welcome to Celyssee, where we explore the finer nuances of perfumery. One of the most common questions fragrance enthusiasts have is, “How can I make my perfume last longer?” A perfume’s longevity is crucial for maintaining its beautiful scent throughout the day. In this blog, we’ll delve into the secrets of extending the life of your fragrance and ensure you enjoy its full allure from morning until night."
+      },
+      {
+        "type": "subtitle",
+        "content": "Understanding Perfume Longevity"
+      },
+      {
+        "type": "paragraph",
+        "content": "Perfume longevity refers to how long a fragrance remains detectable on your skin after application. This can vary based on several factors, including the perfume’s composition, the type of scent, and your skin type. Generally, perfumes can be categorized into:"
+      },
+      {
+        "type": "list",
+        "style": "numbered",
+        "items": [
+          "Eau de Parfum (EDP): Known for its higher concentration of fragrance oils, EDPs typically last longer, often up to 6-8 hours.",
+          "Eau de Toilette (EDT): With a lighter concentration, EDTs usually last around 4-6 hours.",
+          "Eau de Cologne (EDC): Generally having the lowest concentration, EDCs last about 2-4 hours."
+        ]
+      },
+      {
+        "type": "subtitle",
+        "content": "Tips for Enhancing Perfume Longevity"
+      },
+      {
+        "type": "subtitle",
+        "content": "1. Apply to Moisturized Skin"
+      },
+      {
+        "type": "paragraph",
+        "content": "Perfume lasts longer on well-moisturized skin. Dry skin tends to absorb and evaporate fragrance more quickly. Before applying your perfume, use an unscented moisturizer or body lotion. This creates a base that helps lock in the scent."
+      },
+      {
+        "type": "subtitle",
+        "content": "2. Apply to Pulse Points"
+      },
+      {
+        "type": "paragraph",
+        "content": "Focus on applying perfume to your pulse points, where blood vessels are closer to the skin’s surface. These areas generate heat, which helps to diffuse and enhance the fragrance. Common pulse points include the wrists, neck, behind the ears, and the inner elbows."
+      },
+      {
+        "type": "subtitle",
+        "content": "3. Layer Your Scents"
+      },
+      {
+        "type": "paragraph",
+        "content": "Layering your fragrance with matching scented body products (such as shower gel, lotion, or deodorant) can enhance longevity. Using products from the same fragrance line helps create a cohesive scent profile that lasts longer."
+      },
+      {
+        "type": "subtitle",
+        "content": "4. Avoid Rubbing Your Wrists"
+      },
+      {
+        "type": "paragraph",
+        "content": "After applying perfume, avoid rubbing your wrists together. This can break down the fragrance molecules and diminish its longevity. Instead, allow the perfume to dry naturally on your skin."
+      },
+      {
+        "type": "subtitle",
+        "content": "5. Store Properly"
+      },
+      {
+        "type": "paragraph",
+        "content": "Proper storage is key to maintaining your perfume’s quality and longevity. Keep your fragrance in a cool, dark place away from direct sunlight and extreme temperatures. Avoid storing it in the bathroom, where humidity can affect the scent."
+      },
+      {
+        "type": "subtitle",
+        "content": "6. Use Fragrance Extenders"
+      },
+      {
+        "type": "paragraph",
+        "content": "Consider using fragrance extenders or fixatives that can help prolong the life of your perfume. These products are designed to enhance the staying power of your fragrance and can be applied in conjunction with your regular perfume."
+      },
+      {
+        "type": "subtitle",
+        "content": "7. Spray on Clothing"
+      },
+      {
+        "type": "paragraph",
+        "content": "For an extra boost, you can lightly spray your perfume on your clothing. Be cautious, as some perfumes may stain fabrics. Test a small area first to ensure there’s no adverse reaction."
+      },
+      {
+        "type": "subtitle",
+        "content": "8. Choose the Right Fragrance"
+      },
+      {
+        "type": "paragraph",
+        "content": "Fragrances with higher concentrations of essential oils and base notes (such as vanilla, amber, or musk) generally have better longevity compared to lighter scents. Opt for perfumes with a richer composition if you want them to last longer."
+      },
+      {
+        "type": "subtitle",
+        "content": "Exploring Celyssee’s Collection"
+      },
+      {
+        "type": "paragraph",
+        "content": "At Celyssee, we offer a range of exquisite perfumes designed to make a lasting impression. Whether you’re looking for a bold statement or a subtle, enduring scent, our collection has something for everyone. Explore our offerings and find a fragrance that not only captivates but also stands the test of time."
+      },
+      {
+        "type": "subtitle",
+        "content": "Join the Celyssee Community"
+      },
+      {
+        "type": "paragraph",
+        "content": "We hope these tips help you enjoy your favorite fragrances for longer. Share your own longevity tips and experiences with us. Follow our blog for more insights, updates, and trends in the world of perfumery."
+      },
+      {
+        "type": "paragraph",
+        "content": "Thank you for visiting Celyssee. We’re excited to help you make the most of your fragrance and ensure it remains a part of your day, from start to finish."
+      }
+    ],
+    "author": "Celyssee Team",
+    "createdAt": "2024-06-09T00:00:00Z"
   }
 ]
