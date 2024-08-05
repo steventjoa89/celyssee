@@ -89,8 +89,8 @@ export const FOOTER_MENU = [
     title: "Our Company",
     submenus: [
       {
-        name: "Corporate Statements",
-        // link: "corporate-statements" // TODO: LINK
+        name: "Our Journey",
+        link: ROUTES.ABOUT_US,
       },
     ],
   },

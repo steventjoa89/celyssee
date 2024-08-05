@@ -13,6 +13,7 @@ import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
 import TermsAndConditionsPage from "./pages/TermsAndConditionsPage";
 import Footer from "./components/Footer/Footer";
 import PageNotFoundPage from "./pages/PageNotFoundPage";
+import AboutUsPage from "./pages/AboutUsPage";
 
 function App() {
   const location = useLocation();
@@ -35,6 +36,7 @@ function App() {
         />
         <Route path={ROUTES.FAQS} element={<FaqPage />} />
         <Route path={ROUTES.RETURN_POLICY} element={<ReturnPolicyPage />} />
+        <Route path={ROUTES.ABOUT_US} element={<AboutUsPage />} />
         <Route
           path={ROUTES.TERM_AND_CONDITIONS}
           element={<TermsAndConditionsPage />}
