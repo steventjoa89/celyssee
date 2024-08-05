@@ -1,0 +1,17 @@
+/* src/nprogress-custom.css */
+
+/* Hide the circular spinner */
+#nprogress .spinner {
+  display: none; /* Hide the spinner */
+}
+
+/* Change the bar color to black */
+#nprogress .bar {
+  background: black; /* Change the bar color to black */
+  height: 1px; /* Adjust the height as needed */
+}
+
+/* Ensure the spinner class doesn't interfere */
+#nprogress .peg {
+  display: none; /* Hide the peg if it exists */
+}

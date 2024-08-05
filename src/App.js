@@ -16,15 +16,17 @@ import PageNotFoundPage from "./pages/PageNotFoundPage";
 import AboutUsPage from "./pages/AboutUsPage";
 import BlogsPage from "./pages/BlogsPage";
 import BlogPage from "./pages/BlogPage";
-// TODO: NPRogressBar
-// import NProgress from "nprogress";
-// import "nprogress/nprogress.css"; // Import the NProgress styles
+import NProgress from "nprogress";
+import "nprogress/nprogress.css"; // Import the NProgress styles
+import "./nprogress-custom.css";
 
 function App() {
   const location = useLocation();
 
   useEffect(() => {
+    NProgress.start(); // Start the NProgressbar
     window.scrollTo(0, 0);
+    NProgress.done(); // Stop the NProgressbar
   }, [location]);
 
   return (
