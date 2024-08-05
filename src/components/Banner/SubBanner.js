@@ -9,14 +9,16 @@ function SubBannerParagraph({ subbanner, onClick }) {
   return (
     <div className="flex-1 h-[25vh] md:h-[45vh] flex items-center justify-center">
       <div className="flex flex-col items-center justify-center text-center">
-        <div className="px-5 md:px-12 text-left">
-          <h2 className="font-title text-xl md:text-2xl font-bold">
+        <div className="px-3 md:px-12 text-left">
+          <h2 className="font-title text-base sm:text-lg md:text-xl lg:text-2xl font-bold line-clamp-2 md:line-clamp-none">
             {subbanner.title}
           </h2>
-          <p className="mt-3 mb-6 text-xs md:text-sm line-clamp-3 text-gray-500">
+          <p className="mt-2 lg:mt-3 mb-2 sm:mb-3 lg:mb-6 text-xs md:text-base line-clamp-3 md:line-clamp-none text-gray-500">
             {subbanner.description}
           </p>
+          {/* <div className="hidden sm:block"> */}
           <Button onClick={onClick}>{subbanner.buttonText}</Button>
+          {/* </div> */}
         </div>
       </div>
     </div>
@@ -38,21 +40,21 @@ function SubBannerImage({ subbanner }) {
 function SubBanner() {
   const subbannerInfoArr = [
     {
-      title: "The Perfect Day Scents",
+      title: "Elegant Feminine Fragrances",
       description:
-        "Discover your signature fragrance with our curated collection of luxurious perfumes.",
+        "Experience the essence of sophistication with Celyssee's exclusive range of feminine perfumes.",
       image: `${process.env.PUBLIC_URL}/images/banner/${HOME_SUBBANNER1_IMAGE}`,
-      buttonText: "SHOP NOW",
+      buttonText: "MORE",
       buttonClick: () => {
         console.log("first"); // TODO: ONCLICK
       },
     },
     {
-      title: "Best Fragrance",
+      title: "Refined Masculine Scents",
       description:
-        "Discover the best perfumes at The Perfect Day Scents. Our curated collection features luxurious fragrances crafted to elevate your everyday moments. Find your signature scent today.",
+        "Discover the essence of sophistication with Celyssee's distinguished range of masculine perfumes.",
       image: `${process.env.PUBLIC_URL}/images/banner/${HOME_SUBBANNER2_IMAGE}`,
-      buttonText: "SHOP NOW",
+      buttonText: "MORE",
       buttonClick: () => {
         console.log("second"); // TODO: ONCLICK
       },

@@ -18,7 +18,7 @@ function StarterKit() {
           <img
             src={`${process.env.PUBLIC_URL}/images/banner/${HOME_STARTER_KIT_IMAGE}`}
             alt="Starter Kit"
-            className="max-h-[40vh] w-full h-full object-cover rounded-xl"
+            className="w-full h-[25vh] md:h-[40vh] object-cover rounded-xl"
           />
         </div>
 
