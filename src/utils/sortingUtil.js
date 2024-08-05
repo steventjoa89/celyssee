@@ -1,4 +1,4 @@
-import { SortOptions } from "../enums/sortOptions";
+import { SortOptions } from "../enums/sortOptionsEnum";
 
 export function sortPerfumes(sortedBy, sorted, defaultSortIds = []) {
   switch (sortedBy) {

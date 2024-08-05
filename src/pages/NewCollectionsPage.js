@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import NavbarFooterSortMenu from "../components/Navbar/NavbarFooterSortMenu";
 import GridView from "../components/GridView/GridView";
-import { SortOptions } from "../enums/sortOptions";
+import { SortOptions } from "../enums/sortOptionsEnum";
 import { PERFUME_CATALOG } from "../data/data";
 import { sortPerfumes } from "../utils/sortingUtil";
 

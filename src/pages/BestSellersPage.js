@@ -3,7 +3,7 @@ import NavbarFooterSortMenu from "../components/Navbar/NavbarFooterSortMenu";
 import GridView from "../components/GridView/GridView";
 import { PERFUME_CATALOG } from "../data/data";
 import { BEST_SELLER_PERFUMES_IDS } from "../data/settings";
-import { SortOptions } from "../enums/sortOptions";
+import { SortOptions } from "../enums/sortOptionsEnum";
 import { sortPerfumes } from "../utils/sortingUtil";
 
 function BestSellersPage() {

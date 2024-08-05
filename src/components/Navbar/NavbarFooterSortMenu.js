@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import { SortOptions } from "../../enums/sortOptions";
+import { SortOptions } from "../../enums/sortOptionsEnum";
 
 function NavbarFooterSortMenu({
   sortedBy,
