@@ -12,6 +12,7 @@ import ReturnPolicyPage from "./pages/ReturnPolicyPage";
 import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
 import TermsAndConditionsPage from "./pages/TermsAndConditionsPage";
 import Footer from "./components/Footer/Footer";
+import PageNotFoundPage from "./pages/PageNotFoundPage";
 
 function App() {
   const location = useLocation();
@@ -39,6 +40,8 @@ function App() {
           element={<TermsAndConditionsPage />}
         />
         <Route path={ROUTES.PRIVACY_POLICY} element={<PrivacyPolicyPage />} />
+        {/* Catch-all route for undefined pages */}
+        <Route path="*" element={<PageNotFoundPage />} />
       </Routes>
       <Footer />
     </div>

@@ -1,9 +1,10 @@
 import React, { useState } from "react";
+import { useParams } from "react-router-dom";
 import ProductInfo from "../components/ProductDetails/ProductInfo";
 import Card from "../components/Card/Card";
 import { PERFUME_CATALOG } from "../data/data";
-import { useParams } from "react-router-dom";
 import ProductImages from "../components/ProductDetails/ProductImages";
+import PageNotFoundPage from "./PageNotFoundPage";
 
 function ProductDetailsPage() {
   const { id } = useParams();
@@ -13,6 +14,11 @@ function ProductDetailsPage() {
   const selectedPerfume = PERFUME_CATALOG.find(
     (perfume) => perfume.id === parseInt(id)
   );
+
+  // Redirect to PageNotFound where the perfume ID is not found
+  if (!selectedPerfume) {
+    return <PageNotFoundPage />;
+  }
 
   const getSimilarityScore = (selectedPerfume, perfume) => {
     let score = 0;
