@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { ROUTES } from "../routes";
 import Button from "../components/Button/Button";
-import { COMPANY_INFO, HOME_STARTER_KIT_IMAGE } from "../data/settings";
+import { COMPANY_INFO } from "../data/settings";
 import { toProperCase } from "../utils/stringUtil";
 
 function AboutUsTextSection({ title = "", description = "" }) {
