@@ -84,7 +84,7 @@ function Navbar() {
         isOpen={isContactUsSideBarOpen}
         toggleSidebar={toggleContactUsSidebar}
       >
-        <ContactUsSidebar toggleSidebar={toggleMenuSidebar} />
+        <ContactUsSidebar toggleSidebar={toggleContactUsSidebar} />
       </RightSidebar>
 
       {/* <nav
