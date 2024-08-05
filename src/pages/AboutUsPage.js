@@ -117,10 +117,12 @@ function AboutUsPage() {
         />
 
         {/* Innovative Section */}
-        <AboutUsTextSection
-          title="Innovative and Evolving"
-          description={`Our dedication to excellence drives us to continuously innovate and evolve. We embrace new techniques and ideas while staying true to our core values. This commitment to innovation ensures that our fragrances remain at the forefront of the industry.`}
-        />
+        <div className="py-4">
+          <AboutUsTextSection
+            title="Innovative and Evolving"
+            description={`Our dedication to excellence drives us to continuously innovate and evolve. We embrace new techniques and ideas while staying true to our core values. This commitment to innovation ensures that our fragrances remain at the forefront of the industry.`}
+          />
+        </div>
 
         {/* Craftsmanship Section */}
         <AboutUsImageSection

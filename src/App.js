@@ -14,11 +14,13 @@ import TermsAndConditionsPage from "./pages/TermsAndConditionsPage";
 import Footer from "./components/Footer/Footer";
 import PageNotFoundPage from "./pages/PageNotFoundPage";
 import AboutUsPage from "./pages/AboutUsPage";
+// TODO: NPRogressBar
+// import NProgress from "nprogress";
+// import "nprogress/nprogress.css"; // Import the NProgress styles
 
 function App() {
   const location = useLocation();
 
-  // Always Scroll to the top
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
