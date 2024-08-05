@@ -42,8 +42,8 @@ export const TOP_MENU_SIDEBAR = [
     // link: ROUTES.COLLECTIONS("unisex"),// TODO: Link
   },
   {
-    name: "Our Stories",
-    // link: ROUTES.OURSTORIES,// TODO: Link
+    name: "Our Journey",
+    link: ROUTES.ABOUT_US,
   },
 ];
 
@@ -91,6 +91,10 @@ export const FOOTER_MENU = [
       {
         name: "Our Journey",
         link: ROUTES.ABOUT_US,
+      },
+      {
+        name: "Blog",
+        link: ROUTES.BLOGS,
       },
     ],
   },

@@ -14,6 +14,8 @@ import TermsAndConditionsPage from "./pages/TermsAndConditionsPage";
 import Footer from "./components/Footer/Footer";
 import PageNotFoundPage from "./pages/PageNotFoundPage";
 import AboutUsPage from "./pages/AboutUsPage";
+import BlogsPage from "./pages/BlogsPage";
+import BlogPage from "./pages/BlogPage";
 // TODO: NPRogressBar
 // import NProgress from "nprogress";
 // import "nprogress/nprogress.css"; // Import the NProgress styles
@@ -39,6 +41,8 @@ function App() {
         <Route path={ROUTES.FAQS} element={<FaqPage />} />
         <Route path={ROUTES.RETURN_POLICY} element={<ReturnPolicyPage />} />
         <Route path={ROUTES.ABOUT_US} element={<AboutUsPage />} />
+        <Route path={ROUTES.BLOGS} element={<BlogsPage />} />
+        <Route path={ROUTES.BLOG(":id")} element={<BlogPage />} />
         <Route
           path={ROUTES.TERM_AND_CONDITIONS}
           element={<TermsAndConditionsPage />}

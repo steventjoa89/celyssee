@@ -6,6 +6,8 @@ export const ROUTES = {
   FAQS: "/faqs",
   RETURN_POLICY: "/return-policy",
   ABOUT_US: "/our-journey",
+  BLOGS: "/blogs",
+  BLOG: (id) => `/blogs/id/${id}`,
   TERM_AND_CONDITIONS: "/terms-and-conditions",
   PRIVACY_POLICY: "/privacy-policy",
 };
