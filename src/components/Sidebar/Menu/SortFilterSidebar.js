@@ -2,7 +2,6 @@ import React from "react";
 import Button from "../../Button/Button";
 import CheckIcon from "@mui/icons-material/Check";
 import { SortOptions } from "../../../enums/sortOptionsEnum";
-import { sortMenuLabel, toProperCase } from "../../../utils/stringUtil";
 
 function SortFilterSidebar({ sortedBy, setSortedBy }) {
   return (
