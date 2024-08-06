@@ -47,7 +47,7 @@ export function sortPerfumes(sortedBy, sorted, defaultSortIds = []) {
       return sorted.sort(
         (a, b) => new Date(b.releaseAt) - new Date(a.releaseAt)
       );
-    default: // Featured
+    default: // Default
       const idOrderMap = new Map(
         defaultSortIds.map((id, index) => [id, index])
       );

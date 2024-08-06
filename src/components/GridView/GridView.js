@@ -4,7 +4,7 @@ import { getPaginatedItems } from "../../utils/mathUtil";
 import { Pagination } from "@mui/material";
 // import { TailSpin } from "react-loader-spinner";   // TODO: REMOVE UNNECESSARY CODE
 
-function GridView({ title = "", data }) {
+function GridView({ title = "", data, isShowPrice = false }) {
   const gridRef = useRef(null);
 
   const [page, setPage] = useState(1);
@@ -53,7 +53,12 @@ function GridView({ title = "", data }) {
         className="mx-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8"
       >
         {productList.map((item, index) => (
-          <Card key={index} item={item} isLarge={true} isShowPrice={false} />
+          <Card
+            key={index}
+            item={item}
+            isLarge={true}
+            isShowPrice={isShowPrice}
+          />
         ))}
       </div>
 

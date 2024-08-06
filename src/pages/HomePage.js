@@ -15,7 +15,6 @@ import Button from "../components/Button/Button";
 import { useNavigate } from "react-router-dom";
 import { ROUTES } from "../routes";
 import { Gender } from "../enums/genderEnum";
-import { Collections } from "../enums/collectionsEnum";
 
 function HomePage() {
   const subBannerRef = useRef(null);
@@ -117,11 +116,7 @@ function HomePage() {
         </h1>
         <HorizontalScrollableGridView perfumeList={bestSellers} />
         <div className="mt-5">
-          <Button
-            onClick={() =>
-              navigate(ROUTES.COLLECTIONS(Collections.BEST_SELLERS))
-            }
-          >
+          <Button onClick={() => navigate(ROUTES.BEST_SELLERS)}>
             SEE MORE
           </Button>
         </div>
@@ -140,11 +135,7 @@ function HomePage() {
         </h1>
         <HorizontalScrollableGridView perfumeList={newCollections} />
         <div className="mt-5">
-          <Button
-            onClick={() =>
-              navigate(ROUTES.COLLECTIONS(Collections.NEW_COLLECTIONS))
-            }
-          >
+          <Button onClick={() => navigate(ROUTES.NEW_COLLECTIONS)}>
             SEE MORE
           </Button>
         </div>

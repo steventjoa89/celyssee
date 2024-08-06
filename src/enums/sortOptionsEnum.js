@@ -1,4 +1,5 @@
 export const SortOptions = {
+  DEFAULT: "",
   ALPHABETICALLY_AZ: "Alphabetical (A-Z)",
   ALPHABETICALLY_ZA: "Reverse Alphabetical (Z-A)",
   PRICE_AZ: "Price (Low to High)",

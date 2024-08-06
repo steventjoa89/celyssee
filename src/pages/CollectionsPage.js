@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import NavbarFooterSortMenu from "../components/Navbar/NavbarFooterSortMenu";
+import NavbarFooterMenu from "../components/Navbar/NavbarFooterMenu";
 import { toProperCase } from "../utils/stringUtil";
 import { Collections } from "../enums/collectionsEnum";
 import { Gender } from "../enums/genderEnum";
@@ -84,7 +84,7 @@ function CollectionsPage() {
   return (
     <div>
       {/* Navbar Footer */}
-      <NavbarFooterSortMenu
+      <NavbarFooterMenu
         title={toProperCase(collection)}
         sortedBy={sortedBy}
         setSortedBy={setSortedBy}
