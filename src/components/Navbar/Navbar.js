@@ -9,6 +9,8 @@ import MenuSidebar from "../Sidebar/Menu/MenuSidebar";
 import { COMPANY_INFO } from "../../data/settings";
 import RightSidebar from "../Sidebar/RightSidebar";
 import ContactUsSidebar from "../Sidebar/Menu/ContactUsSidebar";
+import TopSidebar from "../Sidebar/TopSidebar";
+import SearchTopbar from "../Sidebar/Menu/SearchTopbar";
 
 function NavbarMenuIcon({ menu, onClick }) {
   const { icon, name } = menu;
@@ -22,9 +24,6 @@ function NavbarMenuIcon({ menu, onClick }) {
 }
 
 function Navbar() {
-  // const [isScrolled, setIsScrolled] = useState(false);
-  // const location = useLocation();
-
   // Collapsible Sidebar
   const [isMenuSideBarOpen, setIsMenuSideBarOpen] = useState(false);
   const [isSearchSideBarOpen, setIsSearchSideBarOpen] = useState(false);
@@ -60,25 +59,19 @@ function Navbar() {
     },
   ];
 
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     setIsScrolled(window.scrollY > 0 ? true : false);
-  //   };
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll); // Cleanup listener on component unmount
-  //   };
-  // }, []);
-
-  // Determine if the current path is the homepage
-  // const isHomepage = location.pathname === "/";
-
   return (
     <>
       {/* Menu Sidebar */}
       <LeftSidebar isOpen={isMenuSideBarOpen} toggleSidebar={toggleMenuSidebar}>
         <MenuSidebar toggleSidebar={toggleMenuSidebar} />
       </LeftSidebar>
+
+      <TopSidebar
+        isOpen={isSearchSideBarOpen}
+        toggleSidebar={toggleSearchSidebar}
+      >
+        <SearchTopbar toggleSidebar={toggleSearchSidebar} />
+      </TopSidebar>
 
       <RightSidebar
         isOpen={isContactUsSideBarOpen}
