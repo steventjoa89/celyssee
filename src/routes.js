@@ -4,6 +4,7 @@ export const ROUTES = {
   NEW_COLLECTIONS: "/new-collections",
   COLLECTIONS: (collection) => `/collections/${collection}`,
   PRODUCT_DETAILS: (id) => `/product/id/${id}`,
+  SEARCH: "/search",
   FAQS: "/faqs",
   RETURN_POLICY: "/return-policy",
   ABOUT_US: "/our-journey",

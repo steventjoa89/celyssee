@@ -1,13 +1,16 @@
 import React, { useEffect, useRef, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import Card from "../Card/Card";
 import { getPaginatedItems } from "../../utils/mathUtil";
 import { Pagination } from "@mui/material";
 
-function GridView({ title = "", page, setPage, data, isShowPrice = false }) {
+function GridView({ title, data, isShowPrice = false }) {
   const gridRef = useRef(null);
+  const location = useLocation();
+  const navigate = useNavigate();
 
+  const [page, setPage] = useState(1);
   const [productList, setProductList] = useState([]);
-  // const [isLoading, setIsLoading] = useState(true);
 
   const totalItemsPerPage = 12;
   const countPages = Math.ceil(data.length / totalItemsPerPage);
@@ -18,25 +21,31 @@ function GridView({ title = "", page, setPage, data, isShowPrice = false }) {
         top: 0,
         behavior: "smooth",
       });
-      setPage(value);
     }
+    setPage(value);
+    // Extract search query from URL
+    const queryParams = new URLSearchParams(location.search);
+    const searchQuery = queryParams.get("search");
+    // Update URL with search query and new page number
+    navigate(`?search=${searchQuery}&page=${value}`);
   };
 
   useEffect(() => {
-    // setIsLoading(true);
-    const fetchData = () => {
-      setProductList(getPaginatedItems(data, page, totalItemsPerPage));
-      // setIsLoading(false);
-    };
-    fetchData();
-  }, [data, page]);
+    // Extract search query and page number from URL
+    const queryParams = new URLSearchParams(location.search);
+    const searchQuery = queryParams.get("search");
+    const pageParam = parseInt(queryParams.get("page"), 10);
+
+    if (!isNaN(pageParam)) {
+      setPage(pageParam);
+    }
+
+    // Fetch data based on the current page
+    setProductList(getPaginatedItems(data, page, totalItemsPerPage));
+  }, [data, page, location.search]);
 
   return (
     <div className="min-h-[50vh] flex flex-col items-center justify-center">
-      {/* {isLoading ? (
-        <TailSpin color="black" width={50} />
-      ) : (
-        <> */}
       {/* Title */}
       {title && (
         <h1 className="relative font-title text-2xl mt-8 mb-5">

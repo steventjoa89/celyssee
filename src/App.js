@@ -8,6 +8,7 @@ import BestSellersPage from "./pages/BestSellersPage";
 import NewCollectionsPage from "./pages/NewCollectionsPage";
 import CollectionsPage from "./pages/CollectionsPage";
 import ProductDetailsPage from "./pages/ProductDetailsPage";
+import SearchResultsPage from "./pages/SearchResultsPage";
 import FaqPage from "./pages/FaqPage";
 import ReturnPolicyPage from "./pages/ReturnPolicyPage";
 import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
@@ -45,6 +46,7 @@ function App() {
           path={ROUTES.PRODUCT_DETAILS(":id")}
           element={<ProductDetailsPage />}
         />
+        <Route path={ROUTES.SEARCH} element={<SearchResultsPage />} />
         <Route path={ROUTES.FAQS} element={<FaqPage />} />
         <Route path={ROUTES.RETURN_POLICY} element={<ReturnPolicyPage />} />
         <Route path={ROUTES.ABOUT_US} element={<AboutUsPage />} />
