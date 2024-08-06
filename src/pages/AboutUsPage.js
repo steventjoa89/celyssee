@@ -4,6 +4,7 @@ import { ROUTES } from "../routes";
 import Button from "../components/Button/Button";
 import { COMPANY_INFO } from "../data/settings";
 import { toProperCase } from "../utils/stringUtil";
+import { Collections } from "../enums/collectionsEnum";
 
 function AboutUsTextSection({ title = "", description = "" }) {
   return (
@@ -156,7 +157,11 @@ function AboutUsPage() {
               )} become a part of your own story.`}
         >
           <div className="mt-3">
-            <Button onClick={() => navigate(ROUTES.BEST_SELLERS)}>
+            <Button
+              onClick={() =>
+                navigate(ROUTES.COLLECTIONS(Collections.BEST_SELLERS))
+              }
+            >
               Explore Our Collection
             </Button>
           </div>

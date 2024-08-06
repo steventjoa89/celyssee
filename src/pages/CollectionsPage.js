@@ -24,8 +24,8 @@ function CollectionsPage() {
   };
 
   const collectionTitles = {
-    [Collections.BEST_SELLERS.toLowerCase()]: GridViewTitle.BestSellers,
-    [Collections.NEW_COLLECTIONS.toLowerCase()]: GridViewTitle.NewCollections,
+    [Collections.BEST_SELLERS]: GridViewTitle.BestSellers,
+    [Collections.NEW_COLLECTIONS]: GridViewTitle.NewCollections,
     [Gender.FEMININE.toLowerCase()]: GridViewTitle.Feminine,
     [Gender.MASCULINE.toLowerCase()]: GridViewTitle.Masculine,
   };

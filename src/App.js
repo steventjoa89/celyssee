@@ -4,8 +4,6 @@ import { Route, Routes, useLocation } from "react-router-dom";
 import { ROUTES } from "./routes";
 import Navbar from "./components/Navbar/Navbar";
 import HomePage from "./pages/HomePage";
-import BestSellersPage from "./pages/BestSellersPage";
-import NewCollectionsPage from "./pages/NewCollectionsPage";
 import CollectionsPage from "./pages/CollectionsPage";
 import ProductDetailsPage from "./pages/ProductDetailsPage";
 import FaqPage from "./pages/FaqPage";
@@ -35,8 +33,6 @@ function App() {
       <Navbar />
       <Routes>
         <Route exatch path={ROUTES.HOME} element={<HomePage />} />
-        <Route path={ROUTES.BEST_SELLERS} element={<BestSellersPage />} />
-        <Route path={ROUTES.NEW_COLLECTIONS} element={<NewCollectionsPage />} />
         <Route
           path={ROUTES.COLLECTIONS(":collection")}
           element={<CollectionsPage />}

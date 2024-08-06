@@ -4,6 +4,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import PinterestIcon from "@mui/icons-material/Pinterest";
 import { ROUTES } from "../routes";
 import { Gender } from "../enums/genderEnum";
+import { Collections } from "../enums/collectionsEnum";
 
 export const COMPANY_INFO = {
   COMPANY_NAME: "CELYSSEE",
@@ -24,11 +25,11 @@ export const BEST_SELLER_PERFUMES_IDS = [5, 4, 3, 2, 1]; // Home page display fr
 export const TOP_MENU_SIDEBAR = [
   {
     name: "Best Sellers",
-    link: ROUTES.BEST_SELLERS,
+    link: ROUTES.COLLECTIONS(Collections.BEST_SELLERS),
   },
   {
     name: "New Collections",
-    link: ROUTES.NEW_COLLECTIONS,
+    link: ROUTES.COLLECTIONS(Collections.NEW_COLLECTIONS),
   },
   {
     name: "Feminine",
