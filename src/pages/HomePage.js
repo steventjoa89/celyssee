@@ -14,6 +14,7 @@ import EmailSubscription from "../components/EmailSubscription/EmailSubscription
 import Button from "../components/Button/Button";
 import { useNavigate } from "react-router-dom";
 import { ROUTES } from "../routes";
+import { Gender } from "../enums/genderEnum";
 
 function HomePage() {
   const subBannerRef = useRef(null);
@@ -49,7 +50,8 @@ function HomePage() {
       image: HOME_SUBBANNER1_IMAGE,
       imagePosition: "left",
       buttonText: "SEE MORE",
-      onClick: () => console.log("first"), // TODO: ONCLICK
+      onClick: () =>
+        navigate(ROUTES.COLLECTIONS(Gender.FEMININE.toLowerCase())),
     },
     {
       title: "Refined Masculine Scents",
@@ -60,7 +62,8 @@ function HomePage() {
       image: HOME_SUBBANNER2_IMAGE,
       imagePosition: "right",
       buttonText: "SEE MORE",
-      onClick: () => console.log("second"), // TODO: ONCLICK
+      onClick: () =>
+        navigate(ROUTES.COLLECTIONS(Gender.MASCULINE.toLowerCase())),
     },
   ];
 

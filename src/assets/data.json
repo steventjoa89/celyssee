@@ -365,7 +365,7 @@
       "english-pear-freesia-3.avif"
     ],
     "description": "Orchards steeped in golden sunshine, warming the russet curves of luscious pears. The sensuous freshness of the just-ripe fruit wrapped in elegant white freesias, enhanced with rose and rooted in patchouli.",
-    "gender": "F",
+    "gender": "M",
     "notes": ["Williams Pear", "Freesia", "Patchouli"],
     "sizes": [
       {
@@ -399,7 +399,7 @@
       "english-pear-freesia-3.avif"
     ],
     "description": "Orchards steeped in golden sunshine, warming the russet curves of luscious pears. The sensuous freshness of the just-ripe fruit wrapped in elegant white freesias, enhanced with rose and rooted in patchouli.",
-    "gender": "F",
+    "gender": "M",
     "notes": ["Williams Pear", "Freesia", "Patchouli"],
     "sizes": [
       {
@@ -427,6 +427,251 @@
   },
   {
     "id": 13,
+    "name": "English Pear & Freesia 13",
+    "images": [
+      "english-pear-freesia-1.avif",
+      "english-pear-freesia-2.avif",
+      "english-pear-freesia-3.avif"
+    ],
+    "description": "Orchards steeped in golden sunshine, warming the russet curves of luscious pears. The sensuous freshness of the just-ripe fruit wrapped in elegant white freesias, enhanced with rose and rooted in patchouli.",
+    "gender": "M",
+    "notes": ["Williams Pear", "Freesia", "Patchouli"],
+    "sizes": [
+      {
+        "volume": 30,
+        "price": 400000,
+        "discount": 0
+      },
+      {
+        "volume": 50,
+        "price": 4800000,
+        "discount": 0
+      }
+    ],
+    "onlineMarketplaces": [
+      {
+        "name": "Tokopedia",
+        "link": "https://www.google.co.id"
+      },
+      {
+        "name": "Shopee",
+        "link": "https://www.google.co.id"
+      }
+    ],
+    "releaseAt": "2024-07-07T00:00:00Z"
+  },
+  {
+    "id": 14,
+    "name": "English Pear & Freesia 13",
+    "images": [
+      "english-pear-freesia-1.avif",
+      "english-pear-freesia-2.avif",
+      "english-pear-freesia-3.avif"
+    ],
+    "description": "Orchards steeped in golden sunshine, warming the russet curves of luscious pears. The sensuous freshness of the just-ripe fruit wrapped in elegant white freesias, enhanced with rose and rooted in patchouli.",
+    "gender": "F",
+    "notes": ["Williams Pear", "Freesia", "Patchouli"],
+    "sizes": [
+      {
+        "volume": 30,
+        "price": 400000,
+        "discount": 0
+      },
+      {
+        "volume": 50,
+        "price": 4800000,
+        "discount": 0
+      }
+    ],
+    "onlineMarketplaces": [
+      {
+        "name": "Tokopedia",
+        "link": "https://www.google.co.id"
+      },
+      {
+        "name": "Shopee",
+        "link": "https://www.google.co.id"
+      }
+    ],
+    "releaseAt": "2024-07-07T00:00:00Z"
+  },
+  {
+    "id": 15,
+    "name": "English Pear & Freesia 13",
+    "images": [
+      "english-pear-freesia-1.avif",
+      "english-pear-freesia-2.avif",
+      "english-pear-freesia-3.avif"
+    ],
+    "description": "Orchards steeped in golden sunshine, warming the russet curves of luscious pears. The sensuous freshness of the just-ripe fruit wrapped in elegant white freesias, enhanced with rose and rooted in patchouli.",
+    "gender": "F",
+    "notes": ["Williams Pear", "Freesia", "Patchouli"],
+    "sizes": [
+      {
+        "volume": 30,
+        "price": 400000,
+        "discount": 0
+      },
+      {
+        "volume": 50,
+        "price": 4800000,
+        "discount": 0
+      }
+    ],
+    "onlineMarketplaces": [
+      {
+        "name": "Tokopedia",
+        "link": "https://www.google.co.id"
+      },
+      {
+        "name": "Shopee",
+        "link": "https://www.google.co.id"
+      }
+    ],
+    "releaseAt": "2024-07-07T00:00:00Z"
+  },
+  {
+    "id": 16,
+    "name": "English Pear & Freesia 13",
+    "images": [
+      "english-pear-freesia-1.avif",
+      "english-pear-freesia-2.avif",
+      "english-pear-freesia-3.avif"
+    ],
+    "description": "Orchards steeped in golden sunshine, warming the russet curves of luscious pears. The sensuous freshness of the just-ripe fruit wrapped in elegant white freesias, enhanced with rose and rooted in patchouli.",
+    "gender": "F",
+    "notes": ["Williams Pear", "Freesia", "Patchouli"],
+    "sizes": [
+      {
+        "volume": 30,
+        "price": 400000,
+        "discount": 0
+      },
+      {
+        "volume": 50,
+        "price": 4800000,
+        "discount": 0
+      }
+    ],
+    "onlineMarketplaces": [
+      {
+        "name": "Tokopedia",
+        "link": "https://www.google.co.id"
+      },
+      {
+        "name": "Shopee",
+        "link": "https://www.google.co.id"
+      }
+    ],
+    "releaseAt": "2024-07-07T00:00:00Z"
+  },
+  {
+    "id": 17,
+    "name": "English Pear & Freesia 13",
+    "images": [
+      "english-pear-freesia-1.avif",
+      "english-pear-freesia-2.avif",
+      "english-pear-freesia-3.avif"
+    ],
+    "description": "Orchards steeped in golden sunshine, warming the russet curves of luscious pears. The sensuous freshness of the just-ripe fruit wrapped in elegant white freesias, enhanced with rose and rooted in patchouli.",
+    "gender": "F",
+    "notes": ["Williams Pear", "Freesia", "Patchouli"],
+    "sizes": [
+      {
+        "volume": 30,
+        "price": 400000,
+        "discount": 0
+      },
+      {
+        "volume": 50,
+        "price": 4800000,
+        "discount": 0
+      }
+    ],
+    "onlineMarketplaces": [
+      {
+        "name": "Tokopedia",
+        "link": "https://www.google.co.id"
+      },
+      {
+        "name": "Shopee",
+        "link": "https://www.google.co.id"
+      }
+    ],
+    "releaseAt": "2024-07-07T00:00:00Z"
+  },
+  {
+    "id": 18,
+    "name": "English Pear & Freesia 13",
+    "images": [
+      "english-pear-freesia-1.avif",
+      "english-pear-freesia-2.avif",
+      "english-pear-freesia-3.avif"
+    ],
+    "description": "Orchards steeped in golden sunshine, warming the russet curves of luscious pears. The sensuous freshness of the just-ripe fruit wrapped in elegant white freesias, enhanced with rose and rooted in patchouli.",
+    "gender": "F",
+    "notes": ["Williams Pear", "Freesia", "Patchouli"],
+    "sizes": [
+      {
+        "volume": 30,
+        "price": 400000,
+        "discount": 0
+      },
+      {
+        "volume": 50,
+        "price": 4800000,
+        "discount": 0
+      }
+    ],
+    "onlineMarketplaces": [
+      {
+        "name": "Tokopedia",
+        "link": "https://www.google.co.id"
+      },
+      {
+        "name": "Shopee",
+        "link": "https://www.google.co.id"
+      }
+    ],
+    "releaseAt": "2024-07-07T00:00:00Z"
+  },
+  {
+    "id": 19,
+    "name": "English Pear & Freesia 13",
+    "images": [
+      "english-pear-freesia-1.avif",
+      "english-pear-freesia-2.avif",
+      "english-pear-freesia-3.avif"
+    ],
+    "description": "Orchards steeped in golden sunshine, warming the russet curves of luscious pears. The sensuous freshness of the just-ripe fruit wrapped in elegant white freesias, enhanced with rose and rooted in patchouli.",
+    "gender": "F",
+    "notes": ["Williams Pear", "Freesia", "Patchouli"],
+    "sizes": [
+      {
+        "volume": 30,
+        "price": 400000,
+        "discount": 0
+      },
+      {
+        "volume": 50,
+        "price": 4800000,
+        "discount": 0
+      }
+    ],
+    "onlineMarketplaces": [
+      {
+        "name": "Tokopedia",
+        "link": "https://www.google.co.id"
+      },
+      {
+        "name": "Shopee",
+        "link": "https://www.google.co.id"
+      }
+    ],
+    "releaseAt": "2024-07-07T00:00:00Z"
+  },
+  {
+    "id": 20,
     "name": "English Pear & Freesia 13",
     "images": [
       "english-pear-freesia-1.avif",

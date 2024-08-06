@@ -3,6 +3,7 @@ import XIcon from "@mui/icons-material/X";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import PinterestIcon from "@mui/icons-material/Pinterest";
 import { ROUTES } from "../routes";
+import { Gender } from "../enums/genderEnum";
 
 export const COMPANY_INFO = {
   COMPANY_NAME: "CELYSSEE",
@@ -30,15 +31,15 @@ export const TOP_MENU_SIDEBAR = [
     link: ROUTES.NEW_COLLECTIONS,
   },
   {
-    name: "Feminine Perfume",
-    // link: ROUTES.COLLECTIONS("feminine"),// TODO: Link
+    name: "Feminine",
+    link: ROUTES.COLLECTIONS(Gender.FEMININE.toLowerCase()),
   },
   {
-    name: "Masculine Perfume",
-    // link: ROUTES.COLLECTIONS("masculine"),// TODO: Link
+    name: "Masculine",
+    link: ROUTES.COLLECTIONS(Gender.MASCULINE.toLowerCase()),
   },
   {
-    name: "Unisex Perfume",
+    name: "Unisex",
     // link: ROUTES.COLLECTIONS("unisex"),// TODO: Link
   },
   {
