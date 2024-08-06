@@ -7,6 +7,7 @@ import { SortOptions } from "../enums/sortOptionsEnum";
 import { sortPerfumes } from "../utils/sortingUtil";
 
 function BestSellersPage() {
+  const [page, setPage] = useState(1);
   const [sortedBy, setSortedBy] = useState(SortOptions.DEFAULT);
   const [sortedData, setSortedData] = useState([]);
 
@@ -37,8 +38,9 @@ function BestSellersPage() {
       {/* Grid View: Content Area */}
       <GridView
         title="Our Timeless Best Sellers"
+        page={page}
+        setPage={setPage}
         data={sortedData}
-        isShowPrice={false}
       />
     </div>
   );

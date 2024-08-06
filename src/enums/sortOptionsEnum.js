@@ -4,6 +4,6 @@ export const SortOptions = {
   ALPHABETICALLY_ZA: "Reverse Alphabetical (Z-A)",
   PRICE_AZ: "Price (Low to High)",
   PRICE_ZA: "Price (High to Low)",
-  DATE_AZ: "Date (Newest First)",
-  DATE_ZA: "Date (Oldest First)",
+  DATE_ZA: "Date (Newest First)", // DESC => newest first
+  DATE_AZ: "Date (Oldest First)", // ASC => oldest dates first
 };

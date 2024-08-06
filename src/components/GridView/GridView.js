@@ -2,12 +2,10 @@ import React, { useEffect, useRef, useState } from "react";
 import Card from "../Card/Card";
 import { getPaginatedItems } from "../../utils/mathUtil";
 import { Pagination } from "@mui/material";
-// import { TailSpin } from "react-loader-spinner";   // TODO: REMOVE UNNECESSARY CODE
 
-function GridView({ title = "", data, isShowPrice = false }) {
+function GridView({ title = "", page, setPage, data, isShowPrice = false }) {
   const gridRef = useRef(null);
 
-  const [page, setPage] = useState(1);
   const [productList, setProductList] = useState([]);
   // const [isLoading, setIsLoading] = useState(true);
 
@@ -75,8 +73,6 @@ function GridView({ title = "", data, isShowPrice = false }) {
           </div>
         )}
       </div>
-      {/* </>
-      )} */}
     </div>
   );
 }

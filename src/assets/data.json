@@ -85,7 +85,7 @@
       "english-pear-freesia-3.avif"
     ],
     "description": "Orchards steeped in golden sunshine, warming the russet curves of luscious pears. The sensuous freshness of the just-ripe fruit wrapped in elegant white freesias, enhanced with rose and rooted in patchouli.",
-    "gender": "A",
+    "gender": "O",
     "notes": ["Williams Pear", "Freesia", "Patchouli"],
     "sizes": [
       {
@@ -388,7 +388,7 @@
         "link": "https://www.google.co.id"
       }
     ],
-    "releaseAt": "2024-07-07T00:00:00Z"
+    "releaseAt": "2024-07-01T00:00:00Z"
   },
   {
     "id": 12,
@@ -423,7 +423,7 @@
         "link": "https://www.google.co.id"
       }
     ],
-    "releaseAt": "2024-07-07T00:00:00Z"
+    "releaseAt": "2024-07-02T00:00:00Z"
   },
   {
     "id": 13,
@@ -458,7 +458,7 @@
         "link": "https://www.google.co.id"
       }
     ],
-    "releaseAt": "2024-07-07T00:00:00Z"
+    "releaseAt": "2024-07-03T00:00:00Z"
   },
   {
     "id": 14,

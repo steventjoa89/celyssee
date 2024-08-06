@@ -6,6 +6,7 @@ import { SortOptions } from "../enums/sortOptionsEnum";
 import { sortPerfumes } from "../utils/sortingUtil";
 
 function NewCollectionsPage() {
+  const [page, setPage] = useState(1);
   const [sortedBy, setSortedBy] = useState(SortOptions.DEFAULT);
   const [sortedData, setSortedData] = useState([]);
 
@@ -36,8 +37,9 @@ function NewCollectionsPage() {
       {/* Grid View: Content Area */}
       <GridView
         title="Our Exclusive New Collections"
+        page={page}
+        setPage={setPage}
         data={sortedData}
-        isShowPrice={false}
       />
     </div>
   );
