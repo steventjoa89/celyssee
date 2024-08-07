@@ -75,7 +75,7 @@ function HomePage() {
     image: HOME_STARTER_KIT_IMAGE,
     imagePosition: "left",
     buttonText: "FIND YOUR FRAGANCE",
-    onClick: () => console.log("third"), // TODO: ONCLICK
+    onClick: () => navigate(ROUTES.PRODUCT_DETAILS(4)), // ID:4 = Starter Kit
   };
 
   return (

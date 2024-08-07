@@ -26,3 +26,32 @@ code {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
+
+/* Product Details for Image Slider */
+.image-slider-container {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden; /* Prevent overflow issues */
+}
+
+.image-slider-container .slick-slide {
+  display: flex;
+  justify-content: center; /* Center images in slider */
+}
+
+.thumbnails {
+  display: flex;
+  justify-content: center; /* Center thumbnails */
+  flex-wrap: wrap; /* Wrap thumbnails if necessary */
+}
+
+.thumbnail-wrapper {
+  margin: 0 4px; /* Add space between thumbnails */
+}
+
+@media (max-width: 768px) {
+  .thumbnail-wrapper img {
+    width: 40px; /* Adjust thumbnail size for mobile */
+    height: 40px;
+  }
+}

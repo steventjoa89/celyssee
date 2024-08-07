@@ -89,24 +89,17 @@
   },
   {
     "id": 4,
-    "name": "English Pear & Freesia 4",
+    "name": "Starter Kit",
     "images": [
-      "english-pear-freesia-1.avif",
-      "english-pear-freesia-2.avif",
-      "english-pear-freesia-3.avif"
+      "starter-kit-1.jpeg",
+      "starter-kit-2.jpeg",
+      "starter-kit-3.jpeg"
     ],
-    "description": "Orchards steeped in golden sunshine, warming the russet curves of luscious pears. The sensuous freshness of the just-ripe fruit wrapped in elegant white freesias, enhanced with rose and rooted in patchouli.",
-    "gender": "F",
-    "notes": ["Williams Pear", "Freesia", "Patchouli"],
+    "description": "Discover your new favorite scent with our Perfume Starter Kit. This set features three mini bottles, each offering a unique fragrance experience. You can choose your preferred scent profile, or let us select our best fragrance for you. Compact and stylish, this kit is perfect for finding your signature scent or gifting to someone special.",
     "sizes": [
       {
         "volume": 30,
-        "price": 1200000,
-        "discount": 30
-      },
-      {
-        "volume": 50,
-        "price": 1800000,
+        "price": 150000,
         "discount": 30
       }
     ],
@@ -120,7 +113,7 @@
         "link": "https://www.google.co.id"
       }
     ],
-    "releaseAt": "2024-06-07T00:00:00Z"
+    "releaseAt": "2024-08-07T00:00:00Z"
   },
   {
     "id": 5,
