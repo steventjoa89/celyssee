@@ -40,8 +40,8 @@ function FilterSidebar({
 
       {/* Gender Filters */}
       <Accordion title="Gender" isShowBottomBorder={true}>
-        <div className="px-4 pb-4 text-left">
-          <ul className="space-y-2">
+        <div className="px-4 mb-4 text-left">
+          <ul className="space-y-3">
             {genderFilter.map((item, index) => (
               <li key={index} className="flex items-center space-x-1">
                 <label className="inline-flex items-center">
@@ -61,8 +61,8 @@ function FilterSidebar({
 
       {/* Volume Filters */}
       <Accordion title="Volume" isShowBottomBorder={true}>
-        <div className="px-4 pb-4 text-left">
-          <ul className="space-y-2">
+        <div className="px-4 mb-4 text-left">
+          <ul className="space-y-3">
             {volumeFilter.map((item, index) => (
               <li key={index} className="flex items-center space-x-1">
                 <label className="inline-flex items-center">
