@@ -10,31 +10,31 @@ function Card({ item, isLarge = false, isShowPrice = true }) {
 
   return (
     <Link to={ROUTES.PRODUCT_DETAILS(item.id)}>
-      <div className="flex flex-col h-full">
+      <div className="flex flex-col h-fulloverflow-hidden">
         <div
           className={`relative w-full ${
             isLarge
-              ? "h-48 sm:h-56 md:h-64 lg:h-72 xl:h-80"
-              : "h-32 sm:h-40 md:h-48 lg:h-56 xl:h-64"
+              ? "h-40 sm:h-48 md:h-56 lg:h-64 xl:h-72"
+              : "h-24 sm:h-32 md:h-40 lg:h-48 xl:h-56"
           } overflow-hidden`}
         >
           <img
             src={`${process.env.PUBLIC_URL}/images/perfumes/${item.images[0]}`}
-            alt="perfume"
-            className="w-full h-full object-contain"
+            alt={item.name}
+            className="w-full h-full object-cover"
           />
         </div>
-        <div className="flex-grow">
+        <div className="flex flex-col px-3 py-0 sm:py-1 md:py-2 lg:py-3">
           <div className="flex flex-col p-2 md:p-1 lg:p-0">
             {/* Name */}
-            <h3 className="text-sm md:text-base font-semibold truncate overflow-ellipsis whitespace-normal">
+            <h3 className="text-xs sm:text-sm md:text-base font-semibold truncate overflow-ellipsis whitespace-normal">
               {item.name}
             </h3>
             {/* Price */}
             {isShowPrice && (
-              <div className="w-full flex flex-col md:flex-row items-center justify-center text-sm md:text-base mt-2">
+              <div className="mt-2 w-full flex flex-col md:flex-row items-center justify-center text-xs sm:text-sm md:text-base">
                 {discount ? (
-                  <div className="space-x-2 md:space-x-3">
+                  <div className="flex items-center space-x-2">
                     <span className="text-gray-600">
                       Rp. {discountedPrice.toLocaleString()}
                     </span>
