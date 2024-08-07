@@ -24,15 +24,15 @@ function Card({ item, isLarge = false, isShowPrice = true }) {
             className="w-full h-full object-contain"
           />
         </div>
-        <div className="flex-grow p-4">
-          <div className="flex flex-col">
+        <div className="flex-grow">
+          <div className="flex flex-col p-2 md:p-1 lg:p-0">
             {/* Name */}
             <h3 className="text-sm md:text-base font-semibold truncate overflow-ellipsis whitespace-normal">
               {item.name}
             </h3>
             {/* Price */}
             {isShowPrice && (
-              <div className="w-full flex flex-col md:flex-row items-center justify-center text-xs md:text-sm mt-2">
+              <div className="w-full flex flex-col md:flex-row items-center justify-center text-sm md:text-base mt-2">
                 {discount ? (
                   <div className="space-x-2 md:space-x-3">
                     <span className="text-gray-600">

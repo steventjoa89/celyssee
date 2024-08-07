@@ -4,6 +4,22 @@ import Card from "../Card/Card";
 import { getPaginatedItems } from "../../utils/mathUtil";
 import { Pagination } from "@mui/material";
 
+function NoData() {
+  return (
+    <div className="flex items-center justify-center min-h-[58vh] text-center">
+      <div className="p-8">
+        <h3 className="font-title text-base md:text-xl font-bold mb-4">
+          No results were found
+        </h3>
+        <p className="text-sm md:text-base lg:text-xl text-gray-500">
+          Enhance your results by carefully reviewing your spelling or consider
+          using broader keywords.
+        </p>
+      </div>
+    </div>
+  );
+}
+
 function GridView({ title, data, isShowPrice = false }) {
   const gridRef = useRef(null);
   const location = useLocation();
@@ -33,7 +49,7 @@ function GridView({ title, data, isShowPrice = false }) {
   useEffect(() => {
     // Extract search query and page number from URL
     const queryParams = new URLSearchParams(location.search);
-    const searchQuery = queryParams.get("search");
+    // const searchQuery = queryParams.get("search");
     const pageParam = parseInt(queryParams.get("page"), 10);
 
     if (!isNaN(pageParam)) {
@@ -43,6 +59,10 @@ function GridView({ title, data, isShowPrice = false }) {
     // Fetch data based on the current page
     setProductList(getPaginatedItems(data, page, totalItemsPerPage));
   }, [data, page, location.search]);
+
+  if (data.length === 0) {
+    return <NoData />;
+  }
 
   return (
     <div className="min-h-[50vh] flex flex-col items-center justify-center">
@@ -57,7 +77,9 @@ function GridView({ title, data, isShowPrice = false }) {
       {/* GridView */}
       <div
         ref={gridRef}
-        className="mx-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8"
+        className={`${
+          !title && "mt-4"
+        } mx-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8`}
       >
         {productList.map((item, index) => (
           <Card

@@ -25,7 +25,7 @@ function RightSidebar({ isOpen, toggleSidebar, children }) {
       <div
         className={`fixed inset-y-0 right-0 z-50 bg-white shadow-xl overflow-y-auto transition-transform transform duration-300 ${
           isOpen ? "translate-x-0" : "translate-x-full"
-        } w-full md:w-[40vw]`}
+        } w-full md:w-[40vw] lg:w-[30vw]`}
       >
         {/* Header */}
         <div className="flex items-center justify-end px-10 pt-10">

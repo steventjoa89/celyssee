@@ -1,32 +1,17 @@
 [
   {
     "id": 1,
-    "name": "English Pear & Freesia 1",
-    "images": [
-      "english-pear-freesia-1.avif",
-      "english-pear-freesia-2.avif",
-      "english-pear-freesia-3.avif"
-    ],
-    "gender": "U",
-    "description": "Orchards steeped in golden sunshine, warming the russet curves of luscious pears. The sensuous freshness of the just-ripe fruit wrapped in elegant white freesias, enhanced with rose and rooted in patchouli.",
-    "ingredients": ["Etyl Alcohol", "Etyl Alcohol2", "Alcohol3"],
-    "notes": ["Williams Pear", "Freesia", "Patchouli"],
+    "name": "Enchanted",
+    "images": ["enchanted-1.jpeg", "enchanted-2.jpeg", "enchanted-3.jpeg"],
+    "gender": "F",
+    "description": "**Enchanted** is a captivating perfume designed for women, embodying elegance and allure. It opens with a lush rose top note, seamlessly blending into a heart of delicate jasmine. The scent concludes with a warm and creamy vanilla base, creating a fragrance that is both enchanting and timeless.",
+    "ingredients": ["Etyl Alcohol", "Aqua"],
+    "notes": ["Rose", "Jasmine", "Vanilla"],
     "sizes": [
       {
         "volume": 30,
         "price": 180000,
-        "discount": 20
-      },
-      {
-        "volume": 50,
-        "price": 240000,
-        "discount": 20
-      },
-      {
-        "volume": 100,
-        "price": 320000,
-        "discount": 30,
-        "isAvailable": false
+        "discount": 30
       }
     ],
     "onlineMarketplaces": [
@@ -39,28 +24,24 @@
         "link": "https://www.google.co.id"
       }
     ],
-    "releaseAt": "2024-06-07T00:00:00Z"
+    "releaseAt": "2024-08-07T00:00:00Z"
   },
   {
     "id": 2,
-    "name": "English Pear & Freesia 2",
+    "name": "Secret Garden",
     "images": [
-      "english-pear-freesia-1.avif",
-      "english-pear-freesia-2.avif",
-      "english-pear-freesia-3.avif"
+      "secret-garden-1.jpeg",
+      "secret-garden-2.jpeg",
+      "secret-garden-3.jpeg",
+      "secret-garden-4.jpeg"
     ],
     "description": "Orchards steeped in golden sunshine, warming the russet curves of luscious pears. The sensuous freshness of the just-ripe fruit wrapped in elegant white freesias, enhanced with rose and rooted in patchouli.",
     "gender": "F",
-    "notes": ["Williams Pear", "Freesia", "Patchouli"],
+    "notes": ["Peony", "Jasmine", "Woody"],
     "sizes": [
       {
         "volume": 30,
-        "price": 1200000,
-        "discount": 10
-      },
-      {
-        "volume": 50,
-        "price": 1800000,
+        "price": 180000,
         "discount": 30
       }
     ],
@@ -74,28 +55,23 @@
         "link": "https://www.google.co.id"
       }
     ],
-    "releaseAt": "2024-06-07T00:00:00Z"
+    "releaseAt": "2024-08-07T00:00:00Z"
   },
   {
     "id": 3,
-    "name": "English Pear & Freesia 3",
+    "name": "Sweet Temptations",
     "images": [
-      "english-pear-freesia-1.avif",
-      "english-pear-freesia-2.avif",
-      "english-pear-freesia-3.avif"
+      "sweet-temptations-1.jpeg",
+      "sweet-temptations-2.jpeg",
+      "sweet-temptations-3.jpeg"
     ],
-    "description": "Orchards steeped in golden sunshine, warming the russet curves of luscious pears. The sensuous freshness of the just-ripe fruit wrapped in elegant white freesias, enhanced with rose and rooted in patchouli.",
-    "gender": "O",
-    "notes": ["Williams Pear", "Freesia", "Patchouli"],
+    "description": "**Sweet Temptations** is a captivating fragrance designed to enchant and allure. This exquisite perfume opens with the rich and sophisticated aroma of black tea, providing an elegant and comforting first impression. The heart of the scent reveals the timeless beauty of jasmine, offering a lush, floral essence that exudes grace and femininity. The base note of bittersweet vanilla adds a warm, indulgent finish, creating a delightful contrast that lingers with a touch of mystery. **Sweet Temptations** is a perfect blend of refinement and sensuality, making it an ideal choice for the modern woman who embodies both strength and allure.",
+    "gender": "F",
+    "notes": ["Black Tea", "Jasmine", "Bitter Sweet Vanilla"],
     "sizes": [
       {
         "volume": 30,
-        "price": 1200000,
-        "discount": 30
-      },
-      {
-        "volume": 50,
-        "price": 1800000,
+        "price": 180000,
         "discount": 30
       }
     ],
@@ -109,7 +85,7 @@
         "link": "https://www.google.co.id"
       }
     ],
-    "releaseAt": "2024-06-07T00:00:00Z"
+    "releaseAt": "2024-08-07T00:00:00Z"
   },
   {
     "id": 4,
