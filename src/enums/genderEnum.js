@@ -19,3 +19,21 @@ export const mapGender = (gender) => {
       return Gender.OTHER;
   }
 };
+
+const GenderLookup = Object.entries(Gender).reduce((acc, [key, value]) => {
+  acc[value.toLowerCase()] = key;
+  return acc;
+}, {});
+
+// Function to get the corresponding Gender enum value
+export const getGenderEnum = (input) => {
+  const normalizedInput = input.trim().toLowerCase();
+
+  const key = GenderLookup[normalizedInput];
+
+  if (!key) {
+    throw new Error("Invalid gender input");
+  }
+
+  return Gender[key];
+};
