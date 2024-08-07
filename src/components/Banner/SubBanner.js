@@ -69,7 +69,7 @@ function SubBanner({
   const isImageLeft = imagePosition === "left";
 
   return (
-    <div className="my-3 mx-16 md:mx-20">
+    <div className="my-3 mx-8 sm:mx-10 md:mx-12 lg:mx-14 xl:mx-16">
       <div
         className={`flex flex-col md:flex-row ${
           isImageLeft ? "" : "md:flex-row-reverse"

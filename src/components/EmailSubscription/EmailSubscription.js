@@ -18,7 +18,7 @@ function EmailSubscription() {
   };
 
   return (
-    <div className="my-8 mx-16">
+    <div className="my-8 mx-8 sm:mx-10 md:mx-12 lg:mx-14 xl:mx-16">
       <div className="flex flex-col md:flex-row">
         {/* Left Panel - Subscription */}
         <div className="flex-1 bg-[#fcf7ed] flex flex-col justify-center items-center p-6 xs:p-8 md:p-10 lg:p-12 xl:p-14">
