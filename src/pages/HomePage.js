@@ -86,7 +86,10 @@ function HomePage() {
         onClick={handleOnClickBanner}
       >
         <div className="absolute inset-0 bg-black opacity-30"></div>
-        <div className="absolute inset-0 flex items-center justify-center text-white">
+        <div
+          data-aos="fade-up"
+          className="absolute inset-0 flex items-center justify-center text-white"
+        >
           <div className="absolute bottom-0 mb-6 md:mb-8 lg:mb-10 xl:mb-12 left-1/2 transform -translate-x-1/2 text-white flex flex-col items-center space-y-10">
             <div className="flex flex-col space-y-2">
               <span className="text-sm">Perfumery</span>
@@ -110,11 +113,17 @@ function HomePage() {
 
       {/* Best Sellers Sections */}
       <div className="my-3 px-8 pb-10 border-b border-gray-200">
-        <h1 className="relative font-title text-3xl mt-8 mb-5">
+        <h1
+          data-aos="fade-up"
+          className="relative font-title text-3xl mt-8 mb-5"
+        >
           Our Best Sellers
           <span className="absolute left-1/2 transform -translate-x-1/2 bottom-[-4px] w-16 h-[2px] bg-black"></span>
         </h1>
-        <HorizontalScrollableGridView perfumeList={bestSellers} />
+        <HorizontalScrollableGridView
+          perfumeList={bestSellers}
+          fadeDirection="right"
+        />
         <div className="mt-5">
           <Button onClick={() => navigate(ROUTES.BEST_SELLERS)}>
             SEE MORE

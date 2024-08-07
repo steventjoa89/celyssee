@@ -3,7 +3,7 @@ import Button from "../Button/Button";
 
 function ImagePanel({ image = "", title = "" }) {
   return (
-    <div className="flex-1">
+    <div data-aos="fade-right" className="flex-1">
       {title && (
         <div className="md:hidden">
           <h2 className="font-title text-2xl lg:text-3xl font-bold mb-4">
@@ -32,6 +32,7 @@ function ImageDescriptionPanel({
 
   return (
     <div
+      data-aos="fade-left"
       className={`flex-1 flex flex-col justify-${textStyle} items-${textStyle} text-${textAlignmentStyle} md:px-12 py-6 xs:py-8 md:py-10 lg:py-12 xl:py-14`}
     >
       {title && (

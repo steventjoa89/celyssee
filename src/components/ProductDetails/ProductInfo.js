@@ -35,7 +35,10 @@ function ProductInfo({ item, selectedSize, setSelectedSize }) {
   };
 
   return (
-    <div className="w-full flex flex-col items-start justify-start space-y-3 mt-4">
+    <div
+      data-aos="fade-left"
+      className="w-full flex flex-col items-start justify-start space-y-3 mt-4"
+    >
       {/* Name */}
       <span className="w-full font-title text-2xl font-bold text-center md:text-left">
         {item.name}

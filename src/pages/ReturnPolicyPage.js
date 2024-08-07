@@ -4,7 +4,7 @@ import { toProperCase } from "../utils/stringUtil";
 
 function ReturnPolicyPage() {
   return (
-    <div className="max-w-5xl mx-auto mt-6 p-6">
+    <div data-aos="fade-up" className="max-w-5xl mx-auto mt-6 p-6">
       <h2 className="text-center font-bold uppercase">Return Policy</h2>
       <div className="text-sm md:text-base my-5 text-left space-y-5">
         <p className="font-bold">Our Return Policy</p>

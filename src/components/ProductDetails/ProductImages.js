@@ -18,7 +18,7 @@ function ProductImages({ item }) {
   };
 
   return (
-    <div className="image-slider-container">
+    <div data-aos="fade-right" className="image-slider-container">
       <Slider ref={sliderRef} {...settings}>
         {item.images.map((image, index) => (
           <div key={index}>

@@ -19,6 +19,8 @@ import AboutUsPage from "./pages/AboutUsPage";
 import BlogsPage from "./pages/BlogsPage";
 import BlogPage from "./pages/BlogPage";
 import NProgress from "nprogress";
+import AOS from "aos";
+import "aos/dist/aos.css"; // Import AOS styles
 import "nprogress/nprogress.css"; // Import the NProgress styles
 import "./nprogress-custom.css";
 
@@ -29,6 +31,12 @@ function App() {
     NProgress.start(); // Start the NProgressbar
     window.scrollTo(0, 0);
     NProgress.done(); // Stop the NProgressbar
+
+    // AOS Init
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
   }, [location]);
 
   return (

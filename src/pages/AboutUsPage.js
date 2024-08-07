@@ -7,7 +7,7 @@ import { toProperCase } from "../utils/stringUtil";
 
 function AboutUsTextSection({ title = "", description = "" }) {
   return (
-    <div className="py-5 lg:py-6 text-center">
+    <div data-aos="fade-up" className="py-5 lg:py-6 text-center">
       <h1 className="font-title text-gray-700 text-3xl md:text-4xl font-bold mb-4">
         {title}
       </h1>
@@ -20,7 +20,7 @@ function AboutUsTextSection({ title = "", description = "" }) {
 
 function ImagePanel({ image = "" }) {
   return (
-    <div className="flex-1">
+    <div data-aos="fade-right" className="flex-1">
       <img
         src={image}
         alt="About Us"
@@ -32,7 +32,10 @@ function ImagePanel({ image = "" }) {
 
 function ImageDescriptionPanel({ title = "", description = "", children }) {
   return (
-    <div className="flex-1 flex flex-col justify-center items-center p-6 xs:p-8 md:p-10 lg:p-12 xl:p-14">
+    <div
+      data-aos="fade-left"
+      className="flex-1 flex flex-col justify-center items-center p-6 xs:p-8 md:p-10 lg:p-12 xl:p-14"
+    >
       <h1 className="font-title text-gray-700 text-2xl md:text-3xl font-bold mb-4">
         {title}
       </h1>

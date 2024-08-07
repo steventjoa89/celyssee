@@ -74,7 +74,10 @@ function GridView({ title, data, isSearch = false, isShowPrice = false }) {
     <div className="min-h-[50vh] flex flex-col items-center justify-center">
       {/* Title */}
       {title && (
-        <h1 className="relative font-title text-2xl mt-8 mb-5">
+        <h1
+          data-aos="fade-right"
+          className="relative font-title text-2xl mt-8 mb-5"
+        >
           {title}
           <span className="absolute left-1/2 transform -translate-x-1/2 bottom-[-4px] w-16 h-[2px] bg-black"></span>
         </h1>
@@ -83,6 +86,7 @@ function GridView({ title, data, isSearch = false, isShowPrice = false }) {
       {/* GridView */}
       <div
         ref={gridRef}
+        data-aos="fade-left"
         className={`${
           !title && "mt-4"
         } mx-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8`}

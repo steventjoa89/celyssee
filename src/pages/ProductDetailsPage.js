@@ -90,11 +90,17 @@ function ProductDetailsPage() {
       {/* Suggestions */}
       <div className="w-full flex items-center justify-center">
         <div className="flex w-full flex-col">
-          <h2 className="relative font-title text-2xl mt-8 mb-5">
+          <h2
+            data-aos="fade-up"
+            className="relative font-title text-2xl mt-8 mb-5"
+          >
             You may also like
             <span className="absolute left-1/2 transform -translate-x-1/2 bottom-[-4px] w-16 h-[2px] bg-black"></span>
           </h2>
-          <div className="grid grid-cols-2 gap-4 px-4 py-6 sm:grid-cols-3 lg:grid-cols-4 md:gap-6 lg:gap-8">
+          <div
+            data-aos="fade-right"
+            className="grid grid-cols-2 gap-4 px-4 py-6 sm:grid-cols-3 lg:grid-cols-4 md:gap-6 lg:gap-8"
+          >
             {suggestedPerfumes.map((item, index) => (
               <Card key={index} item={item} />
             ))}

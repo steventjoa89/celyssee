@@ -11,7 +11,7 @@ function BlogCard({ id, image, title, description }) {
   };
 
   return (
-    <div className="text-left overflow-hidden">
+    <div data-aos="fade-up" className="text-left overflow-hidden">
       <img
         src={`${process.env.PUBLIC_URL}/images/blogs/${image}`}
         alt={title}

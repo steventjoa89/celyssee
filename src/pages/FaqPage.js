@@ -191,7 +191,7 @@ function FaqPage() {
     <div className="max-w-full mx-8 md:mx-16 text-left">
       {faqs.map((item, index) => (
         <div key={index} className="flex flex-col md:flex-row">
-          <div className="flex-1 p-4">
+          <div data-aos="fade-right" className="flex-1 p-4">
             <h2 className="text-center md:text-left text-xl md:text-2xl font-bold">
               {item.title}
             </h2>
@@ -199,7 +199,7 @@ function FaqPage() {
               {item.description}
             </p>
           </div>
-          <div className="flex-1 p-4">
+          <div data-aos="fade-left" className="flex-1 p-4">
             {item.faqs.map((itemFaq, itemIndex) => (
               <Accordion
                 key={itemIndex}

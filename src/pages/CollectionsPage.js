@@ -18,15 +18,17 @@ function CollectionsPage() {
     );
   };
 
-  useEffect(() => {
-    setData(
-      PERFUME_CATALOG.filter(
-        (perfume) => perfume.gender === getGenderEnum(collection)
-      )
-    );
-  }, [collection]);
-
   const isValidCollection = checkValidCollection(collection);
+
+  useEffect(() => {
+    if (isValidCollection) {
+      setData(
+        PERFUME_CATALOG.filter(
+          (perfume) => perfume.gender === getGenderEnum(collection)
+        )
+      );
+    }
+  }, [isValidCollection, collection]);
 
   if (!isValidCollection) {
     return <PageNotFoundPage />;

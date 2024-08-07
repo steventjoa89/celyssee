@@ -15,7 +15,7 @@ function BlogPage() {
   }
 
   return (
-    <div className="max-w-4xl mx-auto mb-8 px-8 py-6">
+    <div data-aos="fade-up" className="max-w-4xl mx-auto mb-8 px-8 py-6">
       <div className="space-y-6 text-left">
         {/* Title Image */}
         <img
