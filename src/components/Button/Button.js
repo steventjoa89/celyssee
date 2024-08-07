@@ -8,7 +8,7 @@ function Button({
   isDisabled = false,
   ...props
 }) {
-  const defaultStyles = "text-black bg-white border-black font-semibold";
+  const defaultStyles = "text-black bg-transparent border-black font-semibold";
   const selectedStyles = "bg-black text-white border-black";
 
   const unavailableStyles =
