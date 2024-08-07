@@ -21,7 +21,6 @@ import BlogPage from "./pages/BlogPage";
 import NProgress from "nprogress";
 import "nprogress/nprogress.css"; // Import the NProgress styles
 import "./nprogress-custom.css";
-import TitleManager from "./components/TitleManager/TitleManager";
 
 function App() {
   const location = useLocation();
@@ -34,7 +33,6 @@ function App() {
 
   return (
     <div className="App">
-      <TitleManager />
       <Navbar />
       <Routes>
         <Route exatch path={ROUTES.HOME} element={<HomePage />} />
