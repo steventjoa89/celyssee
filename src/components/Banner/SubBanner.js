@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "../Button/Button";
 
-function ImagePanel({ image = "", title = "" }) {
+function ImagePanel({ image = "", title = "", onClick }) {
   return (
     <div data-aos="fade-right" className="flex-1">
       {title && (
@@ -14,7 +14,8 @@ function ImagePanel({ image = "", title = "" }) {
       <img
         src={`${process.env.PUBLIC_URL}/images/banner/${image}`}
         alt={title}
-        className="w-full h-[25vh] md:h-[40vh] object-cover rounded-xl"
+        className="w-full h-[25vh] md:h-[40vh] object-cover rounded-xl cursor-pointer"
+        onClick={onClick}
       />
     </div>
   );
@@ -76,7 +77,7 @@ function SubBanner({
           isImageLeft ? "" : "md:flex-row-reverse"
         }`}
       >
-        <ImagePanel image={image} title={title} />
+        <ImagePanel image={image} title={title} onClick={onClick} />
         <ImageDescriptionPanel
           title={title}
           description={description}
