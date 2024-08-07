@@ -2,6 +2,7 @@ import React from "react";
 import parse from "html-react-parser";
 import { COMPANY_INFO } from "../data/settings";
 import { toProperCase } from "../utils/stringUtil";
+import TitleManager from "../components/TitleManager/TitleManager";
 
 function PrivacyPolicyPage() {
   const privacyPolicyArrData = [
@@ -94,33 +95,36 @@ function PrivacyPolicyPage() {
   ];
 
   return (
-    <div data-aos="fade-up" className="max-w-5xl mx-auto p-6">
-      <div className="text-xs md:text-sm my-5 text-left space-y-5">
-        <p className="font-bold">Privacy Policy</p>
-        <p>
-          <span className="font-bold">Effective Date</span>: 31 August 2024
-        </p>
+    <>
+      <TitleManager title="Privacy Policy" />
+      <div data-aos="fade-up" className="max-w-5xl mx-auto p-6">
+        <div className="text-xs md:text-sm my-5 text-left space-y-5">
+          <p className="font-bold">Privacy Policy</p>
+          <p>
+            <span className="font-bold">Effective Date</span>: 31 August 2024
+          </p>
 
-        {privacyPolicyArrData.map((item, index) => (
-          <div key={index} className="space-y-1">
-            <p className="font-bold">{item.title}</p>
-            {item.body && <p>{parse(item.body)}</p>}
-            {item.bodyList && (
-              <ul className="ml-4 list-disc">
-                {item.bodyList.map((itemList, itemIndex) => (
-                  <li key={itemIndex}>{parse(itemList)}</li>
-                ))}
-              </ul>
-            )}
-            {item.additionalBody && <p>{parse(item.additionalBody)}</p>}
-          </div>
-        ))}
+          {privacyPolicyArrData.map((item, index) => (
+            <div key={index} className="space-y-1">
+              <p className="font-bold">{item.title}</p>
+              {item.body && <p>{parse(item.body)}</p>}
+              {item.bodyList && (
+                <ul className="ml-4 list-disc">
+                  {item.bodyList.map((itemList, itemIndex) => (
+                    <li key={itemIndex}>{parse(itemList)}</li>
+                  ))}
+                </ul>
+              )}
+              {item.additionalBody && <p>{parse(item.additionalBody)}</p>}
+            </div>
+          ))}
 
-        <p className="pt-4 font-bold">
-          {toProperCase(COMPANY_INFO.COMPANY_NAME)}
-        </p>
+          <p className="pt-4 font-bold">
+            {toProperCase(COMPANY_INFO.COMPANY_NAME)}
+          </p>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 

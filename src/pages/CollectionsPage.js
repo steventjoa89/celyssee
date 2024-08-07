@@ -4,8 +4,9 @@ import PageNotFoundPage from "./PageNotFoundPage";
 import Breadcrumb from "../components/Breadcrumb/Breadcrumb";
 import GridView from "../components/GridView/GridView";
 import { Gender, getGenderEnum } from "../enums/genderEnum";
-import { toTitleCase } from "../utils/stringUtil";
+import { toProperCase, toTitleCase } from "../utils/stringUtil";
 import { PERFUME_CATALOG } from "../data/data";
+import TitleManager from "../components/TitleManager/TitleManager";
 
 function CollectionsPage() {
   const { collection } = useParams();
@@ -35,19 +36,22 @@ function CollectionsPage() {
   }
 
   return (
-    <div>
-      <Breadcrumb
-        title={`${toTitleCase(collection)} Collections`}
-        isShowFilter={false}
-      />
+    <>
+      <TitleManager title={`${toProperCase(collection)} Perfumes Collection`} />
+      <div>
+        <Breadcrumb
+          title={`${toTitleCase(collection)} Collections`}
+          isShowFilter={false}
+        />
 
-      {/* Grid View: Content Area */}
-      <GridView
-        title={`Our Signature ${toTitleCase(collection)} Scents`}
-        data={data}
-        isShowPrice={false}
-      />
-    </div>
+        {/* Grid View: Content Area */}
+        <GridView
+          title={`Our Signature ${toTitleCase(collection)} Scents`}
+          data={data}
+          isShowPrice={false}
+        />
+      </div>
+    </>
   );
 }
 

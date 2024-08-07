@@ -5,6 +5,7 @@ import GridView from "../components/GridView/GridView";
 import { PERFUME_CATALOG } from "../data/data";
 import { Gender } from "../enums/genderEnum";
 import NProgress from "nprogress";
+import TitleManager from "../components/TitleManager/TitleManager";
 
 function SearchResultsPage() {
   const [searchParams] = useSearchParams();
@@ -76,23 +77,26 @@ function SearchResultsPage() {
   // End of Filter Sidebar Configurations
 
   return (
-    <div>
-      <Breadcrumb
-        title={`Search Result (${data.length})`}
-        isShowFilter={true}
-        genderFilter={genderFilter}
-        volumeFilter={volumeFilter}
-        isGenderFilterChecked={isGenderFilterChecked}
-        setIsGenderFilterChecked={setIsGenderFilterChecked}
-        isVolumeFilterChecked={isVolumeFilterChecked}
-        setIsVolumeFilterChecked={setIsVolumeFilterChecked}
-        handleShowResult={handleShowResult}
-        clearAllFilters={clearAllFilters}
-      />
+    <>
+      <TitleManager title="Search Results" />
+      <div>
+        <Breadcrumb
+          title={`Search Results (${data.length})`}
+          isShowFilter={true}
+          genderFilter={genderFilter}
+          volumeFilter={volumeFilter}
+          isGenderFilterChecked={isGenderFilterChecked}
+          setIsGenderFilterChecked={setIsGenderFilterChecked}
+          isVolumeFilterChecked={isVolumeFilterChecked}
+          setIsVolumeFilterChecked={setIsVolumeFilterChecked}
+          handleShowResult={handleShowResult}
+          clearAllFilters={clearAllFilters}
+        />
 
-      {/* Grid View: Content Area */}
-      <GridView data={data} isSearch={true} isShowPrice={true} />
-    </div>
+        {/* Grid View: Content Area */}
+        <GridView data={data} isSearch={true} isShowPrice={true} />
+      </div>
+    </>
   );
 }
 

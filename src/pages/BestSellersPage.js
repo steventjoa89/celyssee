@@ -3,6 +3,7 @@ import Breadcrumb from "../components/Breadcrumb/Breadcrumb";
 import GridView from "../components/GridView/GridView";
 import { PERFUME_CATALOG } from "../data/data";
 import { BEST_SELLER_PERFUMES_IDS } from "../data/settings";
+import TitleManager from "../components/TitleManager/TitleManager";
 
 function BestSellersPage() {
   const [data, setData] = useState([]);
@@ -16,16 +17,19 @@ function BestSellersPage() {
   }, []);
 
   return (
-    <div>
-      <Breadcrumb title="Best Sellers" isShowFilter={false} />
+    <>
+      <TitleManager title="Best Sellers Collection" />
+      <div>
+        <Breadcrumb title="Best Sellers" isShowFilter={false} />
 
-      {/* Grid View: Content Area */}
-      <GridView
-        title="Our Timeless Best Sellers"
-        data={data}
-        isShowPrice={false}
-      />
-    </div>
+        {/* Grid View: Content Area */}
+        <GridView
+          title="Our Timeless Best Sellers"
+          data={data}
+          isShowPrice={false}
+        />
+      </div>
+    </>
   );
 }
 

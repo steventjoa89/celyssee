@@ -3,6 +3,7 @@ import Accordion from "../components/Accordion/Accordion";
 import parse from "html-react-parser";
 import { COMPANY_INFO } from "../data/settings";
 import { toProperCase } from "../utils/stringUtil";
+import TitleManager from "../components/TitleManager/TitleManager";
 
 function FaqPage() {
   const faqs = [
@@ -188,33 +189,36 @@ function FaqPage() {
   ];
 
   return (
-    <div className="max-w-full mx-8 md:mx-16 text-left">
-      {faqs.map((item, index) => (
-        <div key={index} className="flex flex-col md:flex-row">
-          <div data-aos="fade-right" className="flex-1 p-4">
-            <h2 className="text-center md:text-left text-xl md:text-2xl font-bold">
-              {item.title}
-            </h2>
-            <p className="mt-2 md:mt-4 text-sm text-gray-600">
-              {item.description}
-            </p>
+    <>
+      <TitleManager title="FAQS" />
+      <div className="max-w-full mx-8 md:mx-16 text-left">
+        {faqs.map((item, index) => (
+          <div key={index} className="flex flex-col md:flex-row">
+            <div data-aos="fade-right" className="flex-1 p-4">
+              <h2 className="text-center md:text-left text-xl md:text-2xl font-bold">
+                {item.title}
+              </h2>
+              <p className="mt-2 md:mt-4 text-sm text-gray-600">
+                {item.description}
+              </p>
+            </div>
+            <div data-aos="fade-left" className="flex-1 p-4">
+              {item.faqs.map((itemFaq, itemIndex) => (
+                <Accordion
+                  key={itemIndex}
+                  title={itemFaq.q}
+                  isShowBottomBorder={true}
+                >
+                  <span className="pb-3 text-sm text-gray-600">
+                    {parse(itemFaq.a)}
+                  </span>
+                </Accordion>
+              ))}
+            </div>
           </div>
-          <div data-aos="fade-left" className="flex-1 p-4">
-            {item.faqs.map((itemFaq, itemIndex) => (
-              <Accordion
-                key={itemIndex}
-                title={itemFaq.q}
-                isShowBottomBorder={true}
-              >
-                <span className="pb-3 text-sm text-gray-600">
-                  {parse(itemFaq.a)}
-                </span>
-              </Accordion>
-            ))}
-          </div>
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
+    </>
   );
 }
 

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Breadcrumb from "../components/Breadcrumb/Breadcrumb";
 import GridView from "../components/GridView/GridView";
 import { PERFUME_CATALOG } from "../data/data";
+import TitleManager from "../components/TitleManager/TitleManager";
 
 function NewCollectionsPage() {
   const [data, setData] = useState([]);
@@ -15,16 +16,20 @@ function NewCollectionsPage() {
   }, []);
 
   return (
-    <div>
-      <Breadcrumb title="New Collections" isShowFilter={false} />
+    <>
+      <TitleManager title="New Collection" />
 
-      {/* Grid View: Content Area */}
-      <GridView
-        title="Our Exclusive New Collections"
-        data={data}
-        isShowPrice={false}
-      />
-    </div>
+      <div>
+        <Breadcrumb title="New Collections" isShowFilter={false} />
+
+        {/* Grid View: Content Area */}
+        <GridView
+          title="Our Exclusive New Collections"
+          data={data}
+          isShowPrice={false}
+        />
+      </div>
+    </>
   );
 }
 

@@ -1,6 +1,7 @@
 import React from "react";
 import parse from "html-react-parser";
 import { COMPANY_INFO } from "../data/settings";
+import TitleManager from "../components/TitleManager/TitleManager";
 
 function TermsAndConditionsPage() {
   const termsAndConditionsArrData = [
@@ -73,28 +74,31 @@ function TermsAndConditionsPage() {
   ];
 
   return (
-    <div data-aos="fade-up" className="max-w-5xl mx-auto p-6">
-      <div className="text-xs md:text-sm my-5 text-left space-y-5">
-        <p className="font-bold">Terms and Conditions</p>
-        <p>
-          <span className="font-bold">Last Updated</span>: 31 August 2024
-        </p>
-        <p>
-          Welcome to {COMPANY_INFO.COMPANY_NAME}! By accessing or using our
-          website (the "Site"), you agree to be bound by the following terms and
-          conditions (the "Terms"). Please read them carefully.
-        </p>
+    <>
+      <TitleManager title="Terms And Conditions" />
+      <div data-aos="fade-up" className="max-w-5xl mx-auto p-6">
+        <div className="text-xs md:text-sm my-5 text-left space-y-5">
+          <p className="font-bold">Terms and Conditions</p>
+          <p>
+            <span className="font-bold">Last Updated</span>: 31 August 2024
+          </p>
+          <p>
+            Welcome to {COMPANY_INFO.COMPANY_NAME}! By accessing or using our
+            website (the "Site"), you agree to be bound by the following terms
+            and conditions (the "Terms"). Please read them carefully.
+          </p>
 
-        <ul className="ml-3 list-decimal space-y-3 font-bold">
-          {termsAndConditionsArrData.map((item, index) => (
-            <li key={index}>
-              <div className="text-sm md:text-base">{item.title}</div>
-              <div className="mt-1 font-normal">{parse(item.body)}</div>
-            </li>
-          ))}
-        </ul>
+          <ul className="ml-3 list-decimal space-y-3 font-bold">
+            {termsAndConditionsArrData.map((item, index) => (
+              <li key={index}>
+                <div className="text-sm md:text-base">{item.title}</div>
+                <div className="mt-1 font-normal">{parse(item.body)}</div>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 

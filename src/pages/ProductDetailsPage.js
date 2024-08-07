@@ -5,6 +5,7 @@ import Card from "../components/Card/Card";
 import { PERFUME_CATALOG } from "../data/data";
 import ProductImages from "../components/ProductDetails/ProductImages";
 import PageNotFoundPage from "./PageNotFoundPage";
+import TitleManager from "../components/TitleManager/TitleManager";
 
 function ProductDetailsPage() {
   const { id } = useParams();
@@ -70,6 +71,12 @@ function ProductDetailsPage() {
 
   return (
     <>
+      <TitleManager
+        title={`${selectedPerfume.name} - ${
+          selectedPerfume.gender || ""
+        } Perfumes`}
+      />
+
       {/* ProductDetails */}
       <div className="container mx-auto p-4 flex flex-col md:flex-row">
         {/* Left Panel: Product Images */}
