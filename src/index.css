@@ -2,9 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-html{
-  background: linear-gradient(135deg, white 0%, white 80%, #faf0dd 90%, #f8edd9 100%);
-
+html, body {
+  height: 100%;
+  margin: 0;
+  background: linear-gradient(135deg, white 0%, white 30%, #f8f1e3 80%, #faf0dd 90%, #f8edd9 100%);
+  background-attachment: fixed; /* Ensures background stays fixed during scroll */
+  background-size: cover; /* Ensure the background covers the entire page */
+  background-repeat: no-repeat; /* Prevents repeating the background */
 }
 
 body {
