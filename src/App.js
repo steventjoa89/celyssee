@@ -21,6 +21,7 @@ import BlogPage from "./pages/BlogPage";
 import NProgress from "nprogress";
 import "nprogress/nprogress.css"; // Import the NProgress styles
 import "./nprogress-custom.css";
+import TitleManager from "./components/TitleManager/TitleManager";
 
 function App() {
   const location = useLocation();
@@ -33,6 +34,7 @@ function App() {
 
   return (
     <div className="App">
+      <TitleManager />
       <Navbar />
       <Routes>
         <Route exatch path={ROUTES.HOME} element={<HomePage />} />
@@ -58,7 +60,7 @@ function App() {
         />
         <Route path={ROUTES.PRIVACY_POLICY} element={<PrivacyPolicyPage />} />
         {/* Catch-all route for undefined pages */}
-        <Route path="*" element={<PageNotFoundPage />} />
+        <Route path={ROUTES.PAGE_NOT_FOUND} element={<PageNotFoundPage />} />
       </Routes>
       <Footer />
     </div>

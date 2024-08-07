@@ -12,4 +12,5 @@ export const ROUTES = {
   BLOG: (id) => `/blogs/id/${id}`,
   TERM_AND_CONDITIONS: "/terms-and-conditions",
   PRIVACY_POLICY: "/privacy-policy",
+  PAGE_NOT_FOUND: "*",
 };
