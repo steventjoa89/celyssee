@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "./static/css/main.daab5557.css",
-    "main.js": "./static/js/main.dea2e9d7.js",
-    "static/media/slick.svg": "./static/media/slick.2630a3e3eab21c607e21.svg",
-    "static/media/slick.eot": "./static/media/slick.a4e97f5a2a64f0ab1323.eot",
-    "static/media/slick.ttf": "./static/media/slick.c94f7671dcc99dce43e2.ttf",
-    "static/media/slick.woff": "./static/media/slick.295183786cd8a1389865.woff",
-    "index.html": "./index.html",
-    "main.daab5557.css.map": "./static/css/main.daab5557.css.map",
-    "main.dea2e9d7.js.map": "./static/js/main.dea2e9d7.js.map"
+    "main.css": "/celyssee/static/css/main.01bdcad6.css",
+    "main.js": "/celyssee/static/js/main.b5f3971f.js",
+    "static/media/slick.svg": "/celyssee/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/celyssee/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/celyssee/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/celyssee/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/celyssee/index.html",
+    "main.01bdcad6.css.map": "/celyssee/static/css/main.01bdcad6.css.map",
+    "main.b5f3971f.js.map": "/celyssee/static/js/main.b5f3971f.js.map"
   },
   "entrypoints": [
-    "static/css/main.daab5557.css",
-    "static/js/main.dea2e9d7.js"
+    "static/css/main.01bdcad6.css",
+    "static/js/main.b5f3971f.js"
   ]
 }
