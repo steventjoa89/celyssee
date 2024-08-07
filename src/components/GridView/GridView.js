@@ -85,7 +85,7 @@ function GridView({ title, data, isSearch = false, isShowPrice = false }) {
         ref={gridRef}
         className={`${
           !title && "mt-4"
-        } mx-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8`}
+        } mx-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8`}
       >
         {productList.map((item, index) => (
           <Card
