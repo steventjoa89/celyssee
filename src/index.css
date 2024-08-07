@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+html{
+  background: linear-gradient(135deg, white 0%, white 80%, #faf0dd 90%, #f8edd9 100%);
+
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, questrial, serif, 'Segoe UI', 'Roboto', 'Oxygen',

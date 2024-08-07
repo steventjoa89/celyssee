@@ -57,8 +57,8 @@ function FooterLogo({ isHideTop = false, isHideBottom = false }) {
 
 function Footer() {
   return (
-    <footer>
-      <div className="bg-white mb-10 px-6 lg:px-12 pt-3 lg:pt-10 border-t border-gray-200">
+    <footer class="bg-transparent">
+      <div className="mb-10 px-6 lg:px-12 pt-3 lg:pt-10 border-t border-gray-200">
         <div className="mx-auto">
           {/* Small Screen */}
           <div className="lg:hidden">
