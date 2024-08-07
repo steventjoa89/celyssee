@@ -78,7 +78,7 @@ function SearchResultsPage() {
 
   return (
     <>
-      <TitleManager title="Search Results" />
+      <TitleManager templateKey="SEARCH" />
       <div>
         <Breadcrumb
           title={`Search Results (${data.length})`}

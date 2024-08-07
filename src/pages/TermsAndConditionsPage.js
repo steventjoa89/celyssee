@@ -75,7 +75,8 @@ function TermsAndConditionsPage() {
 
   return (
     <>
-      <TitleManager title="Terms And Conditions" />
+      <TitleManager templateKey="TERM_AND_CONDITIONS" />
+
       <div data-aos="fade-up" className="max-w-5xl mx-auto p-6">
         <div className="text-xs md:text-sm my-5 text-left space-y-5">
           <p className="font-bold">Terms and Conditions</p>

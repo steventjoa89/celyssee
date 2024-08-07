@@ -37,7 +37,10 @@ function CollectionsPage() {
 
   return (
     <>
-      <TitleManager title={`${toProperCase(collection)} Perfumes Collection`} />
+      <TitleManager
+        templateKey="COLLECTIONS"
+        values={{ collection: toProperCase(collection) }}
+      />
       <div>
         <Breadcrumb
           title={`${toTitleCase(collection)} Collections`}

@@ -38,7 +38,7 @@ function BlogCard({ id, image, title, description }) {
 function BlogsPage() {
   return (
     <>
-      <TitleManager title="Blogs" />
+      <TitleManager templateKey="BLOGS" />
       <div className="mx-8 md:mx-12 lg:mx-20 my-8 md:my-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 md:gap-8 lg:gap-12">
         {BLOGS.map((item, index) => (
           <BlogCard

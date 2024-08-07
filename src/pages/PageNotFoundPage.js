@@ -9,7 +9,8 @@ function PageNotFoundPage() {
 
   return (
     <>
-      <TitleManager title="Page Not Found" />
+      <TitleManager templateKey="PAGE_NOT_FOUND" />
+
       <div className="flex items-center justify-center min-h-[58vh] text-center">
         <div className="p-8">
           <h1 className="font-title text-2xl md:text-3xl lg:text-4xl font-bold mb-4">

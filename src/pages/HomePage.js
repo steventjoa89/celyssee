@@ -81,7 +81,7 @@ function HomePage() {
 
   return (
     <>
-      <TitleManager />
+      <TitleManager templateKey="HOME" />
       <div>
         {/* Home Banner */}
         <Banner

@@ -18,7 +18,7 @@ function BestSellersPage() {
 
   return (
     <>
-      <TitleManager title="Best Sellers Collection" />
+      <TitleManager templateKey="BEST_SELLERS" />
       <div>
         <Breadcrumb title="Best Sellers" isShowFilter={false} />
 

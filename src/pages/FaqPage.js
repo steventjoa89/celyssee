@@ -190,7 +190,7 @@ function FaqPage() {
 
   return (
     <>
-      <TitleManager title="FAQS" />
+      <TitleManager templateKey="FAQS" />
       <div className="max-w-full mx-8 md:mx-16 text-left">
         {faqs.map((item, index) => (
           <div key={index} className="flex flex-col md:flex-row">

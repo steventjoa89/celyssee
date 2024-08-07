@@ -72,9 +72,11 @@ function ProductDetailsPage() {
   return (
     <>
       <TitleManager
-        title={`${selectedPerfume.name} - ${
-          selectedPerfume.gender || ""
-        } Perfumes`}
+        templateKey="PRODUCT_DETAILS"
+        values={{
+          name: selectedPerfume.name,
+          gender: selectedPerfume.gender || "",
+        }}
       />
 
       {/* ProductDetails */}

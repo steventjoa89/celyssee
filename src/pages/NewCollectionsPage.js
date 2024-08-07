@@ -17,7 +17,7 @@ function NewCollectionsPage() {
 
   return (
     <>
-      <TitleManager title="New Collection" />
+      <TitleManager templateKey="NEW_COLLECTIONS" />
 
       <div>
         <Breadcrumb title="New Collections" isShowFilter={false} />

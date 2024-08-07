@@ -77,7 +77,7 @@ function AboutUsPage() {
 
   return (
     <>
-      <TitleManager title="Our Journey" />
+      <TitleManager templateKey="ABOUT_US" />
       <div className="text-gray-800 min-h-screen p-6">
         <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12 py-2">
           {/* Our Journey */}

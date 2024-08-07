@@ -96,7 +96,8 @@ function PrivacyPolicyPage() {
 
   return (
     <>
-      <TitleManager title="Privacy Policy" />
+      <TitleManager templateKey="PRIVACY_POLICY" />
+
       <div data-aos="fade-up" className="max-w-5xl mx-auto p-6">
         <div className="text-xs md:text-sm my-5 text-left space-y-5">
           <p className="font-bold">Privacy Policy</p>

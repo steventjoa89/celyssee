@@ -6,7 +6,7 @@ import TitleManager from "../components/TitleManager/TitleManager";
 function ReturnPolicyPage() {
   return (
     <>
-      <TitleManager title="Return Policy" />
+      <TitleManager templateKey="RETURN_POLICY" />
       <div data-aos="fade-up" className="max-w-5xl mx-auto mt-6 p-6">
         <h2 className="text-center font-bold uppercase">Return Policy</h2>
         <div className="text-sm md:text-base my-5 text-left space-y-5">
