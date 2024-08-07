@@ -20,7 +20,7 @@ function NoData() {
   );
 }
 
-function GridView({ title, data, isShowPrice = false }) {
+function GridView({ title, data, isSearch = false, isShowPrice = false }) {
   const gridRef = useRef(null);
   const location = useLocation();
   const navigate = useNavigate();
@@ -33,23 +33,25 @@ function GridView({ title, data, isShowPrice = false }) {
 
   const handleChangePage = (_, value) => {
     if (gridRef.current) {
+      // TODO: behaviour is not smooth
       window.scrollTo({
         top: 0,
         behavior: "smooth",
       });
     }
     setPage(value);
-    // Extract search query from URL
+
     const queryParams = new URLSearchParams(location.search);
-    const searchQuery = queryParams.get("search");
-    // Update URL with search query and new page number
-    navigate(`?search=${searchQuery}&page=${value}`);
+    const searchQuery = isSearch ? queryParams.get("search") : null;
+
+    // Update URL with search query (if present) and new page number
+    navigate(
+      isSearch ? `?search=${searchQuery}&page=${value}` : `?page=${value}`
+    );
   };
 
   useEffect(() => {
-    // Extract search query and page number from URL
     const queryParams = new URLSearchParams(location.search);
-    // const searchQuery = queryParams.get("search");
     const pageParam = parseInt(queryParams.get("page"), 10);
 
     if (!isNaN(pageParam)) {

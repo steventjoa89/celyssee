@@ -91,7 +91,7 @@ function SearchResultsPage() {
       />
 
       {/* Grid View: Content Area */}
-      <GridView data={data} isShowPrice={true} />
+      <GridView data={data} isSearch={true} isShowPrice={true} />
     </div>
   );
 }
