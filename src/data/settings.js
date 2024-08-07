@@ -42,6 +42,10 @@ export const TOP_MENU_SIDEBAR = [
     name: "Our Journey",
     link: ROUTES.ABOUT_US,
   },
+  {
+    name: "Blogs",
+    link: ROUTES.BLOGS,
+  },
 ];
 
 export const SOCIAL_MEDIA_ICONS = [

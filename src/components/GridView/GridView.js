@@ -33,20 +33,23 @@ function GridView({ title, data, isSearch = false, isShowPrice = false }) {
 
   const handleChangePage = (_, value) => {
     if (gridRef.current) {
-      // TODO: behaviour is not smooth
       window.scrollTo({
         top: 0,
         behavior: "smooth",
       });
     }
-    setPage(value);
+
+    // Ensure the page number is within the valid range
+    const validPage = Math.min(value, countPages);
+    setPage(validPage);
 
     const queryParams = new URLSearchParams(location.search);
     const searchQuery = isSearch ? queryParams.get("search") : null;
 
-    // Update URL with search query (if present) and new page number
     navigate(
-      isSearch ? `?search=${searchQuery}&page=${value}` : `?page=${value}`
+      isSearch
+        ? `?search=${searchQuery}&page=${validPage}`
+        : `?page=${validPage}`
     );
   };
 
@@ -54,13 +57,14 @@ function GridView({ title, data, isSearch = false, isShowPrice = false }) {
     const queryParams = new URLSearchParams(location.search);
     const pageParam = parseInt(queryParams.get("page"), 10);
 
-    if (!isNaN(pageParam)) {
-      setPage(pageParam);
-    }
+    // Adjust the page number if it's invalid or out of range
+    const validPage =
+      !isNaN(pageParam) && pageParam <= countPages ? pageParam : 1;
+    setPage(validPage);
 
     // Fetch data based on the current page
-    setProductList(getPaginatedItems(data, page, totalItemsPerPage));
-  }, [data, page, location.search]);
+    setProductList(getPaginatedItems(data, validPage, totalItemsPerPage));
+  }, [data, location.search, countPages]);
 
   if (data.length === 0) {
     return <NoData />;

@@ -24,7 +24,7 @@ function CollectionsPage() {
         (perfume) => perfume.gender === getGenderEnum(collection)
       )
     );
-  }, []);
+  }, [collection]);
 
   const isValidCollection = checkValidCollection(collection);
 
