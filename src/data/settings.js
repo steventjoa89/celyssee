@@ -64,11 +64,6 @@ export const SOCIAL_MEDIA_ICONS = [
     icon: <InstagramIcon fontSize="small" />,
     link: "https://www.instagram.com/celyssee.perfumery/",
   },
-  {
-    name: "Pinterest",
-    icon: <PinterestIcon fontSize="small" />,
-    link: "Https://pinterest.com", // TODO: Link
-  },
 ];
 
 // FOOTER MENU

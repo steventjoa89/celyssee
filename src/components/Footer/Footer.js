@@ -19,6 +19,9 @@ function FooterLogo({ isHideTop = false, isHideBottom = false }) {
           <span className="font-title font-black text-xl tracking-widest">
             {COMPANY_INFO.COMPANY_NAME}
           </span>
+          <span className="font-title font-gray-200 text-xs tracking-wider">
+            Perfumery
+          </span>
         </div>
       )}
 
@@ -27,7 +30,7 @@ function FooterLogo({ isHideTop = false, isHideBottom = false }) {
         <></>
       ) : (
         <>
-          <ul className="my-4 lg:my-8 flex flex-row items-center justify-center space-x-3">
+          <ul className="my-3 lg:my-5 flex flex-row items-center justify-center space-x-3">
             {SOCIAL_MEDIA_ICONS.map((item, key) => (
               <li
                 key={key}
