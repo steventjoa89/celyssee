@@ -109,87 +109,86 @@ function HomePage() {
   return (
     <>
       <TitleManager templateKey="HOME" />
-      <div>
-        {/* Home Banner */}
-        <Banner
-          img={`${process.env.PUBLIC_URL}/images/banner/${HOME_BANNER_IMAGE}`}
-          onClick={handleOnClickBanner}
+
+      {/* Home Banner */}
+      <Banner
+        img={`${process.env.PUBLIC_URL}/images/banner/${HOME_BANNER_IMAGE}`}
+        onClick={handleOnClickBanner}
+      >
+        <div className="absolute inset-0 bg-black opacity-30"></div>
+        <div
+          data-aos="fade-up"
+          className="absolute inset-0 flex items-center justify-center text-white"
         >
-          <div className="absolute inset-0 bg-black opacity-30"></div>
-          <div
-            data-aos="fade-up"
-            className="absolute inset-0 flex items-center justify-center text-white"
-          >
-            <div className="absolute bottom-0 mb-6 md:mb-8 lg:mb-10 xl:mb-12 left-1/2 transform -translate-x-1/2 text-white flex flex-col items-center space-y-10">
-              <div className="flex flex-col space-y-2">
-                <span className="text-sm">Perfumery</span>
-                <span className="text-lg md:text-xl lg:text-2xl">
-                  Where Every Scent Tells a Story
-                </span>
-              </div>
-              <span className="text-sm md:text-base underline underline-offset-4">
-                Discover the collections
+          <div className="absolute bottom-0 mb-6 md:mb-8 lg:mb-10 xl:mb-12 left-1/2 transform -translate-x-1/2 text-white flex flex-col items-center space-y-10">
+            <div className="flex flex-col space-y-2">
+              <span className="text-sm">Perfumery</span>
+              <span className="text-lg md:text-xl lg:text-2xl">
+                Where Every Scent Tells a Story
               </span>
             </div>
-          </div>
-        </Banner>
-
-        {/* SubBanner */}
-        <div ref={subBannerRef} className="my-12">
-          {subbannerInfoArr.map((item, index) => (
-            <SubBanner key={index} {...item} />
-          ))}
-        </div>
-
-        {/* Best Sellers Sections */}
-        <div className="my-3 px-8 pb-10 border-b border-gray-200">
-          <h1
-            data-aos="fade-up"
-            className="relative font-title text-3xl mt-8 mb-5"
-          >
-            Our Best Sellers
-            <span className="absolute left-1/2 transform -translate-x-1/2 bottom-[-4px] w-16 h-[2px] bg-black"></span>
-          </h1>
-          <HorizontalScrollableGridView
-            perfumeList={bestSellers}
-            fadeDirection="right"
-          />
-          <div className="mt-5">
-            <Button onClick={() => navigate(ROUTES.BEST_SELLERS)}>
-              SEE MORE
-            </Button>
+            <span className="text-sm md:text-base underline underline-offset-4">
+              Discover the collections
+            </span>
           </div>
         </div>
+      </Banner>
 
-        {/* Try Starter Kit Sections */}
-        <div className="my-8">
-          <SubBanner {...starterKitInfo} isTextCenter={true} />
-        </div>
-
-        {/* New Collections Sections */}
-        <div className="my-3 px-8 border-t border-gray-200">
-          <h1 className="relative font-title text-3xl mt-8 mb-5">
-            New Collections
-            <span className="absolute left-1/2 transform -translate-x-1/2 bottom-[-4px] w-16 h-[2px] bg-black"></span>
-          </h1>
-          <HorizontalScrollableGridView perfumeList={newCollections} />
-          <div className="mt-5">
-            <Button onClick={() => navigate(ROUTES.NEW_COLLECTIONS)}>
-              SEE MORE
-            </Button>
-          </div>
-        </div>
-
-        {/* Email Subscribe Sections */}
-        <EmailSubscription />
-
-        {/* Popup Modal */}
-        <WelcomeModal
-          image={HOME_PROMOTION_MODAL_IMAGE}
-          isWelcomeModalOpen={isWelcomeModalOpen}
-          closeWelcomeModal={closeWelcomeModal}
-        />
+      {/* SubBanner */}
+      <div ref={subBannerRef} className="my-12">
+        {subbannerInfoArr.map((item, index) => (
+          <SubBanner key={index} {...item} />
+        ))}
       </div>
+
+      {/* Best Sellers Sections */}
+      <div className="my-3 px-8 pb-10 border-b border-gray-200">
+        <h1
+          data-aos="fade-up"
+          className="relative font-title text-3xl mt-8 mb-5"
+        >
+          Our Best Sellers
+          <span className="absolute left-1/2 transform -translate-x-1/2 bottom-[-4px] w-16 h-[2px] bg-black"></span>
+        </h1>
+        <HorizontalScrollableGridView
+          perfumeList={bestSellers}
+          fadeDirection="right"
+        />
+        <div className="mt-5">
+          <Button onClick={() => navigate(ROUTES.BEST_SELLERS)}>
+            SEE MORE
+          </Button>
+        </div>
+      </div>
+
+      {/* Try Starter Kit Sections */}
+      <div className="my-8">
+        <SubBanner {...starterKitInfo} isTextCenter={true} />
+      </div>
+
+      {/* New Collections Sections */}
+      <div className="my-3 px-8 border-t border-gray-200">
+        <h1 className="relative font-title text-3xl mt-8 mb-5">
+          New Collections
+          <span className="absolute left-1/2 transform -translate-x-1/2 bottom-[-4px] w-16 h-[2px] bg-black"></span>
+        </h1>
+        <HorizontalScrollableGridView perfumeList={newCollections} />
+        <div className="mt-5">
+          <Button onClick={() => navigate(ROUTES.NEW_COLLECTIONS)}>
+            SEE MORE
+          </Button>
+        </div>
+      </div>
+
+      {/* Email Subscribe Sections */}
+      <EmailSubscription />
+
+      {/* Popup Modal */}
+      <WelcomeModal
+        image={HOME_PROMOTION_MODAL_IMAGE}
+        isWelcomeModalOpen={isWelcomeModalOpen}
+        closeWelcomeModal={closeWelcomeModal}
+      />
     </>
   );
 }
