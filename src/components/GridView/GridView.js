@@ -11,7 +11,7 @@ function NoData() {
         <h3 className="font-title text-base md:text-xl font-bold mb-4">
           No results were found
         </h3>
-        <p className="text-sm md:text-base lg:text-xl text-gray-500">
+        <p className="text-sm lg:text-base text-gray-500">
           Enhance your results by carefully reviewing your spelling or consider
           using broader keywords.
         </p>

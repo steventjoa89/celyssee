@@ -117,27 +117,22 @@ export const FOOTER_MENU = [
     submenus: [
       {
         name: "Tokopedia",
-        // link: "https://www.google.co.id",
+        link: "https://www.tokopedia.com/",
         outside: true,
       },
       {
         name: "Shopee",
-        // link: "https://www.google.co.id",
-        outside: true,
-      },
-      {
-        name: "TikTok Shop",
-        // link: "https://www.google.co.id",
+        link: "https://shopee.co.id/",
         outside: true,
       },
       {
         name: "Lazada",
-        // link: "https://www.google.co.id",
+        link: "https://www.lazada.co.id/",
         outside: true,
       },
       {
         name: "Blibli",
-        // link: "https://www.google.co.id",
+        link: "https://www.blibli.com/",
         outside: true,
       },
     ],
