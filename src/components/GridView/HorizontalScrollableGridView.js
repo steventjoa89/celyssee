@@ -10,7 +10,7 @@ function HorizontalScrollableGridView({ perfumeList, fadeDirection = "left" }) {
       <div className="flex items-center">
         {perfumeList.map((item, index) => (
           <div key={index} className="flex-shrink-0 mx-2 md:mx-3 xl:mx-4">
-            <Card item={item} isLarge={true} isShowPrice={false} />
+            <Card item={item} isShowPrice={false} />
           </div>
         ))}
       </div>

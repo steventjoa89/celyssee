@@ -3,7 +3,7 @@ import { calculateDiscountedPrice } from "../../utils/mathUtil";
 import { Link } from "react-router-dom";
 import { ROUTES } from "../../routes";
 
-function Card({ item, isLarge = false, isShowPrice = true }) {
+function Card({ item, isShowPrice = true }) {
   const { price, discount = 0 } = item.sizes[0];
 
   const discountedPrice = calculateDiscountedPrice(price, discount);
@@ -11,13 +11,7 @@ function Card({ item, isLarge = false, isShowPrice = true }) {
   return (
     <Link to={ROUTES.PRODUCT_DETAILS(item.id)}>
       <div className="flex flex-col h-fulloverflow-hidden">
-        <div
-          className={`relative w-full ${
-            isLarge
-              ? "h-40 sm:h-48 md:h-56 lg:h-64 xl:h-72"
-              : "h-24 sm:h-32 md:h-40 lg:h-48 xl:h-56"
-          } overflow-hidden`}
-        >
+        <div className="relative w-full h-40 sm:h-48 md:h-56 lg:h-64 xl:h-72 overflow-hidden">
           <img
             src={`${process.env.PUBLIC_URL}/images/perfumes/${item.images[0]}`}
             alt={item.name}

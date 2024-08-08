@@ -111,7 +111,7 @@ function ProductDetailsPage() {
             className="grid grid-cols-2 gap-4 px-4 py-6 sm:grid-cols-3 lg:grid-cols-4 md:gap-6 lg:gap-8"
           >
             {suggestedPerfumes.map((item, index) => (
-              <Card key={index} item={item} />
+              <Card key={index} item={item} isLarge={true} />
             ))}
           </div>
         </div>

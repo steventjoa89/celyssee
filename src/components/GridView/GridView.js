@@ -92,12 +92,7 @@ function GridView({ title, data, isSearch = false, isShowPrice = false }) {
         } mx-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8`}
       >
         {productList.map((item, index) => (
-          <Card
-            key={index}
-            item={item}
-            isLarge={true}
-            isShowPrice={isShowPrice}
-          />
+          <Card key={index} item={item} isShowPrice={isShowPrice} />
         ))}
       </div>
 
