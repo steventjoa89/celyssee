@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Banner from "../components/Banner/Banner";
 import {
   HOME_BANNER_IMAGE,
@@ -13,7 +13,7 @@ import HorizontalScrollableGridView from "../components/GridView/HorizontalScrol
 import { PERFUME_CATALOG } from "../data/data";
 import EmailSubscription from "../components/EmailSubscription/EmailSubscription";
 import Button from "../components/Button/Button";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { ROUTES } from "../routes";
 import { Gender } from "../enums/genderEnum";
 import TitleManager from "../components/TitleManager/TitleManager";
@@ -22,12 +22,31 @@ import WelcomeModal from "../components/Modal/WelcomeModal";
 function HomePage() {
   const subBannerRef = useRef(null);
   const navigate = useNavigate();
+  const location = useLocation();
 
   const [isWelcomeModalOpen, setIsWelcomeModalOpen] = useState(true);
 
   const closeWelcomeModal = () => {
     setIsWelcomeModalOpen(false);
   };
+
+  // Welcome Modal Config
+  useEffect(() => {
+    // Check if the user has visited the page in the current session
+    const hasVisitedThisSession = sessionStorage.getItem(
+      "hasVisitedThisSession"
+    );
+
+    // If the user is visiting for the first time in this session, open the modal
+    if (!hasVisitedThisSession) {
+      setIsWelcomeModalOpen(true);
+      // Set a flag in sessionStorage to indicate that the user has visited the page in this session
+      sessionStorage.setItem("hasVisitedThisSession", "true");
+    } else {
+      // If the user has already visited in this session, ensure the modal is not open
+      setIsWelcomeModalOpen(false);
+    }
+  }, [location.pathname]);
 
   // Best Seller Perfumes Items
   const bestSellerIds = BEST_SELLER_PERFUMES_IDS.slice(0, 4);

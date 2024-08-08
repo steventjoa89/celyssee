@@ -10,7 +10,7 @@ function WelcomeModal({ image, isWelcomeModalOpen, closeWelcomeModal }) {
       aria-labelledby="Promotion"
       aria-describedby="Promotion"
     >
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[90vw] md:w-[66vw] h-[55vh] rounded-xl bg-gradient-to-br from-white via-white to-[#f8edd9] bg-fixed bg-cover bg-no-repeat shadow-lg flex flex-col md:flex-row focus:outline-none">
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[90vw] md:w-[70vw] lg:w-[60vw] xl:w-[50vw] h-[55vh] rounded-xl bg-gradient-to-br from-white via-white to-[#f8edd9] bg-fixed bg-cover bg-no-repeat shadow-lg flex flex-col md:flex-row focus:outline-none">
         {/* Close Icon */}
         <button
           onClick={closeWelcomeModal}
