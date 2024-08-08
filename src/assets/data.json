@@ -10,8 +10,7 @@
     "sizes": [
       {
         "volume": 30,
-        "price": 180000,
-        "discount": 30
+        "price": 180000
       }
     ],
     "onlineMarketplaces": [
@@ -103,6 +102,7 @@
         "discount": 30
       }
     ],
+    "isSoldOut": true,
     "onlineMarketplaces": [
       {
         "name": "Tokopedia",

@@ -30,23 +30,30 @@ function Card({ item, isLarge = false, isShowPrice = true }) {
             <h3 className="text-xs sm:text-sm md:text-base font-semibold truncate overflow-ellipsis whitespace-normal">
               {item.name}
             </h3>
+
             {/* Price */}
             {isShowPrice && (
-              <div className="mt-2 w-full flex flex-col md:flex-row items-center justify-center text-xs sm:text-sm md:text-base">
-                {discount ? (
-                  <div className="flex items-center space-x-2">
+              <div className="mt-2 flex flex-col">
+                {item.isSoldOut && (
+                  <span className="text-xs sm:text-sm text-red-500">
+                    Sold Out
+                  </span>
+                )}
+
+                <div className="flex flex-col md:flex-row items-center justify-center text-xs sm:text-sm md:text-base space-x-2">
+                  {discount > 0 && (
                     <span className="text-gray-600">
                       Rp. {discountedPrice.toLocaleString()}
                     </span>
-                    <span className="text-gray-400 line-through">
-                      Rp. {price.toLocaleString()}
-                    </span>
-                  </div>
-                ) : (
-                  <span className="text-gray-600">
+                  )}
+                  <span
+                    className={`text-gray-600 ${
+                      discount > 0 ? "line-through" : ""
+                    }`}
+                  >
                     Rp. {price.toLocaleString()}
                   </span>
-                )}
+                </div>
               </div>
             )}
           </div>
