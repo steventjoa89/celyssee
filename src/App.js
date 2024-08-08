@@ -29,7 +29,13 @@ function App() {
 
   useEffect(() => {
     NProgress.start(); // Start the NProgressbar
-    window.scrollTo(0, 0);
+    // Check if the URL contains the 'page' query parameter
+    const urlParams = new URLSearchParams(location.search);
+    const hasPageParam = urlParams.has("page");
+    // Only scroll to top if 'page' parameter is not present
+    if (!hasPageParam) {
+      window.scrollTo(0, 0);
+    }
     NProgress.done(); // Stop the NProgressbar
 
     // AOS Init
