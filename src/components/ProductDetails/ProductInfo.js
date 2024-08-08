@@ -45,18 +45,26 @@ function ProductInfo({ item, selectedSize, setSelectedSize }) {
       </span>
 
       {/* Price */}
-      <div className="w-full flex items-center justify-center text-center md:items-start md:justify-start text-lg space-x-3">
-        <span className="text-gray-500">
-          Rp.{" "}
-          {calculateDiscountedPrice(
-            item.sizes[selectedSize].price,
-            item.sizes[selectedSize].discount
-          ).toLocaleString()}
-        </span>
-        {(item.sizes[selectedSize].discount ?? 0) > 0 && (
-          <span className="text-gray-400 line-through">
-            Rp. {item.sizes[selectedSize].price.toLocaleString()}
+      <div className="w-full">
+        <div className="flex items-center justify-center text-center md:items-start md:justify-start text-lg space-x-3">
+          <span className="text-gray-500">
+            Rp.{" "}
+            {calculateDiscountedPrice(
+              item.sizes[selectedSize].price,
+              item.sizes[selectedSize].discount
+            ).toLocaleString()}
           </span>
+          {(item.sizes[selectedSize].discount ?? 0) > 0 && (
+            <span className="text-gray-400 line-through">
+              Rp. {item.sizes[selectedSize].price.toLocaleString()}
+            </span>
+          )}
+        </div>
+        {/* Sold Out Indicator */}
+        {item.isSoldOut && (
+          <div className="flex justify-center md:justify-start">
+            <span className="text-xs sm:text-sm text-red-500">Sold Out</span>
+          </div>
         )}
       </div>
 
@@ -107,7 +115,7 @@ function ProductInfo({ item, selectedSize, setSelectedSize }) {
       </div>
 
       {/* Online Stores */}
-      {item.onlineMarketplaces && (
+      {!item.isSoldOut && item.onlineMarketplaces && (
         <div className="w-full flex justify-center md:justify-start border-b border-gray-200 pt-2 pb-4">
           <div className="flex flex-col items-center md:items-start justify-start">
             <span className="font-bold">Online Stores:</span>

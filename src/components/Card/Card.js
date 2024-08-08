@@ -34,6 +34,7 @@ function Card({ item, isLarge = false, isShowPrice = true }) {
             {/* Price */}
             {isShowPrice && (
               <div className="mt-2 flex flex-col">
+                {/* Sold Out Indicator */}
                 {item.isSoldOut && (
                   <span className="text-xs sm:text-sm text-red-500">
                     Sold Out
