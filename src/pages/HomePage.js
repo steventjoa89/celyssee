@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import Banner from "../components/Banner/Banner";
 import {
   HOME_BANNER_IMAGE,
@@ -6,6 +6,7 @@ import {
   HOME_SUBBANNER1_IMAGE,
   HOME_SUBBANNER2_IMAGE,
   HOME_STARTER_KIT_IMAGE,
+  HOME_PROMOTION_MODAL_IMAGE,
 } from "../data/settings";
 import SubBanner from "../components/Banner/SubBanner";
 import HorizontalScrollableGridView from "../components/GridView/HorizontalScrollableGridView";
@@ -16,10 +17,17 @@ import { useNavigate } from "react-router-dom";
 import { ROUTES } from "../routes";
 import { Gender } from "../enums/genderEnum";
 import TitleManager from "../components/TitleManager/TitleManager";
+import WelcomeModal from "../components/Modal/WelcomeModal";
 
 function HomePage() {
   const subBannerRef = useRef(null);
   const navigate = useNavigate();
+
+  const [isWelcomeModalOpen, setIsWelcomeModalOpen] = useState(true);
+
+  const closeWelcomeModal = () => {
+    setIsWelcomeModalOpen(false);
+  };
 
   // Best Seller Perfumes Items
   const bestSellerIds = BEST_SELLER_PERFUMES_IDS.slice(0, 4);
@@ -155,6 +163,13 @@ function HomePage() {
 
         {/* Email Subscribe Sections */}
         <EmailSubscription />
+
+        {/* Popup Modal */}
+        <WelcomeModal
+          image={HOME_PROMOTION_MODAL_IMAGE}
+          isWelcomeModalOpen={isWelcomeModalOpen}
+          closeWelcomeModal={closeWelcomeModal}
+        />
       </div>
     </>
   );

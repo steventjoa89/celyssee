@@ -1,7 +1,6 @@
 import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
 import XIcon from "@mui/icons-material/X";
 import InstagramIcon from "@mui/icons-material/Instagram";
-import PinterestIcon from "@mui/icons-material/Pinterest";
 import { ROUTES } from "../routes";
 import { Gender } from "../enums/genderEnum";
 
@@ -17,6 +16,7 @@ export const HOME_SUBBANNER1_IMAGE = "subbanner-1.jpeg";
 export const HOME_SUBBANNER2_IMAGE = "subbanner-2.jpeg";
 export const HOME_EMAIL_SUBSCRIPTION_IMAGE = "email-subscription.jpeg";
 export const HOME_STARTER_KIT_IMAGE = "starter-kit.jpeg";
+export const HOME_PROMOTION_MODAL_IMAGE = "promotion-modal.jpeg";
 
 export const BEST_SELLER_PERFUMES_IDS = [1, 2, 3, 4]; // Home page display from FRONT Array (MAX: 4 items in Home Page)
 
