@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import ProductInfo from "../components/ProductDetails/ProductInfo";
-import Card from "../components/Card/Card";
 import { PERFUME_CATALOG } from "../data/data";
 import ProductImages from "../components/ProductDetails/ProductImages";
 import PageNotFoundPage from "./PageNotFoundPage";
 import TitleManager from "../components/TitleManager/TitleManager";
+import ProductSuggestionGridView from "../components/GridView/ProductSuggestionGridView";
 
 function ProductDetailsPage() {
   const { id } = useParams();
@@ -106,14 +106,7 @@ function ProductDetailsPage() {
             You may also like
             <span className="absolute left-1/2 transform -translate-x-1/2 bottom-[-4px] w-16 h-[2px] bg-black"></span>
           </h2>
-          <div
-            data-aos="fade-right"
-            className="grid grid-cols-2 gap-4 px-4 py-6 sm:grid-cols-3 lg:grid-cols-4 md:gap-6 lg:gap-8"
-          >
-            {suggestedPerfumes.map((item, index) => (
-              <Card key={index} item={item} isLarge={true} />
-            ))}
-          </div>
+          <ProductSuggestionGridView perfumeList={suggestedPerfumes} />
         </div>
       </div>
     </>

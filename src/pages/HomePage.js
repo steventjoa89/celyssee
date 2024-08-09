@@ -9,7 +9,7 @@ import {
   HOME_PROMOTION_MODAL_IMAGE,
 } from "../data/settings";
 import SubBanner from "../components/Banner/SubBanner";
-import HorizontalScrollableGridView from "../components/GridView/HorizontalScrollableGridView";
+import ProductSuggestionGridView from "../components/GridView/ProductSuggestionGridView";
 import { PERFUME_CATALOG } from "../data/data";
 import EmailSubscription from "../components/EmailSubscription/EmailSubscription";
 import Button from "../components/Button/Button";
@@ -109,7 +109,6 @@ function HomePage() {
   return (
     <>
       <TitleManager templateKey="HOME" />
-
       {/* Home Banner */}
       <Banner
         img={`${process.env.PUBLIC_URL}/images/banner/${HOME_BANNER_IMAGE}`}
@@ -150,9 +149,9 @@ function HomePage() {
           Our Best Sellers
           <span className="absolute left-1/2 transform -translate-x-1/2 bottom-[-4px] w-16 h-[2px] bg-black"></span>
         </h1>
-        <HorizontalScrollableGridView
+        <ProductSuggestionGridView
           perfumeList={bestSellers}
-          fadeDirection="right"
+          isShowPrice={false}
         />
         <div className="mt-5">
           <Button onClick={() => navigate(ROUTES.BEST_SELLERS)}>
@@ -172,8 +171,11 @@ function HomePage() {
           New Collections
           <span className="absolute left-1/2 transform -translate-x-1/2 bottom-[-4px] w-16 h-[2px] bg-black"></span>
         </h1>
-        <HorizontalScrollableGridView perfumeList={newCollections} />
-        <div className="mt-5">
+        <ProductSuggestionGridView
+          perfumeList={newCollections}
+          isShowPrice={false}
+        />
+        <div className="mt-2">
           <Button onClick={() => navigate(ROUTES.NEW_COLLECTIONS)}>
             SEE MORE
           </Button>
