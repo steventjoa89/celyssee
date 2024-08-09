@@ -9,6 +9,7 @@ import { HashRouter } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
+  // TODO: Refactoring this back to Browser Router for AWS deployment.
   <HashRouter>
     <App />
   </HashRouter>
